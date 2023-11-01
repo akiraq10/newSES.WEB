@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="WenDriver Instances Testing" parallel="methods" thread-count="4">
+
+    <test name="Driver Factory Test" >
+        <classes>
+            <class name="testclass.Test1"/>
+<!--            <class name="com.sdetpro.test.dataprovider.TestDataProvider1"/>-->
+            <!--            <class name="com.sdetpro.test.parallel.TestDriverInstance"/>-->
+
+        </classes>
+    </test>
+
+
+
+
+</suite>
