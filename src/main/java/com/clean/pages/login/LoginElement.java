@@ -1,0 +1,32 @@
+package com.clean.pages.login;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginElement {
+    private WebDriver driver;
+    private LoginElement(WebDriver driver){
+        this.driver= driver;
+        PageFactory.initElements(driver,this);
+
+    }
+
+ public static LoginElement getLoginElement(WebDriver driver){
+        return new LoginElement(driver);
+ }
+
+    @FindBy(id = "UserName")
+    WebElement userName;
+    @FindBy(id = "password-input")
+    WebElement password;
+    @FindBy(id = "ses-submit-btn")
+    WebElement loginBtn;
+    @FindBy(id = "breadcrumb_Folder_ViewFolder_0")
+    WebElement logoBtn;
+    @FindBy(className = "loginValidationErrors")
+    WebElement unsuccessfulError;
+
+
+}
