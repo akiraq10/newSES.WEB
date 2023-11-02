@@ -16,3 +16,6 @@
 1.run test: mvn clean test -Dfile="your test xml direct"<br>
 2.Run generate report: allure generate .\allure-results\ --clean<br>
 
+# MarkDown for github
+https://viblo.asia/p/markdown-huong-dan-su-dung-Az45bQPNlxY
+
