@@ -1,4 +1,9 @@
-﻿# Allure reporter
+#The test environment requirement 
+- Java JDK 21.x
+- Maven 3.9.5
+- Allure report 2.24.1
+ 
+ # Allure reporter
 1. Install Scoop
    a. Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time (
    b. Select 'A'
@@ -6,4 +11,7 @@
    d. scoop install allure
    link doc: https://github.com/allure-framework/allure2
    
-# newSES.WEB
+# Run the test 
+1.run test: mvn clean test -Dfile="your test xml direct"
+2.Run generate report: allure generate .\allure-results\ --clean
+
