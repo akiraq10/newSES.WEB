@@ -6,7 +6,7 @@
  # Allure reporter
 1. <space>Install Scoop <space>
    a.  <space> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time  <space>
-   b. Select 'A'
+   b.  <space> Select 'A'  <space>
    c. iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
    d. scoop install allure
    link doc: https://github.com/allure-framework/allure2
