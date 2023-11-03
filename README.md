@@ -10,7 +10,9 @@
    c. iex "& {$(irm get.scoop.sh)} -RunAsAdmin"<br>
    <br>
 2. Install alure: scoop install allure <br>
-   link doc: https://github.com/allure-framework/allure2
+   link DOC:<br>
+   https://github.com/allure-framework/allure2<br>
+   https://github.com/allure-framework/allure1/wiki/Test-Case-ID
    
 # Run the test 
 1.run test: mvn clean test -Dfile="your test xml direct"<br>
