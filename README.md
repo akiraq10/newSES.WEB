@@ -13,6 +13,9 @@
    link DOC:<br>
    https://github.com/allure-framework/allure2<br>
    https://github.com/allure-framework/allure1/wiki/Test-Case-ID
+
+ # TestNG
+ https://testng.org/doc/documentation-main.html
    
 # Run the test 
 1.run test: mvn clean test -Dfile="your test xml direct"<br>
