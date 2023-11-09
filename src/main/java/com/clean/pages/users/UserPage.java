@@ -1,24 +1,28 @@
-package com.clean.pages.login;
+package com.clean.pages.users;
 
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class UserPage {
 
-    LoginController loginController;
-    LoginVerifier loginVerifier;
-    private LoginPage(LoginController loginController,LoginVerifier loginVerifier){
-        this.loginController= loginController;
-        this.loginVerifier=loginVerifier;
+    UsersController usersController;
+    UserVerifier userVerifier;
+
+    private UserPage(UsersController usersController, UserVerifier userVerifier) {
+        this.usersController = usersController;
+        this.userVerifier = userVerifier;
 
     }
-    public static LoginPage loginPage(WebDriver driver){
-        return new LoginPage(new LoginController(driver),new LoginVerifier(driver));
+
+    public static UserPage userPage(WebDriver driver) {
+        return new UserPage(new UsersController(driver), new UserVerifier(driver));
     }
-    public LoginController act(){
-        return loginController;
+
+    public UsersController act() {
+        return usersController;
     }
-    public LoginVerifier verify(){
-        return loginVerifier;
+
+    public UserVerifier verify() {
+        return userVerifier;
     }
 
 }

@@ -1,4 +1,4 @@
-package com.clean.pages.addfolder;
+package com.clean.pages.users.addfolder;
 
 import org.openqa.selenium.WebDriver;
 

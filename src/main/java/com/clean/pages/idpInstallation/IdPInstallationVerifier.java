@@ -1,30 +1,25 @@
 package com.clean.pages.idpInstallation;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
-import static com.clean.pages.login.LoginElement.getLoginElement;
-import static com.clean.ults.ElementController.verify;
+import static com.clean.pages.idpInstallation.IdPInstallationElement.getElement;
+import static org.testng.Assert.assertTrue;
 
 
-public class LoginVerifier {
+public class IdPInstallationVerifier {
     private WebDriver driver ;
 
 
-    public LoginVerifier(WebDriver driver){
+    public IdPInstallationVerifier(WebDriver driver) {
         this.driver=driver;
 
     }
-    public LoginVerifier veirfyLoginSuccessfully() {
 
-//        waitElement(driver,getLoginElement(driver).logoBtn);
-//       assertTrue(getLoginElement(driver).logoBtn.isDisplayed(),"Not Found");
-        verify(driver,getLoginElement(driver).logoBtn);
-        return this;
-    }
-    public LoginVerifier verifyLoginUnsuccessfully(){
-//        waitElement(driver,getLoginElement(driver).unsuccessfulError);
-//        assertTrue(getLoginElement(driver).unsuccessfulError.isDisplayed(),"Not Found");
-        verify(driver,getLoginElement(driver).unsuccessfulError);
+    @Step("Expected: IdP is configrd success")
+    public IdPInstallationVerifier verifyConfigSuccess() throws InterruptedException {
+        Thread.sleep(500);
+        assertTrue(getElement(driver).signInBtn.isDisplayed());
         return this;
     }
 

@@ -1,30 +1,49 @@
-package com.clean.pages.login;
+package com.clean.pages.users;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
-import static com.clean.pages.login.LoginElement.getLoginElement;
-import static com.clean.ults.ElementController.*;
+import static com.clean.pages.users.UserElements.getUserElem;
+import static com.clean.ults.ElementController.click;
+import static com.clean.ults.ElementController.hover;
 
 
-public class LoginController   {
+public class UsersController {
     private WebDriver driver ;
-    public LoginController(WebDriver driver){
+
+    public UsersController(WebDriver driver) {
         this.driver=driver;
 
     }
-    
 
-    public LoginController fillUserName(String username) {
-        fill(driver,getLoginElement(driver).userName,username);
+    @Step("Hover mouse on the Folder menu")
+    public UsersController hoverOnFolderMenu() {
+
+        hover(driver, getUserElem(driver).folderMenu);
+        return this;
+    }
+    @Step("Click on the Add Folder option")
+    public UsersController clickOnAddFolder() {
+        click(driver, getUserElem(driver).addFolderOpt);
+        return this;
+    }
+    @Step("Click on the Add User option")
+    public UsersController clickOnAddUser() {
+        click(driver, getUserElem(driver).addUserOpt);
+        return this;
+    }
+    @Step("Click on the Add Group option")
+    public UsersController clickOnAddGroup() {
+        click(driver, getUserElem(driver).addGroupOpt);
         return this;
     }
 
-    public LoginController fillPassword(String password) {
-        fill(driver,getLoginElement(driver).password,password);
+
+    public UsersController clickOnExpandIcon() throws InterruptedException {
+        Thread.sleep(1000);
+        click(driver, getUserElem(driver).expandFolderIcon);
         return this;
     }
 
-    public void clickONLoginBtn() {
-        click(driver,getLoginElement(driver).loginBtn);
-    }
+
 }

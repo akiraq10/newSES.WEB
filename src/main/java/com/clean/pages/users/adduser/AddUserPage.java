@@ -1,8 +1,5 @@
-package com.clean.pages.adduser;
+package com.clean.pages.users.adduser;
 
-import com.clean.pages.idpInstallation.IdPInstallationController;
-import com.clean.pages.idpInstallation.IdPInstallationPage;
-import com.clean.pages.idpInstallation.IdPInstallationVerifier;
 import org.openqa.selenium.WebDriver;
 
 public class AddUserPage {

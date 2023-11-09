@@ -1,24 +1,26 @@
-package com.clean.pages.login;
+package com.clean.pages.webInstallation;
+
 
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class WebInstallationPage {
+    WebInstalationVerifier webInstalationVerifier;
+    WebInstalationController webInstalationController;
 
-    LoginController loginController;
-    LoginVerifier loginVerifier;
-    private LoginPage(LoginController loginController,LoginVerifier loginVerifier){
-        this.loginController= loginController;
-        this.loginVerifier=loginVerifier;
-
-    }
-    public static LoginPage loginPage(WebDriver driver){
-        return new LoginPage(new LoginController(driver),new LoginVerifier(driver));
-    }
-    public LoginController act(){
-        return loginController;
-    }
-    public LoginVerifier verify(){
-        return loginVerifier;
+    private WebInstallationPage(WebInstalationController webInstalationController, WebInstalationVerifier webInstalationVerifier) {
+        this.webInstalationController = webInstalationController;
+        this.webInstalationVerifier = webInstalationVerifier;
     }
 
+    public static WebInstallationPage webInstallationPage(WebDriver driver) {
+        return new WebInstallationPage(new WebInstalationController(driver), new WebInstalationVerifier(driver));
+    }
+
+    public WebInstalationController act() {
+        return webInstalationController;
+    }
+
+    public WebInstalationVerifier verify() {
+        return webInstalationVerifier;
+    }
 }

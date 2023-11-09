@@ -1,8 +1,7 @@
-package com.clean.pages.adduser;
+package com.clean.pages.users.adduser;
 
 import org.openqa.selenium.WebDriver;
 
-import static com.clean.pages.adduser.AddUserElement.getAddUserElem;
 import static com.clean.ults.ElementController.verify;
 
 public class AddUserVerifier {
@@ -13,7 +12,7 @@ public class AddUserVerifier {
 
     }
     public AddUserVerifier verifyCreateUserSuccess(String expected){
-        verify(driver, getAddUserElem(driver).successAlert, expected);
+        verify(driver, AddUserElement.getAddUserElem(driver).successAlert, expected);
         return this;
     }
 }

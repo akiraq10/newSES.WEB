@@ -1,6 +1,5 @@
-package com.clean.pages.adduser;
+package com.clean.pages.users.adduser;
 
-import com.clean.pages.idpInstallation.IdPInstallationElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

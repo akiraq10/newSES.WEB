@@ -1,34 +1,17 @@
-package com.clean.pages.login;
+package com.clean.pages.users;
 
 import org.openqa.selenium.WebDriver;
 
-import static com.clean.pages.login.LoginElement.getLoginElement;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-import static com.clean.ults.ElementController.*;
 
-
-public class LoginVerifier {
+public class UserVerifier {
     private WebDriver driver ;
 
 
-    public LoginVerifier(WebDriver driver){
+    public UserVerifier(WebDriver driver) {
         this.driver=driver;
 
     }
-    public LoginVerifier veirfyLoginSuccessfully() {
 
-//        waitElement(driver,getLoginElement(driver).logoBtn);
-//       assertTrue(getLoginElement(driver).logoBtn.isDisplayed(),"Not Found");
-        verify(driver,getLoginElement(driver).logoBtn);
-        return this;
-    }
-    public LoginVerifier verifyLoginUnsuccessfully(){
-//        waitElement(driver,getLoginElement(driver).unsuccessfulError);
-//        assertTrue(getLoginElement(driver).unsuccessfulError.isDisplayed(),"Not Found");
-        verify(driver,getLoginElement(driver).unsuccessfulError);
-        return this;
-    }
 
 
 }

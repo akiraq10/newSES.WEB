@@ -1,0 +1,1 @@
+{"uuid":"1d01d3f6-213d-4a7d-9d9d-8902fed012c2","name":"Basic Test","children":["de48238a-78fc-4467-b268-16276268536e"],"befores":[{"name":"initWebDriverObject","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1698988727302,"stop":1698988727308}],"afters":[],"start":1698988727279,"stop":1698988735561}

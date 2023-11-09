@@ -1,11 +1,8 @@
-package testclass;
+package testclass.server;
 
 import com.clean.driver.DriverBase;
-import com.clean.pages.login.LoginController;
-import com.clean.pages.login.LoginPage;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import static com.clean.pages.login.LoginPage.loginPage;
@@ -30,6 +27,7 @@ public class Test1 extends DriverBase {
 
 
     }
+
     @Description("Test case .......")
     @Test(description = "Login SES.WEB with invalid PWD")
     public void loginInvalidCredentials(){

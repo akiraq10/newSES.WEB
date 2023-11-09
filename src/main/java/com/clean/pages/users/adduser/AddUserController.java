@@ -1,15 +1,11 @@
-package com.clean.pages.adduser;
+package com.clean.pages.users.adduser;
 
 
 import com.clean.datatest.UserData;
-import com.clean.pages.idpInstallation.IdPInstallationController;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
-import java.awt.*;
-
 import static com.clean.datatest.UserData.*;
-import static com.clean.pages.adduser.AddUserElement.getAddUserElem;
 import static com.clean.ults.ElementController.*;
 
 public class AddUserController {
@@ -21,46 +17,46 @@ public class AddUserController {
     }
     @Step("Input the KF path as: {userID}")
     public AddUserController fillUserID(String userID ) {
-        fill(driver,getAddUserElem(driver).userIDTXT,userID);
+        fill(driver, AddUserElement.getAddUserElem(driver).userIDTXT,userID);
         return this;
     }
     @Step("Input the KF path as: {password}")
     public AddUserController fillPWD(String password ) {
-        fill(driver,getAddUserElem(driver).passwordTXT,password);
+        fill(driver, AddUserElement.getAddUserElem(driver).passwordTXT,password);
         return this;
     }
     @Step("Input the KF path as: {firstname}")
     public AddUserController fillFirstName(String firstname ) {
-        fill(driver,getAddUserElem(driver).firstNameTXT,firstname);
+        fill(driver, AddUserElement.getAddUserElem(driver).firstNameTXT,firstname);
         return this;
     }
     @Step("Input the KF path as: {lastname}")
     public AddUserController fillLastName(String lastname ) {
-        fill(driver,getAddUserElem(driver).lastNameTXT,lastname);
+        fill(driver, AddUserElement.getAddUserElem(driver).lastNameTXT,lastname);
         return this;
     }
     @Step("Input the KF path as: {email}")
     public AddUserController fillEmail(String email ) {
-        fill(driver,getAddUserElem(driver).emailTXT,email);
+        fill(driver, AddUserElement.getAddUserElem(driver).emailTXT,email);
         return this;
     }
     @Step("Input the KF path as: {description}")
     public AddUserController fillDescription(String description ) {
-        fill(driver,getAddUserElem(driver).descriptionTXT,description);
+        fill(driver, AddUserElement.getAddUserElem(driver).descriptionTXT,description);
         return this;
     }
     @Step("Check User must change password at next logon ")
     public AddUserController checkFinalPassword() {
-        check(driver,getAddUserElem(driver).finalPWDCheckBox);
+        check(driver, AddUserElement.getAddUserElem(driver).finalPWDCheckBox);
         return this;
     }
     @Step("Un-Check User must change password at next logon ")
     public AddUserController unCheckFinalPassword() {
-        uncheck(driver,getAddUserElem(driver).finalPWDCheckBox);
+        uncheck(driver, AddUserElement.getAddUserElem(driver).finalPWDCheckBox);
         return this;
     }
     public AddUserController clickOnUserType(){
-        click(driver,getAddUserElem(driver).userTypeListBox);
+        click(driver, AddUserElement.getAddUserElem(driver).userTypeListBox);
         return this;
     }
     @Step("Select the user type as : {userType}")
@@ -68,13 +64,13 @@ public class AddUserController {
 
         switch (type){
             case REGULAR :
-                select(getAddUserElem(driver).userTypeOpt,REGULAR.getValue());
+                select(AddUserElement.getAddUserElem(driver).userTypeOpt,REGULAR.getValue());
                 break;
             case AUTO:
-                select(getAddUserElem(driver).userTypeOpt,AUTO.getValue());
+                select(AddUserElement.getAddUserElem(driver).userTypeOpt,AUTO.getValue());
                 break;
             case TEMPORARY:
-                select(getAddUserElem(driver).userTypeOpt, TEMPORARY.getValue());
+                select(AddUserElement.getAddUserElem(driver).userTypeOpt, TEMPORARY.getValue());
                 break;
             default:
                 System.out.println(type + "NOT available");
@@ -85,7 +81,7 @@ public class AddUserController {
     }
     @Step("Click on the Save button")
     public AddUserController clickOnSaveBtn(){
-        click(driver,getAddUserElem(driver).saveBtn);
+        click(driver, AddUserElement.getAddUserElem(driver).saveBtn);
         return this;
     }
 

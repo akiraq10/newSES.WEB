@@ -1,4 +1,4 @@
-package testclass;
+package testclass.server;
 
 import com.clean.driver.DriverBase;
 import io.qameta.allure.Description;
@@ -7,18 +7,19 @@ import org.testng.annotations.Test;
 
 import java.awt.*;
 
-import static com.clean.pages.webInstallation.WebInstallationPage.webInstallationPage;
 import static com.clean.pages.idpInstallation.IdPInstallationPage.idPInstallationPage;
+import static com.clean.pages.webInstallation.WebInstallationPage.webInstallationPage;
 
 
 public class ConfigreTest extends DriverBase {
-    String urlLocalhost=readConfigFile.Scheme()+ readConfigFile.domain()+":";
-   @Description("Make sure admin can configure SES.WEB success")
+    String urlLocalhost = readConfigFile.Scheme() + readConfigFile.domain() + ":";
+
+    @Description("Make sure admin can configure SES.WEB success")
     @Test
     public void config_SESWEB() throws InterruptedException {
         WebDriver driver;
-        driver=getDriver();
-        driver.get(urlLocalhost+readConfigFile.SESWEBPort()+readConfigFile.Subdirectory());
+        driver = getDriver();
+        driver.get(urlLocalhost + readConfigFile.SESWEBPort() + readConfigFile.Subdirectory());
         webInstallationPage(driver).act().fillKF(readConfigFile.KFPath())
                 .fillKFPwd(readConfigFile.KFPwd())
                 .fillServerName(readConfigFile.ServeName())
@@ -32,12 +33,13 @@ public class ConfigreTest extends DriverBase {
 
 
     }
+
     @Description("Make sure admin can configure SES.IdP success")
     @Test
     public void config_IdP() throws InterruptedException, AWTException {
         WebDriver driver;
-        driver=getDriver();
-        driver.get(urlLocalhost+readConfigFile.IdPPort()+readConfigFile.Subdirectory());
+        driver = getDriver();
+        driver.get(urlLocalhost + readConfigFile.IdPPort() + readConfigFile.Subdirectory());
         idPInstallationPage(driver).act()
                 .fillKF(readConfigFile.KFPath())
                 .fillKFPWD(readConfigFile.KFPwd())

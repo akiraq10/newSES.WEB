@@ -1,32 +1,39 @@
-package com.clean.pages.login;
+package com.clean.pages.users;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginElement {
-    private WebDriver driver;
-    private LoginElement(WebDriver driver){
-        this.driver= driver;
-        PageFactory.initElements(driver,this);
+public class UserElements {
+
+    @FindBy(linkText = "Users")
+    WebElement usersPage;
+    @FindBy(id = "Actions_Type_User_Basic")
+    WebElement userMenu;
+    @FindBy(id = "Actions_Type_User_Advanced")
+    WebElement userAdvancedMenu;
+    @FindBy(id = "Actions_Type_Folder_Basic")
+    WebElement folderMenu;
+    @FindBy(id = "Actions_Folder_AddFolder")
+    WebElement addFolderOpt;
+    @FindBy(id = "Actions_Folder_AddUserGeneral")
+    WebElement addUserOpt;
+    @FindBy(id = "Actions_Group_AddGroup")
+    WebElement addGroupOpt;
+    @FindBy(id = "Actions_User_ChallengeResponseGen")
+    WebElement challengeResponseRMCEOpt;
+    @FindBy(xpath = "//*[@id='UF_0_Rm9sZGVycw==']/ins")
+    WebElement expandFolderIcon;
+    private UserElements(WebDriver driver) {
+
+        PageFactory.initElements(driver, this);
 
     }
 
- public static LoginElement getLoginElement(WebDriver driver){
-        return new LoginElement(driver);
- }
-
-    @FindBy(id = "UserName")
-    WebElement userName;
-    @FindBy(id = "password-input")
-    WebElement password;
-    @FindBy(id = "ses-submit-btn")
-    WebElement loginBtn;
-    @FindBy(id = "breadcrumb_Folder_ViewFolder_0")
-    WebElement logoBtn;
-    @FindBy(className = "loginValidationErrors")
-    WebElement unsuccessfulError;
+    public static UserElements getUserElem(WebDriver driver) {
+        return new UserElements(driver);
+    }
 
 
 }

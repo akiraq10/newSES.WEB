@@ -1,6 +1,5 @@
-package com.clean.pages.addgroup;
+package com.clean.pages.users.addgroup;
 
-import com.clean.pages.adduser.AddUserElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

@@ -1,11 +1,10 @@
-package com.clean.pages.addgroup;
+package com.clean.pages.users.addgroup;
 
 
-import com.clean.datatest.UserData;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import static com.clean.ults.ElementController.*;
-import static com.clean.pages.addgroup.AddGroupElement.getElement;
+import static com.clean.pages.users.addgroup.AddGroupElement.getElement;
 
 public class AddGroupController {
     private WebDriver driver ;

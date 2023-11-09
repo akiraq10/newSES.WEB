@@ -1,24 +1,28 @@
-package com.clean.pages.login;
+package com.clean.pages.idpInstallation;
 
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class IdPInstallationPage {
 
-    LoginController loginController;
-    LoginVerifier loginVerifier;
-    private LoginPage(LoginController loginController,LoginVerifier loginVerifier){
-        this.loginController= loginController;
-        this.loginVerifier=loginVerifier;
+    IdPInstallationController idPInstallationController;
+    IdPInstallationVerifier idPInstallationVerifier;
+
+    private IdPInstallationPage(IdPInstallationController loginController, IdPInstallationVerifier loginVerifier) {
+        this.idPInstallationController = loginController;
+        this.idPInstallationVerifier = loginVerifier;
 
     }
-    public static LoginPage loginPage(WebDriver driver){
-        return new LoginPage(new LoginController(driver),new LoginVerifier(driver));
+
+    public static IdPInstallationPage idPInstallationPage(WebDriver driver) {
+        return new IdPInstallationPage(new IdPInstallationController(driver), new IdPInstallationVerifier(driver));
     }
-    public LoginController act(){
-        return loginController;
+
+    public IdPInstallationController act() {
+        return idPInstallationController;
     }
-    public LoginVerifier verify(){
-        return loginVerifier;
+
+    public IdPInstallationVerifier verify() {
+        return idPInstallationVerifier;
     }
 
 }

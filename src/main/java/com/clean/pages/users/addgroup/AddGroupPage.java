@@ -1,4 +1,4 @@
-package com.clean.pages.addgroup;
+package com.clean.pages.users.addgroup;
 
 import org.openqa.selenium.WebDriver;
 
