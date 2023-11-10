@@ -1,5 +1,6 @@
 package com.clean.ults;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -121,8 +122,33 @@ public class ElementController {
         Select select = new Select(element);
         select.selectByVisibleText(optionName);
 
+    }
+    public static void selectOption(WebDriver driver,WebElement comboList,String optionName){
+        Actions action =new Actions(driver);
 
+        if (comboList.getText().equals(optionName))
+            return ;
+        else{
+            click(driver,comboList);
+            try{
 
+                WebElement option=driver
+                        .findElement
+                        (By.xpath
+                        ("//div[@class='k-animation-container']" +
+                                "/div/div[@class='k-list-scroller']/ul/li[text()='" +
+                                optionName +
+                                "']"));
+
+                action.moveToElement(option).perform();
+                if(!option.isDisplayed()){
+                    System.out.println(optionName+ " Not found");
+                    return;
+                }else click(driver,option);
+
+            }catch (Exception e){e.getStackTrace();}
+
+        }
     }
 
 }

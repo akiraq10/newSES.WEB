@@ -15,7 +15,7 @@ public class AddFolderVerifier {
 
     }
 
-    @Step("Expected: The alert Operation succeeded is displayed ")
+    @Step("Expected: The alert {expected} is displayed ")
     public AddFolderVerifier VerifyCreateFolderSuccess(String expected) {
         verify(driver, AddFolderElement.getAddFolderElement(driver).successAlert, expected);
         return this;

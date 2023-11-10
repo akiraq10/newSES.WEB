@@ -1,1 +1,0 @@
-{"uuid":"df9b6825-ae23-4635-a0d9-5d599d4512e4","name":"Default Suite","children":["6dd6747f-7abd-4321-befb-e802d1fd1f3a"],"befores":[{"name":"initWebDriverObject","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1698996413248,"stop":1698996413260}],"afters":[],"start":1698996413221,"stop":1698996440683}

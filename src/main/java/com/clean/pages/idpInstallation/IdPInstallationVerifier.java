@@ -16,7 +16,7 @@ public class IdPInstallationVerifier {
 
     }
 
-    @Step("Expected: IdP is configrd success")
+    @Step("Expected: IdP is configured success")
     public IdPInstallationVerifier verifyConfigSuccess() throws InterruptedException {
         Thread.sleep(500);
         assertTrue(getElement(driver).signInBtn.isDisplayed());

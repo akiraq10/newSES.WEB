@@ -1,6 +1,7 @@
 package com.clean.driver;
 
 import com.clean.ults.ReadConfigFile;
+import io.qameta.allure.Allure;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -13,6 +14,10 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class DriverBase {
@@ -75,6 +80,11 @@ public class DriverBase {
             File screenShot =((TakesScreenshot) driverThread.get().getDriver()).getScreenshotAs(OutputType.FILE);
             try {
                 FileUtils.copyFile(screenShot, new File(fileLocaltion));
+                Path content = Paths.get(fileLocaltion);
+                try (InputStream is = Files.newInputStream(content)){
+                    Allure.addAttachment(testMethod,is);
+                }
+
 
             }catch (Exception e){
                 e.printStackTrace();

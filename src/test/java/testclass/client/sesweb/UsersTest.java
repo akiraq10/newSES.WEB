@@ -18,7 +18,7 @@ public class UsersTest extends DriverBase {
 //        driver = getDriver();
 //        driver.get(readConfigFile.urlSESWEB());
 //    }
-    @Test(alwaysRun = true)
+    @Test(alwaysRun = true,description = "Test case SDTC-... : Verify can create new folder success")
     public void AddNewFolder() throws InterruptedException {
         WebDriver driver;
         driver = getDriver();
@@ -35,7 +35,7 @@ public class UsersTest extends DriverBase {
         addFolderPage(driver).verify().VerifyCreateFolderSuccess(readConfigFile.alertSuccess());
 
     }
-    @Test(alwaysRun = true)
+    @Test(alwaysRun = true,description = "Test case SDTC....: Verify create new regular user success")
     public void AddNewRegularUser(){
         WebDriver driver;
         driver = getDriver();
@@ -46,13 +46,13 @@ public class UsersTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddUser();
         addUserPage(driver).act()
-                .fillUserID("Regular User333")
-                .fillPWD("qwe")
+                .fillUserID(UserData.REGULAR_USERNAME.getValue())
+                .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.REGULAR)
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
     }
-    @Test(alwaysRun = true)
+    @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new regular user with final password")
     public void AddNewRegularUserWithFinalPassowrd(){
         WebDriver driver;
         driver = getDriver();
@@ -63,14 +63,14 @@ public class UsersTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddUser();
         addUserPage(driver).act()
-                .fillUserID("Regular User3333")
-                .fillPWD("qwe")
+                .fillUserID(UserData.REGULAR_USERNAME2.getValue())
+                .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.REGULAR)
                 .unCheckFinalPassword()
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
     }
-    @Test(alwaysRun = true)
+    @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new temporary user success")
     public void AddNewTempUser(){
         WebDriver driver;
         driver = getDriver();
@@ -81,13 +81,13 @@ public class UsersTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddUser();
         addUserPage(driver).act()
-                .fillUserID("Temporary User1333")
-                .fillPWD("qwe")
+                .fillUserID(UserData.TEMPORARY_USERNAME.getValue())
+                .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.TEMPORARY)
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
     }
-    @Test(alwaysRun = true)
+    @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new  Autoboot user success ")
     public void AddNewAutoBootUser(){
         WebDriver driver;
         driver = getDriver();
@@ -98,7 +98,7 @@ public class UsersTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddUser();
         addUserPage(driver).act()
-                .fillUserID("Autoboot User1333")
+                .fillUserID(UserData.AUTO_USERNAME.getValue())
                 .fillPWD("qwe")
                 .selectUserType(UserData.AUTO)
                 .clickOnSaveBtn();

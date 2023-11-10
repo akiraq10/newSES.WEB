@@ -15,7 +15,7 @@ public class ConfigreTest extends DriverBase {
     String urlLocalhost = readConfigFile.Scheme() + readConfigFile.domain() + ":";
 
     @Description("Make sure admin can configure SES.WEB success")
-    @Test
+    @Test(description = "Test case SDTC....: Verify can config SES.WEB success")
     public void config_SESWEB() throws InterruptedException {
         WebDriver driver;
         driver = getDriver();
@@ -35,7 +35,7 @@ public class ConfigreTest extends DriverBase {
     }
 
     @Description("Make sure admin can configure SES.IdP success")
-    @Test
+    @Test(description = "Test case SDTC....: Verify can config IdP portal success")
     public void config_IdP() throws InterruptedException, AWTException {
         WebDriver driver;
         driver = getDriver();

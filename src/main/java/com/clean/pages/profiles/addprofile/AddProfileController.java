@@ -24,10 +24,12 @@ public class AddProfileController {
         fill(driver,addProfileElement(driver).commentsTxt,comment);
         return this;
     }
+    @Step("Click on Submit button ")
     public AddProfileController clickOnSubmitBtn(){
         click(driver,addProfileElement(driver).submitBtn);
         return this;
     }
+    @Step("Click on OK button on the confirmation dialog")
     public AddProfileController clickOnOkOnTheConfirmDialogBtn(){
         click(driver,addProfileElement(driver).okOnConfirmDialogBtn);
         return this;

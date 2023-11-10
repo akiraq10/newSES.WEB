@@ -2,8 +2,9 @@ package com.clean.datatest;
 
 public enum UserData {
     REGULAR_USERNAME("Regular"),
-    REGULAR_USERNAME2("Regular"),
+    REGULAR_USERNAME2("Regular2"),
     TEMPORARY_USERNAME("Temp"),
+    AUTO_USERNAME("Auto"),
     USER_PASSWORD("qwe"),
     GROUP_NAME("Group1"),
     REGULAR("Regular User"),

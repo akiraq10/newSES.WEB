@@ -9,7 +9,7 @@ import static com.clean.pages.profiles.ProfilePage.profilePage;
 import static com.clean.pages.profiles.addprofile.AddProfilePage.addProfilePage;
 
 public class ProfileTest extends DriverBase {
-    @Test
+    @Test(description = "Test case SDTC....: Verify add new profile success")
     public void AddNewProFile(){
         WebDriver driver;
         driver = getDriver();
@@ -22,7 +22,7 @@ public class ProfileTest extends DriverBase {
                 .clickOnAddProfile();
        profilePage(driver).verify().isAddProfilePageDisplay();
        addProfilePage(driver).act()
-               .fillProfileName("kkk")
+               .fillProfileName("kkk1")
                .fillProfileComment("aaa")
                .clickOnSubmitBtn();
        addProfilePage(driver).verify().isConfirmDialogDisplay();

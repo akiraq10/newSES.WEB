@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Nov 10 13:37:05 ICT 2023","Fri Nov 10 13:37:18 ICT 2023","12664","Default Suite","Parallel","testclass.server.LoginTest","testclass.server.LoginTest","loginValidCredentials","Login SES.WEB with valid PWD","Test case SDTC....: Verify login SES.WEB with valid pwd success"

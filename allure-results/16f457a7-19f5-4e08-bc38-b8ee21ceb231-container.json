@@ -1,1 +1,0 @@
-{"uuid":"16f457a7-19f5-4e08-bc38-b8ee21ceb231","name":"Parallel","children":["e61768af-f9ba-4ba1-abb0-fedaf4998f8c"],"befores":[{"name":"initial","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1699500624040,"stop":1699500631795}],"afters":[],"start":1699500624038,"stop":1699500637308}
