@@ -16,6 +16,9 @@
 
  # TestNG
  https://testng.org/doc/documentation-main.html
+ # Selenium grid
+ https://github.com/bonigarcia/webdrivermanager-examples/blob/master/src/main/java/io/github/bonigarcia/wdm/StartHub.java<br>
+ https://github.com/bonigarcia/webdrivermanager-examples/blob/master/src/test/java/io/github/bonigarcia/wdm/test/remote/RemoteTest.java
    
 # Run the test 
 1.run test: mvn clean test -Dfile="your test xml direct"<br>
