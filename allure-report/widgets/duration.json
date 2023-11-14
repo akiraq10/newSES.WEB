@@ -1,1 +1,1 @@
-[{"uid":"e94732652e250248","name":"Login SES.WEB with valid PWD","time":{"start":1699598225613,"stop":1699598238277,"duration":12664},"status":"passed","severity":"normal"}]
+[{"uid":"e0e7a437cdeb0458","name":"Test case SDTC....: Verify can create new  Autoboot user success ","time":{"start":1699952071887,"stop":1699952101857,"duration":29970},"status":"broken","severity":"normal"}]

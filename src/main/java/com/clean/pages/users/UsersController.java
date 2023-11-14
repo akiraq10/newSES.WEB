@@ -4,8 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.users.UserElements.getUserElem;
-import static com.clean.ults.ElementController.click;
-import static com.clean.ults.ElementController.hover;
+import static com.clean.ults.ElementController.*;
 
 
 public class UsersController {
@@ -42,6 +41,11 @@ public class UsersController {
     public UsersController clickOnExpandIcon() throws InterruptedException {
         Thread.sleep(1000);
         click(driver, getUserElem(driver).expandFolderIcon);
+        return this;
+    }
+    @Step("Select User as {username}")
+    public UsersController selectExistingUser(String username) throws InterruptedException {
+        selectElementInTable(driver,getUserElem(driver).userListTbl,username);
         return this;
     }
 

@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Nov 10 13:37:05 ICT 2023","Fri Nov 10 13:37:18 ICT 2023","12664","Default Suite","Parallel","testclass.server.LoginTest","testclass.server.LoginTest","loginValidCredentials","Login SES.WEB with valid PWD","Test case SDTC....: Verify login SES.WEB with valid pwd success"
+"broken","Tue Nov 14 15:54:31 ICT 2023","Tue Nov 14 15:55:01 ICT 2023","29970","Default Suite","Parallel","testclass.client.sesweb.UsersTest","testclass.client.sesweb.UsersTest","AddNewAutoBootUser","Test case SDTC....: Verify can create new  Autoboot user success ",""

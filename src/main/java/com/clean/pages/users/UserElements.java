@@ -25,6 +25,9 @@ public class UserElements {
     WebElement challengeResponseRMCEOpt;
     @FindBy(xpath = "//*[@id='UF_0_Rm9sZGVycw==']/ins")
     WebElement expandFolderIcon;
+
+    @FindBy(xpath = "//tbody")
+    WebElement userListTbl;
     private UserElements(WebDriver driver) {
 
         PageFactory.initElements(driver, this);

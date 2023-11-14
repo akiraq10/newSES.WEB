@@ -28,5 +28,9 @@ public interface ReadConfigFile extends Config {
     String SESWEBUrl();
     String ServerPublicUrL();
     String alertSuccess();
+    String idpSESWEB();
+    String idpUserName();
+    String idPEmailUser();
+
 
 }

@@ -34,7 +34,7 @@ public class LoginController {
         return this;
 
     }
-    @Step("Login to the SES.WEB by vaild admin user : {username}, and password: {password}")
+    @Step("Login to the SES.WEB by valid admin user : {userName}, and password: {password}")
     public void loginSESWEB(String userName,String password){
         fillUserName(userName)
                 .fillPassword(password)

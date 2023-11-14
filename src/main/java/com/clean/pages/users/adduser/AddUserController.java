@@ -59,7 +59,7 @@ public class AddUserController {
         click(driver, AddUserElement.getAddUserElem(driver).userTypeListBox);
         return this;
     }
-    @Step("Select the user type as : {userType}")
+    @Step("Select the user type as : {type}")
     public AddUserController selectUserType(UserData type) {
 
         switch (type){

@@ -9,6 +9,7 @@ import static com.clean.pages.users.addfolder.AddFolderPage.addFolderPage;
 import static com.clean.pages.users.adduser.AddUserPage.addUserPage;
 import static com.clean.pages.users.UserPage.userPage;
 import static com.clean.pages.login.LoginPage.loginPage;
+import static com.clean.pages.users.edituser.EditUserPage.editUserPage;
 
 public class UsersTest extends DriverBase {
 
@@ -103,6 +104,18 @@ public class UsersTest extends DriverBase {
                 .selectUserType(UserData.AUTO)
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
+    }
+    @Test(description = "Test case SDTC....:Verify admin can add email for an existing user")
+    public void ModifyUserAddEmail() throws InterruptedException {
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act().selectExistingUser(readConfigFile.idpUserName());
+        editUserPage(driver).act().fillEmail(readConfigFile.idPEmailUser())
+                .clickOnSaveBtn();
+        editUserPage(driver).verify().isAlertSuccessDisplay();
     }
 
 }
