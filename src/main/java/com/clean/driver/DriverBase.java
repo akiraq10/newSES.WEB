@@ -1,6 +1,8 @@
 package com.clean.driver;
 
 import com.clean.ults.ReadConfigFile;
+import com.google.common.collect.ImmutableMap;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Allure;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.commons.io.FileUtils;
@@ -15,10 +17,13 @@ import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+
+import static com.github.automatedowl.tools.AllureEnvironmentWriter.allureEnvironmentWriter;
 
 public class DriverBase {
     private static List<DriverFactory> webDriverThreadPool = Collections.synchronizedList((new ArrayList<DriverFactory>()));
@@ -29,6 +34,7 @@ public class DriverBase {
 
    @BeforeSuite(alwaysRun = true)
     public static void initWebDriverObject(){
+
         driverThread = ThreadLocal.withInitial(()->{
             DriverFactory webDriverThread =new DriverFactory();
             webDriverThreadPool.add(webDriverThread);
@@ -39,6 +45,9 @@ public class DriverBase {
 
     public static WebDriver getDriver(){
         return driverThread.get().getDriver();
+    }
+    public static WebDriver getDriver(String browser) throws MalformedURLException {
+        return driverThread.get().getDriver(browser);
     }
     public static WebDriverWait getWaitDriver(){
         return driverThread.get().getWebDriverWait();
