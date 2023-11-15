@@ -1,6 +1,6 @@
 package com.clean.pages.users.edituser;
 
-import io.qameta.allure.Step;
+
 import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.users.edituser.EditUserElement.editUserElement;
@@ -13,12 +13,12 @@ public class EditUserController {
     public EditUserController(WebDriver driver) {
         this.driver = driver;
     }
-    @Step("Input the email as: {email}")
+
     public  EditUserController fillEmail(String email){
         fill(driver,editUserElement(driver).emailTxt,email);
         return this;
     }
-    @Step("Click on the Save button")
+
     public EditUserController clickOnSaveBtn(){
         click(driver,editUserElement(driver).saveBtn);
         return this;

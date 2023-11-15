@@ -12,7 +12,7 @@ public class DriverFactory {
     private  WebDriver webDriver;
     private WebDriverWait wait;
     //Singleton Design Pattern
-   WebDriver getDriver(){
+   public WebDriver getDriver(){
         if(webDriver == null){
             WebDriverManager.chromedriver().setup();
             webDriver= new ChromeDriver();

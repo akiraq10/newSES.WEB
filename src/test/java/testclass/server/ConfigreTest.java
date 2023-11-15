@@ -1,7 +1,7 @@
 package testclass.server;
 
 import com.clean.driver.DriverBase;
-import io.qameta.allure.Description;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -14,7 +14,7 @@ import static com.clean.pages.webInstallation.WebInstallationPage.webInstallatio
 public class ConfigreTest extends DriverBase {
     String urlLocalhost = readConfigFile.Scheme() + readConfigFile.domain() + ":";
 
-    @Description("Make sure admin can configure SES.WEB success")
+
     @Test(description = "Test case SDTC....: Verify can config SES.WEB success")
     public void config_SESWEB() throws InterruptedException {
         WebDriver driver;
@@ -34,7 +34,7 @@ public class ConfigreTest extends DriverBase {
 
     }
 
-    @Description("Make sure admin can configure SES.IdP success")
+
     @Test(description = "Test case SDTC....: Verify can config IdP portal success")
     public void config_IdP() throws InterruptedException, AWTException {
         WebDriver driver;

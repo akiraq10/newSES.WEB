@@ -1,7 +1,7 @@
 package testclass.server;
 
 import com.clean.driver.DriverBase;
-import io.qameta.allure.Description;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -12,7 +12,7 @@ public class LoginTest extends DriverBase {
 //    WebDriver driver;
 
 
-    @Description(" Verify login SES.WEB with valid pwd success")
+
     @Test(description = " Test case SDTC....: Login SES.WEB with valid PWD")
     public void loginValidCredentials(){
         WebDriver driver;
@@ -28,7 +28,7 @@ public class LoginTest extends DriverBase {
 
     }
 
-    @Description("Verify unable to login SES.WEB with invalid pwd ")
+
     @Test(description = "Test case SDTC....: Login SES.WEB with invalid PWD")
     public void loginInvalidCredentials(){
         WebDriver driver;

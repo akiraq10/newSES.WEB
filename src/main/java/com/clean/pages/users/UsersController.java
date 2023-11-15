@@ -1,6 +1,6 @@
 package com.clean.pages.users;
 
-import io.qameta.allure.Step;
+
 import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.users.UserElements.getUserElem;
@@ -15,23 +15,23 @@ public class UsersController {
 
     }
 
-    @Step("Hover mouse on the Folder menu")
+
     public UsersController hoverOnFolderMenu() {
 
         hover(driver, getUserElem(driver).folderMenu);
         return this;
     }
-    @Step("Click on the Add Folder option")
+
     public UsersController clickOnAddFolder() {
         click(driver, getUserElem(driver).addFolderOpt);
         return this;
     }
-    @Step("Click on the Add User option")
+
     public UsersController clickOnAddUser() {
         click(driver, getUserElem(driver).addUserOpt);
         return this;
     }
-    @Step("Click on the Add Group option")
+
     public UsersController clickOnAddGroup() {
         click(driver, getUserElem(driver).addGroupOpt);
         return this;
@@ -43,7 +43,7 @@ public class UsersController {
         click(driver, getUserElem(driver).expandFolderIcon);
         return this;
     }
-    @Step("Select User as {username}")
+
     public UsersController selectExistingUser(String username) throws InterruptedException {
         selectElementInTable(driver,getUserElem(driver).userListTbl,username);
         return this;

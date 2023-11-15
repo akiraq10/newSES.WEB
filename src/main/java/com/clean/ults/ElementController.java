@@ -1,5 +1,8 @@
 package com.clean.ults;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import lombok.extern.java.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,34 +17,31 @@ import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.List;
 
+import static com.clean.listener.ListenerEx.extentTest;
 import static org.testng.Assert.*;
 
 public class ElementController {
 
-    private static void waitForElement(WebDriver driver, WebElement element){
+
+
+    private static WebElement waitForElementVisibility(WebDriver driver, WebElement elementName){
         WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(element));
+        return wait.until(ExpectedConditions.visibilityOf(elementName));
     }
-    private static WebElement waitForElementVisibility(WebDriver driver, WebElement elementname){
+    private static WebElement waitForElementClickAble(WebDriver driver, WebElement elementName){
         WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(20));
-        WebElement element = wait.until(ExpectedConditions.visibilityOf(elementname));
-        return element;
-    }
-    private static WebElement waitForElementClickAble(WebDriver driver, WebElement elementname){
-        WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(20));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementname));
-        return element;
+        return wait.until(ExpectedConditions.elementToBeClickable(elementName));
     }
 
     public static void click(WebDriver driver,WebElement element){
         waitForElementClickAble(driver,element);
         if (!element.isDisplayed())
         {
-            assertTrue(false,"ERR| "+ element+" Not Found");
+            fail("ERR| " + element + " Not Found");
 
         }
         else{
-
+            extentTest.get().log(Status.INFO,"Click on the " + element.getText());
             element.click();
 
         }
@@ -50,10 +50,10 @@ public class ElementController {
         waitForElementVisibility(driver,element);
         if (!element.isDisplayed())
         {
-            assertTrue(false,"ERR| "+ element+" Not Found");
+            fail("ERR| " + element + " Not Found");
         }
         else{
-
+            extentTest.get().log(Status.INFO,"Enter the  " + textDatabase);
             element.clear();
             element.sendKeys(textDatabase);
 
@@ -62,27 +62,31 @@ public class ElementController {
 
 
     public static void verify(WebDriver driver,WebElement element){
-//        waitForElementVisibility(driver,element);
+        waitForElementVisibility(driver,element);
         if (!element.isDisplayed())
         {
-            assertTrue(false,"ERR| "+ element+" Not Found");
+            fail("ERR| " + element + " Not Found");
         }
-        else assertTrue(element.isDisplayed(), "Test case is failed");
+        else {
+            extentTest.get().log(Status.INFO,"Verify the " + element.getText() + " is Displayed");
+            assertTrue(element.isDisplayed(), "Test case is failed");
+        }
     }
     public static void verifyElementNotDisplay(WebDriver driver,WebElement element){
+        waitForElementVisibility(driver,element);
         if (!element.isDisplayed())
         {
             assertFalse(element.isDisplayed(), "Test case is failed");
         }
-        else assertTrue(false,"ERR| "+ element +" is Found");
+        else fail("ERR| " + element + " is Found");
 
     }
 
     public static void verify(WebDriver driver, WebElement element, String expected) {
-//        waitForElementVisibility(driver,element);
+        waitForElementVisibility(driver,element);
         if (!element.isDisplayed())
         {
-            assertTrue(false,"ERR| "+ element+" Not Found");
+            fail("ERR| " + element + " Not Found");
         }
         else assertEquals(element.getText(), expected);
     }
@@ -104,9 +108,10 @@ public class ElementController {
     public static void hover(WebDriver driver, WebElement element) {
         waitForElementClickAble(driver,element);
         if (!element.isDisplayed()) {
-            assertTrue(false,"ERR| "+ element+" Not Found");
+            fail("ERR| " + element + " Not Found");
 
         } else {
+            extentTest.get().log(Status.INFO,"Hover mouse on the " + "' " +element.getText() +" '");
 
             Actions actions = new Actions(driver);
             actions.moveToElement(element).build().perform();
@@ -117,10 +122,11 @@ public class ElementController {
         waitForElementClickAble(driver,element);
         if (!element.isDisplayed())
         {
-            assertTrue(false,"ERR| "+ element+" Not Found");
+            fail("ERR| " + element + " Not Found");
         }
         else{
             if (element.isSelected()){
+                extentTest.get().log(Status.INFO,"Uncheck the " + element.getText());
                 element.click();
             }else System.out.println(element + "was uncheck");
         }
@@ -129,18 +135,19 @@ public class ElementController {
         waitForElementVisibility(driver,element);
         if (!element.isDisplayed())
         {
-            assertTrue(false,"ERR| "+ element+" Not Found");
+            fail("ERR| " + element + " Not Found");
         }
         else{
             if(!element.isSelected())
             {
+                extentTest.get().log(Status.INFO,"Check on the " + element.getText());
                 element.click();
             }else System.out.println(element + " was checked below");
 
         }
     }
     public static void select(WebElement element,String optionName){
-
+        extentTest.get().log(Status.INFO,"Select the " + optionName +" option");
         Select select = new Select(element);
         select.selectByVisibleText(optionName);
 
@@ -164,9 +171,10 @@ public class ElementController {
 
                 action.moveToElement(option).perform();
                 if(!option.isDisplayed()){
-                    assertTrue(false,"ERR| "+ comboList +" Not Found");
+                    fail("ERR| " + comboList + " Not Found");
                     return;
                 }else{
+                    extentTest.get().log(Status.INFO,"Select the " + optionName +" option");
                     waitForElementClickAble(driver,option);
                     click(driver,option);
                 }
@@ -183,6 +191,7 @@ public class ElementController {
         for(WebElement row : rows){
             if (row.getText().equals(value))
             {
+                extentTest.get().log(Status.INFO,"Select the " + value );
                 row.click();
                 break;
             }

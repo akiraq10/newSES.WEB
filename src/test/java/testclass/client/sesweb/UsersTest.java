@@ -2,8 +2,10 @@ package testclass.client.sesweb;
 
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
+import com.clean.listener.ListenerEx;
 import org.openqa.selenium.WebDriver;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import static com.clean.pages.users.addfolder.AddFolderPage.addFolderPage;
 import static com.clean.pages.users.adduser.AddUserPage.addUserPage;
@@ -11,6 +13,7 @@ import static com.clean.pages.users.UserPage.userPage;
 import static com.clean.pages.login.LoginPage.loginPage;
 import static com.clean.pages.users.edituser.EditUserPage.editUserPage;
 
+@Listeners(ListenerEx.class)
 public class UsersTest extends DriverBase {
 
 
@@ -54,7 +57,7 @@ public class UsersTest extends DriverBase {
         addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
     }
     @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new regular user with final password")
-    public void AddNewRegularUserWithFinalPassowrd(){
+    public void AddNewRegularUserWithFinalPassword(){
         WebDriver driver;
         driver = getDriver();
         driver.get(readConfigFile.urlSESWEB());
@@ -71,6 +74,7 @@ public class UsersTest extends DriverBase {
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
     }
+
     @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new temporary user success")
     public void AddNewTempUser(){
         WebDriver driver;

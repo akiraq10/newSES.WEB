@@ -1,6 +1,6 @@
 package com.clean.pages.login;
 
-import io.qameta.allure.Step;
+
 import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.login.LoginElement.getLoginElement;
@@ -16,25 +16,25 @@ public class LoginController {
 
     }
 
-    @Step("Input the username as: {username}")
+
     public LoginController fillUserName(String username) {
         fill(driver,getLoginElement(driver).userName,username);
         return this;
     }
 
-    @Step("Input the password as: {password}")
+
     public LoginController fillPassword(String password) {
         fill(driver,getLoginElement(driver).password,password);
         return this;
     }
 
-    @Step("Click on the Login button")
+
     public LoginController clickONLoginBtn() {
         click(driver,getLoginElement(driver).loginBtn);
         return this;
 
     }
-    @Step("Login to the SES.WEB by valid admin user : {userName}, and password: {password}")
+
     public void loginSESWEB(String userName,String password){
         fillUserName(userName)
                 .fillPassword(password)

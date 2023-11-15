@@ -1,7 +1,11 @@
 package com.clean.driver;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.clean.extendreport.ExtentReportManage;
 import com.clean.ults.ReadConfigFile;
-import io.qameta.allure.Allure;
+//import io.qameta.allure.Allure;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -20,9 +24,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
+import static com.clean.listener.ListenerEx.extentTest;
+
 public class DriverBase {
+
     private static List<DriverFactory> webDriverThreadPool = Collections.synchronizedList((new ArrayList<DriverFactory>()));
-    private static  ThreadLocal<DriverFactory> driverThread;
+    public static  ThreadLocal<DriverFactory> driverThread;
 
     public static ReadConfigFile readConfigFile= ConfigFactory.create(ReadConfigFile.class);
 
@@ -80,14 +87,13 @@ public class DriverBase {
             File screenShot =((TakesScreenshot) driverThread.get().getDriver()).getScreenshotAs(OutputType.FILE);
             try {
                 FileUtils.copyFile(screenShot, new File(fileLocaltion));
-                Path content = Paths.get(fileLocaltion);
-                try (InputStream is = Files.newInputStream(content)){
-                    Allure.addAttachment(testMethod,is);
-                }
-
+               Path content = Paths.get(fileLocaltion);
+                extentTest.get().fail("details",MediaEntityBuilder.createScreenCaptureFromPath(content.toString()).build());
+//                System.out.println(fileLocaltion);
 
             }catch (Exception e){
                 e.printStackTrace();
+                extentTest.get().fail("Test failed cannot attach screenshot");
             }
         }
 
