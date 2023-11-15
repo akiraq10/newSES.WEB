@@ -4,9 +4,7 @@
 
     <test name="Login feature" >
         <classes>
-<!--            <class name="testclass.server.LoginTest"/>-->
-<!--            <class name="com.sdetpro.test.dataprovider.TestDataProvider1"/>-->
-            <!--            <class name="com.sdetpro.test.parallel.TestDriverInstance"/>-->
+            <class name="testclass.server.LoginTest"/>
 
         </classes>
     </test>

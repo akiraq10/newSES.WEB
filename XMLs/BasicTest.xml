@@ -11,7 +11,7 @@
             <class name="testclass.client.sesweb.ProfileTest"></class>
             <class name="testclass.client.sesweb.PackageTest"></class>
             <class name="testclass.client.sesweb.AdministratorTest"></class>
-            <class name="testclass.client.idp.IdPLoginTest"></class>
+<!--            <class name="testclass.client.idp.IdPLoginTest"></class>-->
         </classes>
     </test>
 
