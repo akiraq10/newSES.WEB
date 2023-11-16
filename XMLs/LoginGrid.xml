@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Basic Test grid" parallel="classes" thread-count="4">
+
+    <test name="Login feature on firefox" >
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+
+            <class name="testclass.server.LoginTestGrid"/>
+
+        </classes>
+    </test>
+    <test name="Login feature on chrome" >
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+
+            <class name="testclass.server.LoginTestGrid"/>
+
+        </classes>
+    </test>
+
+
+
+
+</suite>
