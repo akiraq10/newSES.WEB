@@ -12,7 +12,7 @@ import static com.clean.pages.login.LoginPage.loginPage;
 
 public class PackageTest extends DriverBase {
 
-    @Test(dependsOnMethods ={"AddNewProFile"},description = "Test case SDTC....: Verify create new package success" )
+    @Test(dependsOnMethods ={"AddNewEndpointProfile"},description = "Test case SDTC....: Verify create new package success" )
     public void AddNewEndpointPackage(){
         WebDriver driver;
         driver = getDriver();
