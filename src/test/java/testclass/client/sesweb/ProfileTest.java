@@ -1,5 +1,6 @@
 package testclass.client.sesweb;
 
+import com.clean.datatest.ProfilesData;
 import com.clean.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -10,7 +11,7 @@ import static com.clean.pages.profiles.addprofile.AddProfilePage.addProfilePage;
 
 public class ProfileTest extends DriverBase {
     @Test(description = "Test case SDTC....: Verify add new profile success")
-    public void AddNewProFile(){
+    public void AddNewEndpointProfile(){
         WebDriver driver;
         driver = getDriver();
         driver.get(readConfigFile.urlSESWEB());
@@ -22,8 +23,8 @@ public class ProfileTest extends DriverBase {
                 .clickOnAddProfile();
        profilePage(driver).verify().isAddProfilePageDisplay();
        addProfilePage(driver).act()
-               .fillProfileName("kkk1")
-               .fillProfileComment("aaa")
+               .fillProfileName(ProfilesData.ENDPOINT_PROFILE_NAME.getValue())
+               .fillProfileComment(ProfilesData.DESCRIPTION.getValue())
                .clickOnSubmitBtn();
        addProfilePage(driver).verify().isConfirmDialogDisplay();
        addProfilePage(driver).act().clickOnOkOnTheConfirmDialogBtn();

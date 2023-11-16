@@ -1,5 +1,6 @@
 package com.clean.driver;
 
+import com.clean.ults.ReadConfigFile;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+
+import static com.clean.driver.DriverBase.readConfigFile;
 
 public class DriverFactory {
 
@@ -27,7 +30,7 @@ public class DriverFactory {
         if(webDriver == null){
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            if(browserName.equalsIgnoreCase("chrome")) {
+            if(browserName.equalsIgnoreCase(readConfigFile.chrome())) {
                 WebDriverManager.chromedriver().setup();
                 capabilities.setCapability("browserName", browserName);
             }else {
@@ -35,7 +38,7 @@ public class DriverFactory {
                 capabilities.setCapability("browserName",browserName);
             }
 
-            webDriver = new RemoteWebDriver(new URL("http://localhost:4444/"),
+            webDriver = new RemoteWebDriver(new URL(readConfigFile.seleniumGridHub()),
                     capabilities);
             return webDriver;
 

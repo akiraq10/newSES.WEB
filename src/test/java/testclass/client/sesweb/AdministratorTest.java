@@ -1,5 +1,6 @@
 package testclass.client.sesweb;
 
+import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -10,6 +11,7 @@ import static com.clean.pages.configuration.administratormanagement.addnewadmin.
 import static com.clean.pages.configuration.administratormanagement.assignrole.AssignRolePage.assignRolePage;
 import static com.clean.pages.configuration.administratormanagement.editadiminuser.ModifyAdminUserPage.modifyAdminUserPage;
 import static com.clean.pages.login.LoginPage.loginPage;
+import static com.clean.datatest.AdminRoleData.*;
 
 public class AdministratorTest extends DriverBase {
     @Test(description = "Test case SDTC....: Add new Administrator user")
@@ -27,8 +29,8 @@ public class AdministratorTest extends DriverBase {
                 .clickOnAddNewAdminOpt();
         addNewAdminPage(driver).verify().isSelectUserPageDisplay();
         addNewAdminPage(driver).act()
-                .searchAdminUser(readConfigFile.idpUserName())
-                .selectAdminUser(readConfigFile.idpUserName())
+                .searchAdminUser(UserData.REGULAR_USERNAME.getValue())
+                .selectAdminUser(UserData.REGULAR_USERNAME.getValue())
                 .clickOnSaveButton();
         addNewAdminPage(driver).verify().isAlertSuccessDisplay();
     }
@@ -39,22 +41,30 @@ public class AdministratorTest extends DriverBase {
         driver.get(readConfigFile.urlSESWEB());
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+
         configurationPage(driver).act().clickOnConfiguration()
                 .clickOnAdministrator();
+
         adminPAge(driver).verify().isAdministratorPageDisplay();
+
         adminPAge(driver).act()
-                .selectAdminUser(readConfigFile.idpUserName())
+                .selectAdminUser(UserData.REGULAR_USERNAME.getValue())
                 .hoverOnAdministratorMenu()
                 .clickOnViewPropertiesOpt();
+
         modifyAdminUserPage(driver).verify().isAdminPropertiesPageDisplay();
+
         modifyAdminUserPage(driver).act()
                 .clickOnPermissionTab()
                 .hoverOnAdministratorMenu()
                 .clickOnAssignRoleOpt();
+
         assignRolePage(driver).verify().isSelectRolePageDisplay();
+
         assignRolePage(driver).act()
-                .selectRole("Administrator")
+                .selectRole(ADMIN_ROLE_NAME.getValue())
                 .clickOnOKBtn();
+
         assignRolePage(driver).verify().isAlertSuccessDisplay();
     }
 

@@ -5,7 +5,8 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "classpath:basicInfo.properties",
         "classpath:ConfigureInfo.properties",
-        "classpath:AlertMessage.properties"
+        "classpath:AlertMessage.properties",
+        "classpath:Browser.properties"
 
 })
 public interface ReadConfigFile extends Config {
@@ -31,6 +32,11 @@ public interface ReadConfigFile extends Config {
     String idpSESWEB();
     String idpUserName();
     String idPEmailUser();
+    String chrome();
+    String firefox();
+    String edge();
+    String seleniumGridHub();
+
 
 
 }

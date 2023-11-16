@@ -15,32 +15,32 @@ public class AddUserController {
         this.driver=driver;
 
     }
-    @Step("Input the KF path as: {userID}")
+    @Step("Input the UserName as: {userID}")
     public AddUserController fillUserID(String userID ) {
         fill(driver, AddUserElement.getAddUserElem(driver).userIDTXT,userID);
         return this;
     }
-    @Step("Input the KF path as: {password}")
+    @Step("Input the Password as: {password}")
     public AddUserController fillPWD(String password ) {
         fill(driver, AddUserElement.getAddUserElem(driver).passwordTXT,password);
         return this;
     }
-    @Step("Input the KF path as: {firstname}")
+    @Step("Input the First Name as: {firstname}")
     public AddUserController fillFirstName(String firstname ) {
         fill(driver, AddUserElement.getAddUserElem(driver).firstNameTXT,firstname);
         return this;
     }
-    @Step("Input the KF path as: {lastname}")
+    @Step("Input the Last name as: {lastname}")
     public AddUserController fillLastName(String lastname ) {
         fill(driver, AddUserElement.getAddUserElem(driver).lastNameTXT,lastname);
         return this;
     }
-    @Step("Input the KF path as: {email}")
+    @Step("Input the Email address as: {email}")
     public AddUserController fillEmail(String email ) {
         fill(driver, AddUserElement.getAddUserElem(driver).emailTXT,email);
         return this;
     }
-    @Step("Input the KF path as: {description}")
+    @Step("Input the Description as: {description}")
     public AddUserController fillDescription(String description ) {
         fill(driver, AddUserElement.getAddUserElem(driver).descriptionTXT,description);
         return this;

@@ -30,8 +30,8 @@ public class UsersTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddFolder();
         addFolderPage(driver).act()
-                .fillFolderName(UserData.REGULAR_USERNAME.toString())
-                .fillDescription("aaaa2")
+                .fillFolderName(UserData.FOLDER_NAME.getValue())
+                .fillDescription(UserData.DESCRIPTION.getValue())
                 .clickOnSaveBtn();
         addFolderPage(driver).verify().VerifyCreateFolderSuccess(readConfigFile.alertSuccess());
 
@@ -100,7 +100,7 @@ public class UsersTest extends DriverBase {
                 .clickOnAddUser();
         addUserPage(driver).act()
                 .fillUserID(UserData.AUTO_USERNAME.getValue())
-                .fillPWD("qwe")
+                .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.AUTO)
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
@@ -112,7 +112,7 @@ public class UsersTest extends DriverBase {
         driver.get(readConfigFile.urlSESWEB());
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
-        userPage(driver).act().selectExistingUser(readConfigFile.idpUserName());
+        userPage(driver).act().selectExistingUser(UserData.REGULAR_USERNAME.getValue());
         editUserPage(driver).act().fillEmail(readConfigFile.idPEmailUser())
                 .clickOnSaveBtn();
         editUserPage(driver).verify().isAlertSuccessDisplay();
