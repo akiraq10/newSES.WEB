@@ -15,7 +15,7 @@ public class AddProfileVerifier {
 
     @Step("Verify the Confirmation dialog is displayed")
     public AddProfileVerifier isConfirmDialogDisplay(){
-        verify(driver,addProfileElement(driver).confirmDialog);
+        verify(driver,addProfileElement(driver).confirmDialog,"Profile was created successfully");
         return this;
     }
 }
