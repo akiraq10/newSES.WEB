@@ -19,52 +19,58 @@ import static org.testng.Assert.*;
 public class ElementController {
 
     private static void waitForElementVisibility(WebDriver driver, WebElement elementName){
-        WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(elementName));
+        try {
+            WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(20));
+            wait.until(ExpectedConditions.visibilityOf(elementName));
+        }catch (Exception e){
+            fail("ERR| " +elementName + " Not displayed. Please recheck the locator");
+            e.printStackTrace();
+        }
+
 
     }
     private static void waitForElementClickAble(WebDriver driver, WebElement elementName){
-        WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.elementToBeClickable(elementName));
+        try {
+            WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(20));
+            wait.until(ExpectedConditions.elementToBeClickable(elementName));
+        }catch (Exception e)
+        {
+            fail("ERR| " +elementName + " Not displayed. Please recheck the locator");
+            e.printStackTrace();
+        }
+
     }
 
 
     public static void click(WebDriver driver,WebElement element){
         waitForElementClickAble(driver,element);
-        if (!element.isDisplayed())
-        {
-            fail("ERR| " + element + " Not Found");
+        element.click();
 
-        }
-        else{
 
-            element.click();
-
-        }
     }
     public static void fill(WebDriver driver,WebElement element,String textDatabase){
+        waitForElementVisibility(driver,element);
+        element.clear();
+        element.sendKeys(textDatabase);
+
+
+    }
+
+
+    public static void verify(WebDriver driver,WebElement element){
         waitForElementVisibility(driver,element);
         if (!element.isDisplayed())
         {
             fail("ERR| " + element + " Not Found");
         }
-        else{
-
-            element.clear();
-            element.sendKeys(textDatabase);
-
-        }
-    }
-
-
-    public static void verify(WebDriver driver,WebElement element){
-       waitForElementVisibility(driver,element);
-        if (!element.isDisplayed())
+        else
         {
-            fail("ERR| " + element + " Not Found");
+
+            assertTrue(element.isDisplayed(), "Test case is failed");
         }
-        else assertTrue(element.isDisplayed(), "Test case is failed");
+
     }
+
     public static void verifyElementNotDisplay(WebDriver driver,WebElement element){
         if (!element.isDisplayed())
         {
@@ -76,11 +82,7 @@ public class ElementController {
 
     public static void verify(WebDriver driver, WebElement element, String expected) {
        waitForElementVisibility(driver,element);
-        if (!element.isDisplayed())
-        {
-            fail("ERR| " + element + " Not Found");
-        }
-        else assertEquals(element.getText(), expected);
+       assertEquals(element.getText(), expected);
     }
 
     public static void browseFile(String path) throws AWTException {
@@ -99,43 +101,37 @@ public class ElementController {
 
     public static void hover(WebDriver driver, WebElement element) {
         waitForElementClickAble(driver,element);
-        if (!element.isDisplayed()) {
-            fail("ERR| " + element + " Not Found");
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).build().perform();
 
-        } else {
-
-            Actions actions = new Actions(driver);
-            actions.moveToElement(element).build().perform();
-
-        }
     }
     public static void uncheck(WebDriver driver,WebElement element){
         waitForElementClickAble(driver,element);
-        if (!element.isDisplayed())
-        {
-            fail("ERR| " + element + " Not Found");
-        }
-        else{
-
+        try{
             if (element.isSelected()){
                 element.click();
-            }else System.out.println(element + "was uncheck");
         }
+            else System.out.println(element + "was uncheck");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
     public static void check(WebDriver driver,WebElement element){
         waitForElementVisibility(driver,element);
-        if (!element.isDisplayed())
-        {
-            fail("ERR| " + element + " Not Found");
-        }
-        else{
 
+        try{
             if(!element.isSelected())
             {
                 element.click();
             }else System.out.println(element + " was checked below");
-
+        }catch (Exception e){
+            e.printStackTrace();
         }
+
+
+
     }
     public static void select(WebElement element,String optionName){
 
@@ -175,7 +171,7 @@ public class ElementController {
         }
     }
     public static void selectElementInTable(WebDriver driver, WebElement  table,String value) throws InterruptedException {
-       waitForElementVisibility(driver,table);
+        waitForElementVisibility(driver,table);
         Thread.sleep(500);
         hover(driver, table);
         List<WebElement> rows = table.findElements(By.xpath(".//td"));

@@ -49,9 +49,7 @@ public class DriverBase {
     public static WebDriver getDriver(String browser) throws MalformedURLException {
         return driverThread.get().getDriver(browser);
     }
-    public static WebDriverWait getWaitDriver(){
-        return driverThread.get().getWebDriverWait();
-    }
+
 
   @AfterSuite(alwaysRun = true)
     public void afterSuite(){
