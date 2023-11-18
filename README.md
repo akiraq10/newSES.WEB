@@ -18,7 +18,16 @@
  https://testng.org/doc/documentation-main.html
  # Selenium grid
  https://github.com/bonigarcia/webdrivermanager-examples/blob/master/src/main/java/io/github/bonigarcia/wdm/StartHub.java<br>
- https://github.com/bonigarcia/webdrivermanager-examples/blob/master/src/test/java/io/github/bonigarcia/wdm/test/remote/RemoteTest.java
+ https://github.com/bonigarcia/webdrivermanager-examples/blob/master/src/test/java/io/github/bonigarcia/wdm/test/remote/RemoteTest.java<br>
+ 
+ -Register gir hub on server:<br>
+ java -jar selenium-server-<version>.jar hub <br>
+ 
+ -Register grid node on the same location with the hub: <br>
+ java -jar selenium-server-<version>.jar node <br>
+ -Register Grid node on the different hub <br>
+ java -jar selenium-server-<version>.jar node --hub http://<hub-ip>:4444 <br>
+ 
    
 # Run the test 
 1.run test: mvn clean test -Dfile="your test xml direct"<br>
