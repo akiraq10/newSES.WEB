@@ -12,14 +12,14 @@ public class AddPkgVerifier {
     public AddPkgVerifier(WebDriver driver) {
         this.driver = driver;
     }
-    @Step("Verify the Installation Package page is displayed ")
+    @Step("Verify the Add new Installation Package page is displayed ")
     public AddPkgVerifier isAddPackagePageDisplay(){
         verify(driver,addPkgElement(driver).addInstallationPackageBreadcrumb);
         return this;
     }
     @Step("Verify the Confirmation dialog  is displayed ")
-    public AddPkgVerifier isConfirmationDialogDisplay(){
-        verify(driver,addPkgElement(driver).confirmationDialog);
+    public AddPkgVerifier isConfirmationDialogDisplay(String expected){
+        verify(driver,addPkgElement(driver).confirmationDialog,expected);
         return this;
     }
 }

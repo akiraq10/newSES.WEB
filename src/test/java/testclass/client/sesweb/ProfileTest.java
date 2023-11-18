@@ -26,7 +26,7 @@ public class ProfileTest extends DriverBase {
                .fillProfileName(ProfilesData.ENDPOINT_PROFILE_NAME.getValue())
                .fillProfileComment(ProfilesData.DESCRIPTION.getValue())
                .clickOnSubmitBtn();
-       addProfilePage(driver).verify().isConfirmDialogDisplay();
+       addProfilePage(driver).verify().isConfirmDialogDisplay(ProfilesData.PROFILE_SUCCESS_ALERT.getValue());
        addProfilePage(driver).act().clickOnOkOnTheConfirmDialogBtn();
     }
 }

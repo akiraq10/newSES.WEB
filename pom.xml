@@ -40,6 +40,9 @@
                     </argLine>
                     <systemPropertyVariables>
                         <allure.results.directory>target/allure-results</allure.results.directory>
+                        <includes>
+                            <include>environment.xml</include>
+                        </includes>
                     </systemPropertyVariables>
                 </configuration>
                 <dependencies>
@@ -58,6 +61,7 @@
                 <configuration>
                     <reportVersion>${allure.version}</reportVersion>
                     <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
+
                 </configuration>
             </plugin>
         </plugins>

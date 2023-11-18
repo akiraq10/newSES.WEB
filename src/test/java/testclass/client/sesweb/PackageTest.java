@@ -28,7 +28,7 @@ public class PackageTest extends DriverBase {
                 .selectProfileName(ProfilesData.ENDPOINT_PROFILE_NAME.getValue())
                 .fillDescription(PackagesData.DESCRIPTION.getValue())
                 .clickOnSubmitBtn();
-        addPkgPage(driver).verify().isConfirmationDialogDisplay();
+        addPkgPage(driver).verify().isConfirmationDialogDisplay(PackagesData.PACKAGE_SUCCESS_ALERT.getValue());
         addPkgPage(driver).act().clickOnOkBtnOnConfirmationDialog();
 
     }
