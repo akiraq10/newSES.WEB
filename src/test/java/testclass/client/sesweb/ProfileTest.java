@@ -1,5 +1,6 @@
 package testclass.client.sesweb;
 
+import com.clean.dataprovider.DataProvider;
 import com.clean.datatest.ProfilesData;
 import com.clean.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +26,27 @@ public class ProfileTest extends DriverBase {
        addProfilePage(driver).act()
                .fillProfileName(ProfilesData.ENDPOINT_PROFILE_NAME.getValue())
                .fillProfileComment(ProfilesData.DESCRIPTION.getValue())
+               .clickOnSubmitBtn();
+       addProfilePage(driver).verify().isConfirmDialogDisplay(ProfilesData.PROFILE_SUCCESS_ALERT.getValue());
+       addProfilePage(driver).act().clickOnOkOnTheConfirmDialogBtn();
+    }
+    @Test(description = "Test case SDTC....: Verify add new profile {profileName} success",dataProvider="readProfileData",dataProviderClass = DataProvider.class )
+    public void AddNeWProfile(String profileName,String comment,String targetPlatform,String profileType){
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        profilePage(driver).act()
+                .clickOnProfile()
+                .hoverOnProfileMenu()
+                .clickOnAddProfile();
+       profilePage(driver).verify().isAddProfilePageDisplay();
+       addProfilePage(driver).act()
+               .fillProfileName(profileName)
+               .fillProfileComment(comment)
+               .selectTargetPlatform(targetPlatform)
+               .selectProfileType(profileType)
                .clickOnSubmitBtn();
        addProfilePage(driver).verify().isConfirmDialogDisplay(ProfilesData.PROFILE_SUCCESS_ALERT.getValue());
        addProfilePage(driver).act().clickOnOkOnTheConfirmDialogBtn();

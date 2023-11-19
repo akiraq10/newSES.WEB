@@ -45,6 +45,10 @@ public class AddProfileElement {
     WebElement confirmDialog;
     @FindBy(xpath = "//button[contains(text(),'OK')]")
     WebElement okOnConfirmDialogBtn;
+    @FindBy(xpath = "//div[@name='formRowTargetPlatform']/span")
+    WebElement targetPlatformDropdown;
+    @FindBy(xpath = "//div[@name='formRowDeviceType']/span")
+    WebElement profileTypeDropdown;
 
 
 

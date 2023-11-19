@@ -4,8 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.profiles.addprofile.AddProfileElement.addProfileElement;
-import static com.clean.ults.ElementController.click;
-import static com.clean.ults.ElementController.fill;
+import static com.clean.ults.ElementController.*;
 
 public class AddProfileController {
     private WebDriver driver;
@@ -33,5 +32,17 @@ public class AddProfileController {
     public AddProfileController clickOnOkOnTheConfirmDialogBtn(){
         click(driver,addProfileElement(driver).okOnConfirmDialogBtn);
         return this;
+    }
+    @Step("Select the target Platform as: {platform}")
+    public AddProfileController selectTargetPlatform(String platform){
+        selectOption(driver,addProfileElement(driver).targetPlatformDropdown,platform);
+        return this;
+
+    }
+    @Step("Select the Profile type as: {profileType}")
+    public AddProfileController selectProfileType(String profileType){
+        selectOption(driver,addProfileElement(driver).profileTypeDropdown,profileType);
+        return this;
+
     }
 }
