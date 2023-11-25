@@ -16,38 +16,38 @@ public class AddPkgElement {
 
     @FindBy(id = "breadcrumb_Package_AddPackages_3")
     WebElement addInstallationPackageBreadcrumb;
-    @FindBy(xpath = "//div[@targetform='General']")
+    @FindBy(css = "[targetform='General']")
     WebElement installationPackageBasics;
-    @FindBy(xpath = "//div[@targetform='Encryption']")
+    @FindBy(css = "[targetform='Encryption']")
     WebElement installationProcessSettings;
-    @FindBy(xpath = "//div[@targetform='EncryptionAdvanced']")
+    @FindBy(css = "[targetform='EncryptionAdvanced']")
     WebElement deviceInfoAndKeySettings;
-    @FindBy(xpath = "//div[@targetform='AuthenticationRecovery']")
+    @FindBy(css = "[targetform='AuthenticationRecovery']")
     WebElement deviceProvisioningAndAccess;
-    @FindBy(xpath = "//div[@targetform='UserRecoverySettings']")
+    @FindBy(css = "[targetform='UserRecoverySettings']")
     WebElement newUserAndRecoveryAccessSettings;
-    @FindBy(xpath = "//div[@targetform='Confirm']")
+    @FindBy(css = "[targetform='Confirm']")
     WebElement confirmAndCreate;
-    @FindBy(xpath = "//div[@name='formRowTargetPlatform']/span")
+    @FindBy(css = "[name='formRowTargetPlatform']>span")
     WebElement targetPlatformDropList;
-    @FindBy(xpath = "//div[@name='formRowDeviceType']/span")
+    @FindBy(css = "[name='formRowDeviceType']>span")
     WebElement packageTypeDropList;
-    @FindBy(xpath = "//div[@name='formRowProfile']/span")
+    @FindBy(css = "[name='formRowProfile']>span")
     WebElement profileTobeDeployDropList;
     @FindBy(name ="PackageName")
     WebElement packageNameTxt;
     @FindBy(name ="PackageDescription")
     WebElement descriptionTxt;
-    @FindBy(xpath = "//button[@id='back']")
+    @FindBy(css = "button#back")
     WebElement backBtn;
-    @FindBy(xpath = "//button[@id='next']")
+    @FindBy(css = "button#next")
     WebElement nextBtn;
-    @FindBy(xpath = "//button[@id='submit']")
+    @FindBy(css = "button#submit")
     WebElement submitBtn;
-    @FindBy(xpath = "//div[@class='jconfirm-content']")
+    @FindBy(css = ".jconfirm-content")
     WebElement confirmationDialog;
 
-    @FindBy(xpath = "//button[contains(text(),'OK')]")
+    @FindBy(css = ".jconfirm-buttons>button")
     WebElement okOnConfirmationDialogBtn;
 
 

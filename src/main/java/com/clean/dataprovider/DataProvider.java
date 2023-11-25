@@ -7,9 +7,9 @@ import java.io.File;
 import java.io.FileInputStream;
 
 public class DataProvider {
-    String excelFilename ="DataTest.xlsx";
+    private String excelFilename ="DataTest.xlsx";
 
-    File excelFileLocation = new File(System.getProperty("user.dir")+
+    private File excelFileLocation = new File(System.getProperty("user.dir")+
             "/Data/"+excelFilename);
     @org.testng.annotations.DataProvider
     public Object[][] loginData(){

@@ -23,10 +23,14 @@ public class UserElements {
     WebElement addGroupOpt;
     @FindBy(id = "Actions_User_ChallengeResponseGen")
     WebElement challengeResponseRMCEOpt;
-    @FindBy(xpath = "//*[@id='UF_0_Rm9sZGVycw==']/ins")
+//    @FindBy(xpath = "//*[@id='UF_0_Rm9sZGVycw==']/ins")
+//    WebElement expandFolderIcon;
+    @FindBy(css = "[id='UF_0_Rm9sZGVycw==']>ins")
     WebElement expandFolderIcon;
 
-    @FindBy(xpath = "//tbody")
+//    @FindBy(xpath = "//tbody")
+//    WebElement userListTbl;
+    @FindBy(css = "tbody")
     WebElement userListTbl;
     private UserElements(WebDriver driver) {
 

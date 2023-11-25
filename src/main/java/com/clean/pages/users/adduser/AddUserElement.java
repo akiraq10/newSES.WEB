@@ -35,7 +35,9 @@ public class AddUserElement {
     WebElement userTypeListBox;
     @FindBy(id = "new-user-submit")
     WebElement saveBtn;
-    @FindBy(xpath = "//div[@class='alert success']")
+//    @FindBy(xpath = "//div[@class='alert success']")
+//    WebElement successAlert;
+    @FindBy(css = "[class='alert success']")
     WebElement successAlert;
 
 

@@ -14,9 +14,13 @@ public class AddFolderElement {
     WebElement folderNameTXT;
     @FindBy(id = "Description")
     WebElement descriptionTXT;
-    @FindBy(xpath = "//button[contains(text(),'Save')]")
+//    @FindBy(xpath = "//button[contains(text(),'Save')]")
+//    WebElement saveBtn;
+    @FindBy(css = "[class='submit']")
     WebElement saveBtn;
-    @FindBy(xpath = "//div[@class='alert success']")
+//    @FindBy(xpath = "//div[@class='alert success']")
+//    WebElement successAlert;
+    @FindBy(css = "[class='alert success']")
     WebElement successAlert;
 
     private AddFolderElement(WebDriver driver) {
