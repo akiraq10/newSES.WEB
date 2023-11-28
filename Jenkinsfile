@@ -20,7 +20,7 @@ pipeline {
 
             post {
              always {
-            allure jdk: '', results: [[path: 'allure-results']]
+            allure jdk: '', results: [[path: 'target/allure-results']]
 
             archiveArtifacts(artifacts: '**/TestCaptures/*.png', allowEmptyArchive: true, caseSensitive: false)
         }
@@ -29,21 +29,21 @@ pipeline {
             echo "SUCCESS"
             emailext to:'khoi.nguyen@winmagic.com',
             subject: env.JOB_NAME,
-            body: '''${SCRIPT, template="managed:groovy-email-template"}''' 
+            body: '''${SCRIPT, template="managed:AllureEmail"}''' 
         }
 
         unstable {
             echo "UNSTABLE"
             emailext to:'khoi.nguyen@winmagic.com',
             subject: env.JOB_NAME,
-            body: '''${SCRIPT, template="managed:groovy-email-template"}''' 
+            body: '''${SCRIPT, template="managed:AllureEmail"}''' 
         }
 
         failure {
             echo "FAILURE"
             emailext to:'khoi.nguyen@winmagic.com',
             subject: env.JOB_NAME,
-            body: '''${SCRIPT, template="managed:groovy-email-template"}''' 
+            body: '''${SCRIPT, template="managed:AllureEmail"}''' 
         }
                 
         }
