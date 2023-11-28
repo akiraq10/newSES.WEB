@@ -49,4 +49,14 @@ public class AddPkgController {
         return this;
 
   }
+  @Step("Click on the New Users, User Privileges and Recovery Access Settings page")
+    public AddPkgController clickOnRecoveryAccessSettingPage(){
+        click(driver,addPkgElement(driver).newUserAndRecoveryAccessSettings);
+        return this;
+  }
+  @Step("Input the initial password as: {password}")
+    public AddPkgController fillInitialPWD(String password){
+        fill(driver,addPkgElement(driver).initialPwdTxt,password);
+        return this;
+  }
 }

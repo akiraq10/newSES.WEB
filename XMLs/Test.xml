@@ -5,10 +5,14 @@
 
     <test name="Basic test ses.WEB">
         <classes>
-
+            <class name="testclass.client.sesweb.ProfileTest">
+                <methods>
+                    <include name="AddNewOSAProfile"></include>
+                </methods>
+            </class>
             <class name="testclass.client.sesweb.PackageTest">
                 <methods>
-                    <include name="AddNewPackage"></include>
+                    <include name="AddNewOSAPackage"></include>
                 </methods>
             </class>
 

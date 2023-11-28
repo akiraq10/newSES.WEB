@@ -13,9 +13,9 @@ import static com.clean.pages.login.LoginPage.loginPage;
 
 public class PackageTest extends DriverBase {
 
-    @Test(dependsOnMethods ={"AddNewEndpointProfile"},
-            description = "Test case SDTC....: Verify create new package success" )
-    public void AddNewEndpointPackage(){
+    @Test(dependsOnMethods ={"AddNewOSAProfile"},
+            description = "Test case SDTC....: Verify create new OSA package success" )
+    public void AddNewOSAPackage(){
         WebDriver driver;
         driver = getDriver();
         driver.get(readConfigFile.urlSESWEB());
@@ -27,8 +27,12 @@ public class PackageTest extends DriverBase {
                 .clickOnAddPackage();
         addPkgPage(driver).verify().isAddPackagePageDisplay();
         addPkgPage(driver).act()
-                .selectProfileName(ProfilesData.ENDPOINT_PROFILE_NAME.getValue())
+                .selectTargetPlatform(PackagesData.TARGET_PLATFORM_ENDPOINT.getValue())
+                .selectPackageType(PackagesData.OSA_PACKAGE_TYPE.getValue())
+                .selectProfileName(ProfilesData.OSA_PROFILE_NAME.getValue())
                 .fillDescription(PackagesData.DESCRIPTION.getValue())
+                .clickOnRecoveryAccessSettingPage()
+                .fillInitialPWD("qwe123456789")
                 .clickOnSubmitBtn();
         addPkgPage(driver).verify().isConfirmationDialogDisplay(PackagesData.PACKAGE_SUCCESS_ALERT.getValue());
         addPkgPage(driver).act().clickOnOkBtnOnConfirmationDialog();

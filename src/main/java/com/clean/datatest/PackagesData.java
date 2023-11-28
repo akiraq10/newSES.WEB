@@ -6,6 +6,8 @@ public enum PackagesData {
     ENDPOINT_LINUX_PACKAGE_NAME("Endpoint_Linux"),
     OSA_PACKAGE_NAME("OSA"),
     DESCRIPTION("hello word"),
+    TARGET_PLATFORM_ENDPOINT("Endpoint Devices"),
+    OSA_PACKAGE_TYPE("SecureDoc for OSA"),
     PACKAGE_SUCCESS_ALERT("Package was created successfully");
     String value;
 

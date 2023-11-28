@@ -50,7 +50,6 @@ public class DriverBase {
         return driverThread.get().getDriver(browser);
     }
 
-
   @AfterSuite(alwaysRun = true)
     public void afterSuite(){
         for(DriverFactory driver : webDriverThreadPool){
