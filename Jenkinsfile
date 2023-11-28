@@ -15,7 +15,7 @@ pipeline {
 
 
                 // To run Maven on a Windows agent, use
-                bat "mvn clean test -Dfile='.\XMLs\BasicTest.xml'"
+                bat "mvn clean test -Dfile=.\XMLs\BasicTest.xml"
             }
 
             post {
