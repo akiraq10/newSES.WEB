@@ -27,21 +27,21 @@ pipeline {
 
         success {
             echo "SUCCESS"
-            emailext to:'youremailhere',
+            emailext to:'khoi.nguyen@winmagic.com',
             subject: env.JOB_NAME,
             body: '''${SCRIPT, template="managed:groovy-email-template"}''' 
         }
 
         unstable {
             echo "UNSTABLE"
-            emailext to:'youremailhere',
+            emailext to:'khoi.nguyen@winmagic.com',
             subject: env.JOB_NAME,
             body: '''${SCRIPT, template="managed:groovy-email-template"}''' 
         }
 
         failure {
             echo "FAILURE"
-            emailext to:'youremailhere',
+            emailext to:'khoi.nguyen@winmagic.com',
             subject: env.JOB_NAME,
             body: '''${SCRIPT, template="managed:groovy-email-template"}''' 
         }
