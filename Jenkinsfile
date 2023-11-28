@@ -21,33 +21,38 @@ pipeline {
             post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
-                always {
-                            allure jdk: '', results: [[path: 'target/allure-results']]
-
-                            archiveArtifacts(artifacts: '**/screenshots/*.png', allowEmptyArchive: true, caseSensitive: false)
-                        }
-
-                        success {
-                            echo "SUCCESS"
-                            emailext to:'khoi.nguyen@winmagic.com',
-                            subject: env.JOB_NAME,
-                            body: '''${SCRIPT, template="managed:Allure Groovy Email Template"}'''
-                        }
-
-                        unstable {
-                            echo "UNSTABLE"
-                            emailext to:'khoi.nguyen@winmagic.com',
-                            subject: env.JOB_NAME,
-                            body: '''${SCRIPT, template="managed:Allure Groovy Email Template"}'''
-                        }
-
-                        failure {
-                            echo "FAILURE"
-                            emailext to:'khoi.nguyen@winmagic.com',
-                            subject: env.JOB_NAME,
-                            body: '''${SCRIPT, template="managed:Allure Groovy Email Template"}'''
-                        }
-            }
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
+                
         }
+            always {
+            allure jdk: '', results: [[path: 'target/allure-results']]
+
+            archiveArtifacts(artifacts: '**/TestCaptures/*.png', allowEmptyArchive: true, caseSensitive: false)
+        }
+
+        success {
+            echo "SUCCESS"
+            emailext to:'youremailhere',
+            subject: env.JOB_NAME,
+            body: '''${SCRIPT, template="managed:AllureEmail"}''' 
+        }
+
+        unstable {
+            echo "UNSTABLE"
+            emailext to:'youremailhere',
+            subject: env.JOB_NAME,
+            body: '''${SCRIPT, template="managed:AllureEmail"}''' 
+        }
+
+        failure {
+            echo "FAILURE"
+            emailext to:'youremailhere',
+            subject: env.JOB_NAME,
+            body: '''${SCRIPT, template="managed:AllureEmail"}''' 
+        }
+            
     }
 }
