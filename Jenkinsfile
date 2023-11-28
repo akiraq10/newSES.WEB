@@ -27,32 +27,7 @@ pipeline {
                 }
                 
         }
-            always {
-            allure jdk: '', results: [[path: 'target/allure-results']]
-
-            archiveArtifacts(artifacts: '**/TestCaptures/*.png', allowEmptyArchive: true, caseSensitive: false)
-        }
-
-        success {
-            echo "SUCCESS"
-            emailext to:'youremailhere',
-            subject: env.JOB_NAME,
-            body: '''${SCRIPT, template="managed:AllureEmail"}''' 
-        }
-
-        unstable {
-            echo "UNSTABLE"
-            emailext to:'youremailhere',
-            subject: env.JOB_NAME,
-            body: '''${SCRIPT, template="managed:AllureEmail"}''' 
-        }
-
-        failure {
-            echo "FAILURE"
-            emailext to:'youremailhere',
-            subject: env.JOB_NAME,
-            body: '''${SCRIPT, template="managed:AllureEmail"}''' 
-        }
+           
             
     }
 }
