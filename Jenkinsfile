@@ -19,12 +19,32 @@ pipeline {
             }
 
             post {
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
-                success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
-                }
+             always {
+            allure jdk: '', results: [[path: 'allure-results']]
+
+            archiveArtifacts(artifacts: '**/TestCaptures/*.png', allowEmptyArchive: true, caseSensitive: false)
+        }
+
+        success {
+            echo "SUCCESS"
+            emailext to:'youremailhere',
+            subject: env.JOB_NAME,
+            body: '''${SCRIPT, template="managed:groovy-email-template"}''' 
+        }
+
+        unstable {
+            echo "UNSTABLE"
+            emailext to:'youremailhere',
+            subject: env.JOB_NAME,
+            body: '''${SCRIPT, template="managed:groovy-email-template"}''' 
+        }
+
+        failure {
+            echo "FAILURE"
+            emailext to:'youremailhere',
+            subject: env.JOB_NAME,
+            body: '''${SCRIPT, template="managed:groovy-email-template"}''' 
+        }
                 
         }
            
