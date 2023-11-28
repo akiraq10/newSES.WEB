@@ -28,7 +28,7 @@ pipeline {
                 always {
                             allure jdk: '', results: [[path: 'target/allure-results']]
 
-                            archiveArtifacts(artifacts: '**/TestCaptures/*.png', allowEmptyArchive: true, caseSensitive: false)
+                            archiveArtifacts(artifacts: '**/screenshots/*.png', allowEmptyArchive: true, caseSensitive: false)
                         }
 
                         success {
