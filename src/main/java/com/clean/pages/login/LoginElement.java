@@ -18,7 +18,7 @@ public class LoginElement {
 
     @FindBy(id = "UserName")
     WebElement userName;
-    @FindBy(id = "password-input")
+    @FindBy(id = "Password")
     WebElement password;
     @FindBy(id = "ses-submit-btn")
     WebElement loginBtn;

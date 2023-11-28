@@ -49,6 +49,8 @@ public class AddPkgElement {
 
     @FindBy(css = ".jconfirm-buttons>button")
     WebElement okOnConfirmationDialogBtn;
+    @FindBy(css ="input[name='InitialPwd']")
+    WebElement initialPwdTxt;
 
 
 
