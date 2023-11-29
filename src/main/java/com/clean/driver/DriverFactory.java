@@ -21,7 +21,9 @@ public class DriverFactory {
    WebDriver getDriver(){
         if(webDriver == null){
             WebDriverManager.chromedriver().setup();
-            webDriver= new ChromeDriver();
+            ChromeOptions chromeOptions=new ChromeOptions();
+            chromeOptions.setAcceptInsecureCerts(true);
+            webDriver= new ChromeDriver(chromeOptions);
         }
         return webDriver;
     }
