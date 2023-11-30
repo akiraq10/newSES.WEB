@@ -1,5 +1,6 @@
 package testclass.client.sesweb;
 
+import com.clean.datatest.AlertData;
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
 import io.qameta.allure.Description;
@@ -29,7 +30,7 @@ public class GroupTest extends DriverBase {
                 .fillGroupName(UserData.GROUP_NAME.getValue())
                 .clickOnSaveButton();
 
-        addGroupPage(driver).verify().isCheckAddGroupSuccess(readConfigFile.alertSuccess());
+        addGroupPage(driver).verify().isCheckAddGroupSuccess(AlertData.ALERT_SUCCESS.getValue());
 
     }
 

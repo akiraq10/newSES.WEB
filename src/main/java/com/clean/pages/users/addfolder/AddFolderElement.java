@@ -22,6 +22,8 @@ public class AddFolderElement {
 //    WebElement successAlert;
     @FindBy(css = "[class='alert success']")
     WebElement successAlert;
+    @FindBy(css ="[class='alert i_access_denied red']")
+    WebElement deniedAlert;
 
     private AddFolderElement(WebDriver driver) {
         PageFactory.initElements(driver, this);
