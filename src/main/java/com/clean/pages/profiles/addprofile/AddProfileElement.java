@@ -41,10 +41,22 @@ public class AddProfileElement {
     WebElement nextBtn;
     @FindBy(id = "submit")
     WebElement submitBtn;
-    @FindBy(xpath = "//div[@class='jconfirm-content']")
+//    @FindBy(xpath = "//div[@class='jconfirm-content']")
+//    WebElement confirmDialog;
+//    @FindBy(xpath = "//button[contains(text(),'OK')]")
+//    WebElement okOnConfirmDialogBtn;
+//    @FindBy(xpath = "//div[@name='formRowTargetPlatform']/span")
+//    WebElement targetPlatformDropdown;
+//    @FindBy(xpath = "//div[@name='formRowDeviceType']/span")
+//    WebElement profileTypeDropdown;
+ @FindBy(css = "div[class='jconfirm-content']")
     WebElement confirmDialog;
-    @FindBy(xpath = "//button[contains(text(),'OK')]")
+    @FindBy(css = ".jconfirm-buttons>button")
     WebElement okOnConfirmDialogBtn;
+    @FindBy(css = "[name='formRowTargetPlatform']>[role=listbox]")
+    WebElement targetPlatformDropdown;
+    @FindBy(css = "[name='formRowDeviceType']>[role='listbox']")
+    WebElement profileTypeDropdown;
 
 
 

@@ -14,10 +14,16 @@ public class AddFolderElement {
     WebElement folderNameTXT;
     @FindBy(id = "Description")
     WebElement descriptionTXT;
-    @FindBy(xpath = "//button[contains(text(),'Save')]")
+//    @FindBy(xpath = "//button[contains(text(),'Save')]")
+//    WebElement saveBtn;
+    @FindBy(css = "[class='submit']")
     WebElement saveBtn;
-    @FindBy(xpath = "//div[@class='alert success']")
+//    @FindBy(xpath = "//div[@class='alert success']")
+//    WebElement successAlert;
+    @FindBy(css = "[class='alert success']")
     WebElement successAlert;
+    @FindBy(css ="[class='alert i_access_denied red']")
+    WebElement deniedAlert;
 
     private AddFolderElement(WebDriver driver) {
         PageFactory.initElements(driver, this);

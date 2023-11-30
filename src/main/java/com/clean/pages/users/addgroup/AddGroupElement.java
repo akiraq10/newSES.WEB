@@ -21,7 +21,10 @@ public class AddGroupElement {
     WebElement saveBtn;
     @FindBy(id = "GroupName-error")
     WebElement groupNameError;
-    @FindBy(xpath = "//div[@class='alert success']")
+//    @FindBy(xpath = "//div[@class='alert success']")
+//    WebElement alertCreateGroupSuccess;
+
+    @FindBy(css = "[class='alert success']")
     WebElement alertCreateGroupSuccess;
     @FindBy(xpath = "alert i_access_denied red")
     WebElement alertCreateGroupExisting;

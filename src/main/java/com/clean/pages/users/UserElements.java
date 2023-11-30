@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class UserElements {
 
     @FindBy(linkText = "Users")
@@ -23,11 +25,18 @@ public class UserElements {
     WebElement addGroupOpt;
     @FindBy(id = "Actions_User_ChallengeResponseGen")
     WebElement challengeResponseRMCEOpt;
-    @FindBy(xpath = "//*[@id='UF_0_Rm9sZGVycw==']/ins")
-    WebElement expandFolderIcon;
+    @FindBy(id = "Actions_Folder_ViewFolderGeneral")
+    WebElement folderProperties;
 
-    @FindBy(xpath = "//tbody")
+    @FindBy(css = "[id='UF_0_Rm9sZGVycw=='][class='jstree-closed']>ins")
+    WebElement expandFolderIcon;
+    @FindBy(css ="[id='UF_0_Rm9sZGVycw==']>ul")
+    WebElement folderTree;
+
+    @FindBy(css = "tbody")
     WebElement userListTbl;
+    @FindBy(id = "breadcrumb_Folder_ViewFolder_2")
+    WebElement usersBreadcrumb;
     private UserElements(WebDriver driver) {
 
         PageFactory.initElements(driver, this);

@@ -17,6 +17,6 @@ public class EditUserElement {
     WebElement emailTxt;
     @FindBy(id = "edit-user-submit")
     WebElement saveBtn;
-    @FindBy(xpath = "//div[@class='alert success']")
+    @FindBy(css = "[class='alert success']")
     WebElement alertSuccess;
 }

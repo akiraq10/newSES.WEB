@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Basic Test2" parallel="methods" thread-count="4">
+
+
+    <test name="Basic test ses.WEB">
+        <classes>
+            <class name="testclass.client.sesweb.ProfileTest">
+                <methods>
+                    <include name="AddNewOSAProfile"></include>
+                </methods>
+            </class>
+            <class name="testclass.client.sesweb.PackageTest">
+                <methods>
+                    <include name="AddNewOSAPackage"></include>
+                </methods>
+            </class>
+
+
+            <!--            <class name="testclass.client.idp.IdPLoginTest"></class>-->
+        </classes>
+    </test>
+
+
+</suite>
