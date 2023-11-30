@@ -38,14 +38,29 @@ public class UsersController {
     }
 
 
-    public UsersController clickOnExpandIcon() throws InterruptedException {
-        Thread.sleep(1000);
+
+    private UsersController clickOnExpandIcon() throws InterruptedException {
         click(driver, getUserElem(driver).expandFolderIcon);
+        Thread.sleep(1000);
         return this;
     }
     @Step("Select User as {username}")
     public UsersController selectExistingUser(String username) throws InterruptedException {
         selectElementInTable(driver,getUserElem(driver).userListTbl,username);
+        return this;
+    }
+
+    @Step("Select the folder as {folderName}")
+    public UsersController selectFolderOnFolderTree(String folderName) throws InterruptedException {
+        clickOnExpandIcon();
+        selectElementInList(driver,getUserElem(driver).folderTree,folderName);
+        Thread.sleep(2000);
+        return this;
+
+    }
+    @Step("Click on Folder properties option")
+    public UsersController clickOnFolderPropertiesOpt(){
+        click(driver,getUserElem(driver).folderProperties);
         return this;
     }
 

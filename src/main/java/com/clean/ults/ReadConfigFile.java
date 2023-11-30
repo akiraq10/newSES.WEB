@@ -5,7 +5,6 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "classpath:basicInfo.properties",
         "classpath:ConfigureInfo.properties",
-        "classpath:AlertMessage.properties",
         "classpath:Browser.properties"
 
 })
@@ -28,7 +27,6 @@ public interface ReadConfigFile extends Config {
     String ServerUrl();
     String SESWEBUrl();
     String ServerPublicUrL();
-    String alertSuccess();
     String idpSESWEB();
     String idpUserName();
     String idPEmailUser();

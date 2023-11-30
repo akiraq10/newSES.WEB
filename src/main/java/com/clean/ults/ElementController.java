@@ -1,6 +1,7 @@
 package com.clean.ults;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -45,8 +46,6 @@ public class ElementController {
     public static void click(WebDriver driver,WebElement element){
         waitForElementClickAble(driver,element);
         element.click();
-
-
     }
     public static void fill(WebDriver driver,WebElement element,String textDatabase){
         waitForElementVisibility(driver,element);
@@ -59,6 +58,7 @@ public class ElementController {
 
     public static void verify(WebDriver driver,WebElement element){
         waitForElementVisibility(driver,element);
+
         if (!element.isDisplayed())
         {
             fail("ERR| " + element + " Not Found");
@@ -183,5 +183,39 @@ public class ElementController {
             }
         }
     }
+    public static void selectElementInList(WebDriver driver, WebElement  list,String value) throws InterruptedException {
+        waitForElementVisibility(driver,list);
+        hover(driver,list);
+        highLightElement(driver,list);
+
+        List<WebElement> listElements = list.findElements(By.cssSelector("li>a"));
+        for(WebElement liElement : listElements){
+                if (liElement.getText().contains(value)){
+                    highLightElement(driver,liElement);
+                    click(driver,liElement);
+                    break;
+                }
+        }
+    }
+
+    private static void highLightElement(WebDriver driver, WebElement element)
+    {
+        JavascriptExecutor js=(JavascriptExecutor)driver;
+
+        js.executeScript("arguments[0].setAttribute('style', ' border: 2px solid red;');", element);
+
+        try
+        {
+            Thread.sleep(500);
+        }
+        catch (InterruptedException e) {
+
+            System.out.println(e.getMessage());
+        }
+
+        js.executeScript("arguments[0].setAttribute('style',' border: solid 2px green');", element);
+
+    }
+
 
 }

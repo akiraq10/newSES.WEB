@@ -1,5 +1,6 @@
 package testclass.client.sesweb;
 
+import com.clean.datatest.AlertData;
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
@@ -13,29 +14,6 @@ import static com.clean.pages.users.edituser.EditUserPage.editUserPage;
 
 public class UsersTest extends DriverBase {
 
-
-//    public void initial() {
-//        WebDriver driver;
-//        driver = getDriver();
-//        driver.get(readConfigFile.urlSESWEB());
-//    }
-    @Test(alwaysRun = true,description = "Test case SDTC-... : Verify can create new folder success")
-    public void AddNewFolder() throws InterruptedException {
-        WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
-        loginPage(driver).act()
-                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
-        userPage(driver).act()
-                .hoverOnFolderMenu()
-                .clickOnAddFolder();
-        addFolderPage(driver).act()
-                .fillFolderName(UserData.FOLDER_NAME.getValue())
-                .fillDescription(UserData.DESCRIPTION.getValue())
-                .clickOnSaveBtn();
-        addFolderPage(driver).verify().VerifyCreateFolderSuccess(readConfigFile.alertSuccess());
-
-    }
     @Test(alwaysRun = true,description = "Test case SDTC....: Verify create new regular user success")
     public void AddNewRegularUser(){
         WebDriver driver;
@@ -51,7 +29,7 @@ public class UsersTest extends DriverBase {
                 .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.REGULAR)
                 .clickOnSaveBtn();
-        addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
+        addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
     @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new regular user with final password")
     public void AddNewRegularUserWithFinalPassowrd(){
@@ -69,7 +47,7 @@ public class UsersTest extends DriverBase {
                 .selectUserType(UserData.REGULAR)
                 .unCheckFinalPassword()
                 .clickOnSaveBtn();
-        addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
+        addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
     @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new temporary user success")
     public void AddNewTempUser(){
@@ -86,7 +64,7 @@ public class UsersTest extends DriverBase {
                 .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.TEMPORARY)
                 .clickOnSaveBtn();
-        addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
+        addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
     @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new  Autoboot user success ")
     public void AddNewAutoBootUser(){
@@ -103,7 +81,7 @@ public class UsersTest extends DriverBase {
                 .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.AUTO)
                 .clickOnSaveBtn();
-        addUserPage(driver).verify().verifyCreateUserSuccess(readConfigFile.alertSuccess());
+        addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
     @Test(description = "Test case SDTC....:Verify admin can add email for an existing user")
     public void ModifyUserAddEmail() throws InterruptedException {
