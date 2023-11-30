@@ -71,7 +71,8 @@ public class FolderTest extends DriverBase {
                 .clickOnSaveBtn();
         addFolderPage(driver).verify().isCheckAlertDeniedDisplay(AlertData.ALERT_64_CHARACTERS.getValue());
     }
-    @Test(alwaysRun = true,description = "SDTC-40294 : Folder Properties - General > Back")
+
+    @Test(alwaysRun = true,description = "SDTC-40294 : Folder Properties - General > Back",dependsOnMethods = "AddNewFolder")
     public void SelectFolderAndGotoFolderProperties() throws InterruptedException {
         WebDriver driver;
         driver = getDriver();
@@ -79,7 +80,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree("k")
+                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
