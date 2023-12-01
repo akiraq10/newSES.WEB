@@ -84,6 +84,10 @@ public class ElementController {
        waitForElementVisibility(driver,element);
        assertEquals(element.getText(), expected);
     }
+    public static void verifyTextInElement(WebDriver driver, WebElement element, String expected) {
+        waitForElementVisibility(driver,element);
+        assertEquals(element.getAttribute("value"), expected);
+    }
 
     public static void browseFile(String path) throws AWTException {
         StringSelection ss = new StringSelection(path);

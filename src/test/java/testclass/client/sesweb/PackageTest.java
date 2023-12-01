@@ -32,7 +32,7 @@ public class PackageTest extends DriverBase {
                 .selectProfileName(ProfilesData.OSA_PROFILE_NAME.getValue())
                 .fillDescription(PackagesData.DESCRIPTION.getValue())
                 .clickOnRecoveryAccessSettingPage()
-                .fillInitialPWD("qwe123456789")
+                .fillInitialPWD(PackagesData.OSA_INITIAL_PASSWORD.getValue())
                 .clickOnSubmitBtn();
         addPkgPage(driver).verify().isConfirmationDialogDisplay(PackagesData.PACKAGE_SUCCESS_ALERT.getValue());
         addPkgPage(driver).act().clickOnOkBtnOnConfirmationDialog();

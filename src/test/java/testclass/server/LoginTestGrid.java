@@ -50,6 +50,11 @@ public class LoginTestGrid extends DriverBase {
 
 
     }
+    @Parameters({"name"})
+    @Test
+    public void testParameter(String name){
+        System.out.println(name);
 
+    }
 
 }
