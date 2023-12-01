@@ -8,7 +8,8 @@ public enum PackagesData {
     DESCRIPTION("hello word"),
     TARGET_PLATFORM_ENDPOINT("Endpoint Devices"),
     OSA_PACKAGE_TYPE("SecureDoc for OSA"),
-    PACKAGE_SUCCESS_ALERT("Package was created successfully");
+    PACKAGE_SUCCESS_ALERT("Package was created successfully"),
+    OSA_INITIAL_PASSWORD("123456789");
     String value;
 
     PackagesData(String value) {

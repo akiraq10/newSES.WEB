@@ -36,10 +36,33 @@ public class FolderPropertiesElements {
     WebElement folderNameTxt;
     @FindBy(id = "Description")
     WebElement descriptionTxt;
-    @FindBy(css ="button[class='submit']")
+    @FindBy(css ="button[name='save']")
     WebElement saveBtn;
     @FindBy(id = "breadcrumb_Folder_ViewFolderGeneral_4")
     WebElement folderPropertiesBreadcrumb;
+    @FindBy(css ="[class='alert success']")
+    WebElement alertSuccess;
+    @FindBy(id = "GroupName")
+    WebElement groupNameTxt;
+    @FindBy(id = "User_Name")
+    WebElement userIDTxt;
+    @FindBy(css =":is(#password-input,#User_Password)")
+    WebElement passwordTxT;
+    @FindBy(id = "breadcrumb_User_ChallengeResponseGen_3")
+    WebElement challengeResponseBreadcrumb;
+    @FindBy(css ="[for='Challenge_Response']")
+    WebElement challengeResponseTitle;
+    @FindBy(id = "submit_button")
+    WebElement getResponseBtn;
+    @FindBy(css =".jconfirm-content")
+    WebElement deleteFolderConfirmDialog;
+    @FindBy(xpath = "//button[text()='Yes']")
+    WebElement yesBtnOnConfirmDialog;
+    @FindBy(xpath = "//button[text()='No']")
+    WebElement noBtnOnConfirmDialog;
+    @FindBy(id = "breadcrumb_Folder_ViewLogs_4")
+    WebElement viewAuditLogBreadcrumb;
+
 
 
     
