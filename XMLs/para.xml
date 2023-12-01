@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Basic Test2" parallel="methods" thread-count="4">
+
+
+    <test name="Basic test ses.WEB">
+    <parameter name="name" value="kkk"></parameter>
+        <classes>
+            <class name="testclass.server.LoginTestGrid">
+                <methods>
+                    <include name="testParameter"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+
+</suite>
