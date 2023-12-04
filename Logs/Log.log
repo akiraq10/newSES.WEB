@@ -1,7 +1,0 @@
-[INFO ] 2023-12-04 14:43:25.390 [main] Log - =========== onStart :-Login feature-===============
-[INFO ] 2023-12-04 14:43:25.453 [TestNG-test=Login feature-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Started
-[INFO ] 2023-12-04 14:43:25.453 [TestNG-test=Login feature-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Started
-[INFO ] 2023-12-04 14:43:37.798 [TestNG-test=Login feature-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
-[ERROR] 2023-12-04 14:43:57.049 [TestNG-test=Login feature-2] Log -  Test case SDTC....: Login SES.WEB with valid PWDFailed
-[INFO ] 2023-12-04 14:43:57.049 [TestNG-test=Login feature-2] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.id: breadcrumb_Folder_ViewFolder_0' Not displayed. Please recheck the locator
-[INFO ] 2023-12-04 14:43:57.468 [main] Log - =========== onFinish :-Login feature-===============
