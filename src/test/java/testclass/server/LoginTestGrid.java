@@ -50,10 +50,10 @@ public class LoginTestGrid extends DriverBase {
 
 
     }
-    @Parameters({"name"})
+    @Parameters({"browser"})
     @Test
-    public void testParameter(String name){
-        System.out.println(name);
+    public void testParameter(String browser){
+        System.out.println(browser);
 
     }
 
