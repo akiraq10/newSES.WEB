@@ -5,7 +5,7 @@
         <listener class-name="com.clean.listener.ListenerEx"></listener>
     </listeners>
 
-    <test name="Login feature on firefox" >
+    <test name="Login feature" >
         <parameter name="browser" value="firefox"></parameter>
         <classes>
 
