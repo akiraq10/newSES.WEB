@@ -13,14 +13,6 @@
 
         </classes>
     </test>
-    <test name="Login feature on chrome" >
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-
-            <class name="testclass.server.LoginTestGrid"/>
-
-        </classes>
-    </test>
 
 
 
