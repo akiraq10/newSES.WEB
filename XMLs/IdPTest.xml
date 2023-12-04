@@ -2,7 +2,9 @@
 
 <suite name="Basic Test2" thread-count="4">
 
-
+    <listeners>
+        <listener class-name="com.clean.listener.ListenerEx"></listener>
+    </listeners>
     <test name="IdP Login Test">
         <classes>
             <class name="testclass.client.idp.IdPLoginTest"></class>
