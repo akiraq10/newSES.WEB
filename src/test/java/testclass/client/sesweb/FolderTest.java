@@ -4,12 +4,14 @@ import com.clean.datatest.AlertData;
 import com.clean.datatest.FolderData;
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import static com.clean.pages.login.LoginPage.loginPage;
 import static com.clean.pages.users.UserPage.userPage;
 import static com.clean.pages.users.addfolder.AddFolderPage.addFolderPage;
+import static com.clean.pages.users.assignKey.AssignKeyPage.assignKeyPage;
 import static com.clean.pages.users.folderproperties.FolderPropertiesPage.folderPropertiesPage;
 
 public class FolderTest extends DriverBase {
@@ -305,6 +307,81 @@ public class FolderTest extends DriverBase {
                 .clickOnSaveBtn();
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
+    }
+    @Test(alwaysRun = true,
+            description = "SDTC-38632 : Folder properties - Keys - Assign key",
+            dependsOnMethods = "AddNewFolder")
+    public void AssignKeyToFolder() throws InterruptedException {
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnFolderPropertiesOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+        folderPropertiesPage(driver).act()
+                .clickKeyTab()
+                .hoverOnFolderMenu()
+                .clickOnAssignKey();
+        assignKeyPage(driver).verify()
+                .isCheckAssignKeyPageDisplay();
+        assignKeyPage(driver).act()
+                .selectKey(FolderData.DEVICE_KEY.getValue())
+                .clickOnSaveBtn();
+        assignKeyPage(driver).verify()
+                .isCheckAlertSuccessDisplay();
+    }
+    @Test(alwaysRun = true,
+            description = "SDTC-38633 : Folder properties - Keys - Remove key",
+            dependsOnMethods = "AssignKeyToFolder")
+    public void RemoveKeyInFolder() throws InterruptedException {
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnFolderPropertiesOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+        folderPropertiesPage(driver).act()
+                .clickKeyTab()
+                .selectKeyName(FolderData.DEVICE_KEY.getValue())
+                .hoverOnFolderMenu()
+                .clickOnRemoveKey();
+        folderPropertiesPage(driver).verify()
+                .isCheckAlertSuccessDisplay();
+    }
+    @Test(alwaysRun = true,
+            description = "SDTC-40298 : Folder properties - Keys - Back",
+            dependsOnMethods = "AddNewFolder")
+    public void VerifyBackFeatureInKeyTab() throws InterruptedException {
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnFolderPropertiesOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+        folderPropertiesPage(driver).act()
+                .clickKeyTab();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesKeyBreadcrumbDisplay();
+        folderPropertiesPage(driver).act()
+                .hoverOnGeneralMenu()
+                .clickOnBackOption();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
     }
 
 

@@ -40,6 +40,8 @@ public class FolderPropertiesElements {
     WebElement saveBtn;
     @FindBy(id = "breadcrumb_Folder_ViewFolderGeneral_4")
     WebElement folderPropertiesBreadcrumb;
+    @FindBy(id = "breadcrumb_Folder_ViewFolderKeys_4")
+    WebElement folderPropertiesKeyBreadcrumb;
     @FindBy(css ="[class='alert success']")
     WebElement alertSuccess;
     @FindBy(id = "GroupName")
@@ -62,6 +64,12 @@ public class FolderPropertiesElements {
     WebElement noBtnOnConfirmDialog;
     @FindBy(id = "breadcrumb_Folder_ViewLogs_4")
     WebElement viewAuditLogBreadcrumb;
+    @FindBy(id = "Actions_Folder_AssignKey")
+    WebElement assignKeyOpt;
+    @FindBy(id = "Actions_Folder_RemoveKey")
+    WebElement removeKeyOpt;
+    @FindBy(css ="table[data-role='selectable']")
+    WebElement selectTable;
 
 
 

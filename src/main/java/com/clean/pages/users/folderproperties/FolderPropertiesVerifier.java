@@ -12,9 +12,14 @@ public class FolderPropertiesVerifier {
     public FolderPropertiesVerifier(WebDriver driver) {
         this.driver = driver;
     }
-    @Step("Verify the folder breadcrumb is displayed")
+    @Step("Verify the folder properties -> Properties: General page is displayed")
     public FolderPropertiesVerifier isCheckFolderPropertiesBreadcrumbDisplay(){
         verify(driver,getFolderElement(driver).folderPropertiesBreadcrumb);
+        return this;
+    }
+    @Step("Verify the folder properties -> Properties: Keys page is displayed")
+    public FolderPropertiesVerifier isCheckFolderPropertiesKeyBreadcrumbDisplay(){
+        verify(driver,getFolderElement(driver).folderPropertiesKeyBreadcrumb);
         return this;
     }
     @Step("Verify the Alert success is displayed")
