@@ -14,6 +14,7 @@ public enum FolderData {
     FOLDER_SUB("Folder_Sub1"),
     FOLDER_RENAME("Folder_Rename"),
     FOLDER_NEW("Folder_new"),
+    DEVICE_KEY("<DEVICE_KEY>"),
     FOLDER_DELETE("Text");
 
 

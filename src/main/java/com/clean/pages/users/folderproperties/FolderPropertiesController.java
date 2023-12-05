@@ -103,5 +103,25 @@ public class FolderPropertiesController {
         click(driver,getFolderElement(driver).viewLogsOpt);
         return this;
     }
+    @Step("Click on the Key tab")
+    public FolderPropertiesController clickKeyTab(){
+        click(driver,getFolderElement(driver).keysTab);
+        return this;
+    }
+    @Step("Click on Assign key option")
+    public FolderPropertiesController clickOnAssignKey(){
+        click(driver,getFolderElement(driver).assignKeyOpt);
+        return this;
+    }
+    @Step("Click on Remove key option")
+    public FolderPropertiesController clickOnRemoveKey(){
+        click(driver,getFolderElement(driver).removeKeyOpt);
+        return this;
+    }
+    @Step("Select the Key : {keyName}")
+    public FolderPropertiesController selectKeyName(String keyName) throws InterruptedException {
+        selectElementInTable(driver,getFolderElement(driver).selectTable,keyName);
+        return this;
+    }
 
 }
