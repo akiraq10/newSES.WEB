@@ -70,6 +70,18 @@ public class FolderPropertiesElements {
     WebElement removeKeyOpt;
     @FindBy(css ="table[data-role='selectable']")
     WebElement selectTable;
+    @FindBy(id = "Actions_Folder_AssignUser")
+    WebElement assignUserOpt;
+    @FindBy(id = "Actions_Folder_RemoveUser")
+    WebElement removeUserOpt;
+    @FindBy(id = "breadcrumb_Folder_ViewFolderUsers_4")
+    WebElement folderPropertiesUserBreadcrumb;
+    @FindBy(id = "breadcrumb_Folder_ViewFolderGroups_4")
+    WebElement folderPropertiesGroupBreadcrumb;
+    @FindBy(id = "Actions_Folder_AssignGroup")
+    WebElement assignGroupOpt;
+    @FindBy(id = "Actions_Folder_RemoveGroup")
+    WebElement removeGroupOpt;
 
 
 

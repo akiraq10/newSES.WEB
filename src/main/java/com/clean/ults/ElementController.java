@@ -178,13 +178,17 @@ public class ElementController {
         waitForElementVisibility(driver,table);
         Thread.sleep(500);
         hover(driver, table);
+
         List<WebElement> rows = table.findElements(By.xpath(".//td"));
         for(WebElement row : rows){
+            highLightElement(driver,table);
             if (row.getText().equals(value))
             {
+                highLightElement(driver,row);
                 row.click();
                 break;
             }
+
         }
     }
     public static void selectElementInList(WebDriver driver, WebElement  list,String value) throws InterruptedException {
@@ -199,6 +203,23 @@ public class ElementController {
                     click(driver,liElement);
                     break;
                 }
+        }
+    }
+    public static void verifyElementNotDisplayInTable(WebDriver driver, WebElement  table,String value) throws InterruptedException {
+        waitForElementVisibility(driver,table);
+        Thread.sleep(500);
+        hover(driver, table);
+        List<WebElement> rows = table.findElements(By.xpath(".//td"));
+        for(WebElement row : rows){
+            if (row.getText().equals(value))
+            {
+                fail("ERR| " + row.getText() + " still existing");
+                break;
+            }
+            else {
+                assertFalse(!row.isDisplayed(), "Test case is failed");
+                break;
+            }
         }
     }
 
@@ -220,6 +241,8 @@ public class ElementController {
         js.executeScript("arguments[0].setAttribute('style',' border: solid 2px green');", element);
 
     }
+
+
 
 
 }
