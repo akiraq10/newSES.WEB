@@ -74,4 +74,32 @@ public class FolderPropertiesVerifier {
         verifyTextInElement(driver,getFolderElement(driver).descriptionTxt,description);
         return this;
     }
+    @Step("Verify the username {username} is removed in folder success")
+    public FolderPropertiesVerifier isCheckUserIsRemoved(String username) throws InterruptedException {
+        verifyElementNotDisplayInTable(driver,getFolderElement(driver).selectTable,username);
+        return this;
+    }
+    @Step("Verify the username {userName} is removed in folder success")
+    public FolderPropertiesVerifier isCheckKeyIsRemoved(String userName) throws InterruptedException {
+        verifyElementNotDisplayInTable(driver,getFolderElement(driver).selectTable,userName);
+        return this;
+    }
+    @Step("Verify the Users Page is displayed")
+    public FolderPropertiesVerifier isCheckUserPageDisplay()
+    {
+        verify(driver,getFolderElement(driver).folderPropertiesUserBreadcrumb);
+        return this;
+    }
+    @Step("Verify the Group Page is displayed")
+    public FolderPropertiesVerifier isCheckGroupPageDisplay()
+    {
+        verify(driver,getFolderElement(driver).folderPropertiesGroupBreadcrumb);
+        return this;
+    }
+    @Step("Verify the Group:  {groupName} is removed in folder success")
+    public FolderPropertiesVerifier isCheckGroupIsRemoved(String groupName) throws InterruptedException {
+        verifyElementNotDisplayInTable(driver,getFolderElement(driver).selectTable,groupName);
+        return this;
+    }
+
 }

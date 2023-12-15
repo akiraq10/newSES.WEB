@@ -1,20 +1,18 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Basic Test2" parallel="methods" thread-count="4">
+<suite name="Basic Test2" parallel="classes" thread-count="4">
 
 
     <test name="Basic test ses.WEB">
         <classes>
-            <class name="testclass.client.sesweb.ProfileTest">
+            <class name="testclass.testNG">
                 <methods>
-                    <include name="AddNewOSAProfile"></include>
+<!--                    <include name="AddNewOSAPackage"></include>-->
+                    <include name="LoginTest1"></include>
+                    <include name="LoginTest2"></include>
                 </methods>
             </class>
-            <class name="testclass.client.sesweb.PackageTest">
-                <methods>
-                    <include name="AddNewOSAPackage"></include>
-                </methods>
-            </class>
+
 
 
             <!--            <class name="testclass.client.idp.IdPLoginTest"></class>-->

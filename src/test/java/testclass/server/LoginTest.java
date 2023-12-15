@@ -24,7 +24,7 @@ public class LoginTest extends DriverBase {
         driver.get(readConfigFile.urlSESWEB());
         loginPage(driver).act()
                 .fillUserName(readConfigFile.username())
-                .fillPassword(readConfigFile.password()+1)
+                .fillPassword(readConfigFile.password())
                 .clickONLoginBtn();
         loginPage(driver).verify().veirfyLoginSuccessfully();
 

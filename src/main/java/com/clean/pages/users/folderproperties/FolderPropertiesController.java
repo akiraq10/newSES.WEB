@@ -123,5 +123,45 @@ public class FolderPropertiesController {
         selectElementInTable(driver,getFolderElement(driver).selectTable,keyName);
         return this;
     }
+    @Step("Click on the User tab")
+    public FolderPropertiesController clickOnUserTab(){
+        click(driver,getFolderElement(driver).usersTab);
+        return this;
+    }
+    @Step("Click on the Assign User option")
+    public FolderPropertiesController clickOnAssignUserOpt(){
+        click(driver,getFolderElement(driver).assignUserOpt);
+        return this;
+    }
+    @Step("Click on the Remove User option")
+    public FolderPropertiesController clickOnRemoveUserOpt(){
+        click(driver,getFolderElement(driver).removeUserOpt);
+        return this;
+    }
+    @Step("Select the user name : {userName}")
+    public FolderPropertiesController selectUserName(String userName) throws InterruptedException {
+        selectElementInTable(driver,getFolderElement(driver).selectTable,userName);
+        return this;
+    }
+    @Step("Click on the Group tab")
+    public FolderPropertiesController clickOnGroupTab(){
+        click(driver,getFolderElement(driver).groupTab);
+        return this;
+    }
+    @Step("Click On Assign Group Opt")
+    public FolderPropertiesController clickOnAssignGroupOpt(){
+        click(driver,getFolderElement(driver).assignGroupOpt);
+        return this;
+    }
+    @Step("Click On Remove Group Opt")
+    public FolderPropertiesController clickOnRemoveGroupOpt(){
+        click(driver,getFolderElement(driver).removeGroupOpt);
+        return this;
+    }
+    @Step("Select the Group name : {groupName}")
+    public FolderPropertiesController selectGroupName(String groupName) throws InterruptedException {
+        selectElementInTable(driver,getFolderElement(driver).selectTable,groupName);
+        return this;
+    }
 
 }

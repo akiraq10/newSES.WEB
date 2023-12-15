@@ -12,6 +12,8 @@ import static com.clean.pages.login.LoginPage.loginPage;
 import static com.clean.pages.users.UserPage.userPage;
 import static com.clean.pages.users.addfolder.AddFolderPage.addFolderPage;
 import static com.clean.pages.users.assignKey.AssignKeyPage.assignKeyPage;
+import static com.clean.pages.users.assigngroup.AssignGroupPage.assignGroupPage;
+import static com.clean.pages.users.assignuser.AssignUserPage.assignUserPage;
 import static com.clean.pages.users.folderproperties.FolderPropertiesPage.folderPropertiesPage;
 
 public class FolderTest extends DriverBase {
@@ -356,7 +358,8 @@ public class FolderTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnRemoveKey();
         folderPropertiesPage(driver).verify()
-                .isCheckAlertSuccessDisplay();
+                .isCheckAlertSuccessDisplay()
+                .isCheckKeyIsRemoved(FolderData.DEVICE_KEY.getValue());
     }
     @Test(alwaysRun = true,
             description = "SDTC-40298 : Folder properties - Keys - Back",
@@ -384,5 +387,163 @@ public class FolderTest extends DriverBase {
                 .isCheckFolderPropertiesBreadcrumbDisplay();
     }
 
+    @Test(alwaysRun = true,
+    description = "SDTC-38635 : Folder properties - Users - Assign user",
+    dependsOnMethods ={"AddNewFolder","AddNewRegularUser"} )
+    public void AssignUserToFolder() throws InterruptedException {
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnFolderPropertiesOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+        folderPropertiesPage(driver).act()
+                .clickOnUserTab()
+                .hoverOnFolderMenu()
+                .clickOnAssignUserOpt();
+        assignUserPage(driver).verify()
+                .isCheckAssignUserPageDisplay();
+        assignUserPage(driver).act()
+                .selectUser(UserData.REGULAR_USERNAME.getValue())
+                .clickOnSaveBtn();
+        folderPropertiesPage(driver).verify()
+                .isCheckAlertSuccessDisplay();
+
+    }
+
+    @Test(alwaysRun = true,
+    description = "SDTC-38636 : Folder properties - Users - Remove user",
+    dependsOnMethods = "AssignUserToFolder")
+    public void RemoveUserFolder() throws InterruptedException {
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnFolderPropertiesOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+        folderPropertiesPage(driver).act()
+                .clickOnUserTab()
+                .selectUserName(UserData.REGULAR_USERNAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnRemoveUserOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckAlertSuccessDisplay()
+                .isCheckUserIsRemoved(UserData.REGULAR_USERNAME.getValue());
+
+
+    }
+    @Test(alwaysRun = true,
+            description = "SDTC-40299 : Folder properties - Users - Back",
+          dependsOnMethods = "AddNewFolder")
+    public void VerifyBackFeatureInUserTab() throws InterruptedException {
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnFolderPropertiesOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+        folderPropertiesPage(driver).act()
+                .clickOnUserTab();
+        folderPropertiesPage(driver).verify()
+                .isCheckUserPageDisplay();
+        folderPropertiesPage(driver).act()
+                .hoverOnGeneralMenu()
+                .clickOnBackOption();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+    }
+    @Test(alwaysRun = true,
+    description = "SDTC-38641 : Folder properties - Groups - Assign group",
+    dependsOnMethods = {"AddNewFolder","CreateNewGroup"})
+    public void AssignGroupToFolder() throws InterruptedException {
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnFolderPropertiesOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+        folderPropertiesPage(driver).act()
+                .clickOnGroupTab()
+                .hoverOnFolderMenu()
+                .clickOnAssignGroupOpt();
+        assignGroupPage(driver).verify()
+                .isCheckAssignGroupPageDisplay();
+        assignGroupPage(driver).act()
+                .clickOnTheGroup(UserData.GROUP_NAME.getValue())
+                .clickOnSaveBtn();
+        folderPropertiesPage(driver).verify()
+                .isCheckAlertSuccessDisplay();
+
+    }
+    @Test(alwaysRun = true,
+    description = "SDTC-38640 : Folder properties - Groups - Remove group",
+    dependsOnMethods = "AssignGroupToFolder")
+    public void RemoveGroupToFolder() throws InterruptedException {
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnFolderPropertiesOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+        folderPropertiesPage(driver).act()
+                .clickOnGroupTab()
+                .selectGroupName(UserData.GROUP_NAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnRemoveGroupOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckAlertSuccessDisplay()
+                .isCheckGroupIsRemoved(UserData.GROUP_NAME.getValue());
+    }
+
+    @Test(alwaysRun = true,
+    description = "SDTC-40300 : Folder properties - Groups - Back",
+    dependsOnMethods = "AddNewFolder")
+    public void VerifyBackFeatureAtGroupTab() throws InterruptedException {
+        WebDriver driver;
+        driver = getDriver();
+        driver.get(readConfigFile.urlSESWEB());
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .hoverOnFolderMenu()
+                .clickOnFolderPropertiesOpt();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+        folderPropertiesPage(driver).act()
+                .clickOnGroupTab();
+        folderPropertiesPage(driver).verify()
+                .isCheckGroupPageDisplay();
+        folderPropertiesPage(driver).act()
+                .hoverOnGeneralMenu()
+                .clickOnBackOption();
+        folderPropertiesPage(driver).verify()
+                .isCheckFolderPropertiesBreadcrumbDisplay();
+    }
 
 }
