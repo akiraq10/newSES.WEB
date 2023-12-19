@@ -76,7 +76,8 @@ public class FolderTest extends DriverBase {
         addFolderPage(driver).verify().isCheckAlertDeniedDisplay(AlertData.ALERT_64_CHARACTERS.getValue());
     }
 
-    @Test(alwaysRun = true,description = "SDTC-40294 : Folder Properties - General > Back",dependsOnMethods = "AddNewFolder")
+    @Test(description = "SDTC-40294 : Folder Properties - General > Back",
+            dependsOnMethods = "AddNewFolder")
     public void SelectFolderAndGotoFolderProperties() throws InterruptedException {
         WebDriver driver;
         driver = getDriver();
@@ -96,7 +97,7 @@ public class FolderTest extends DriverBase {
                 .isCheckUserBreadcrumbDisplay();
 
     }
-    @Test(alwaysRun = true,
+    @Test(
             description = "SDTC-38627 : Folder Properties - Folder > Add Folder",
             dependsOnMethods = "AddNewFolder"
     )
@@ -122,7 +123,7 @@ public class FolderTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
-    @Test(alwaysRun = true,
+    @Test(
     description = "SDTC-38628 : Folder Properties - Folder > Add new Group",
     dependsOnMethods = "AddNewFolder"
     )
@@ -148,7 +149,7 @@ public class FolderTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
-    @Test(alwaysRun = true,
+    @Test(
     description = "SDTC-40296 : Folder Properties - Folder > Add new user",
     dependsOnMethods = "AddNewFolder"
     )
@@ -174,7 +175,7 @@ public class FolderTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
     }
 
-    @Test(alwaysRun = true,
+    @Test(
     description = "SDTC-40295 : Folder Properties - Folder > Challenge Response",
     dependsOnMethods = "AddNewFolder"
     )
@@ -226,7 +227,7 @@ public class FolderTest extends DriverBase {
                 .isCheckDeleteMsgSuccess(FolderData.DELETE_FOLDER_SUCCESS_MSG.getValue());
 
     }
-    @Test(alwaysRun = true,
+    @Test(
     description = "SDTC-40297 : Folder Properties - Folder > View logs",
     dependsOnMethods = "AddNewFolder")
     public void VerifyViewLogPage() throws InterruptedException {
@@ -248,7 +249,7 @@ public class FolderTest extends DriverBase {
                 .isCheckViewLogPageDisplay();
 
     }
-    @Test(alwaysRun = true,
+    @Test(
     description = "SDTC-38630 : Folder properties - Folder Name",
     dependsOnMethods = "AddNewFolder")
     public void VerifyTheFolderNameAfterCreatedSuccess() throws InterruptedException {
@@ -310,7 +311,7 @@ public class FolderTest extends DriverBase {
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
     }
-    @Test(alwaysRun = true,
+    @Test(
             description = "SDTC-38632 : Folder properties - Keys - Assign key",
             dependsOnMethods = "AddNewFolder")
     public void AssignKeyToFolder() throws InterruptedException {
@@ -337,7 +338,7 @@ public class FolderTest extends DriverBase {
         assignKeyPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
     }
-    @Test(alwaysRun = true,
+    @Test(
             description = "SDTC-38633 : Folder properties - Keys - Remove key",
             dependsOnMethods = "AssignKeyToFolder")
     public void RemoveKeyInFolder() throws InterruptedException {
@@ -361,7 +362,7 @@ public class FolderTest extends DriverBase {
                 .isCheckAlertSuccessDisplay()
                 .isCheckKeyIsRemoved(FolderData.DEVICE_KEY.getValue());
     }
-    @Test(alwaysRun = true,
+    @Test(
             description = "SDTC-40298 : Folder properties - Keys - Back",
             dependsOnMethods = "AddNewFolder")
     public void VerifyBackFeatureInKeyTab() throws InterruptedException {
@@ -387,7 +388,7 @@ public class FolderTest extends DriverBase {
                 .isCheckFolderPropertiesBreadcrumbDisplay();
     }
 
-    @Test(alwaysRun = true,
+    @Test(
     description = "SDTC-38635 : Folder properties - Users - Assign user",
     dependsOnMethods ={"AddNewFolder","AddNewRegularUser"} )
     public void AssignUserToFolder() throws InterruptedException {
@@ -416,7 +417,7 @@ public class FolderTest extends DriverBase {
 
     }
 
-    @Test(alwaysRun = true,
+    @Test(
     description = "SDTC-38636 : Folder properties - Users - Remove user",
     dependsOnMethods = "AssignUserToFolder")
     public void RemoveUserFolder() throws InterruptedException {
@@ -442,7 +443,7 @@ public class FolderTest extends DriverBase {
 
 
     }
-    @Test(alwaysRun = true,
+    @Test(
             description = "SDTC-40299 : Folder properties - Users - Back",
           dependsOnMethods = "AddNewFolder")
     public void VerifyBackFeatureInUserTab() throws InterruptedException {
@@ -467,7 +468,7 @@ public class FolderTest extends DriverBase {
         folderPropertiesPage(driver).verify()
                 .isCheckFolderPropertiesBreadcrumbDisplay();
     }
-    @Test(alwaysRun = true,
+    @Test(
     description = "SDTC-38641 : Folder properties - Groups - Assign group",
     dependsOnMethods = {"AddNewFolder","CreateNewGroup"})
     public void AssignGroupToFolder() throws InterruptedException {
@@ -495,7 +496,7 @@ public class FolderTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
-    @Test(alwaysRun = true,
+    @Test(
     description = "SDTC-38640 : Folder properties - Groups - Remove group",
     dependsOnMethods = "AssignGroupToFolder")
     public void RemoveGroupToFolder() throws InterruptedException {
@@ -520,7 +521,7 @@ public class FolderTest extends DriverBase {
                 .isCheckGroupIsRemoved(UserData.GROUP_NAME.getValue());
     }
 
-    @Test(alwaysRun = true,
+    @Test(
     description = "SDTC-40300 : Folder properties - Groups - Back",
     dependsOnMethods = "AddNewFolder")
     public void VerifyBackFeatureAtGroupTab() throws InterruptedException {

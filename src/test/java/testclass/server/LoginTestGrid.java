@@ -11,15 +11,15 @@ import java.net.MalformedURLException;
 
 import static com.clean.pages.login.LoginPage.loginPage;
 
+
 public class LoginTestGrid extends DriverBase {
 
 //    WebDriver driver;
     WebDriver driver;
 
-
     @Feature("Login Test")
-    @Description(" Verify login SES.WEB with valid pwd success")
     @Parameters({"browser"})
+    @Description(" Verify login SES.WEB with valid pwd success")
     @Test(description = " Test case SDTC....: Login SES.WEB with valid PWD")
     public void loginValidCredentials(String browser) throws MalformedURLException {
 //        WebDriver driver;
@@ -35,9 +35,9 @@ public class LoginTestGrid extends DriverBase {
 
     }
     @Feature("Login Test")
-    @Description("Verify unable to login SES.WEB with invalid pwd ")
     @Parameters({"browser"})
-    @Test(description = "Test case SDTC....: Login SES.WEB with invalid PWD")
+    @Description("Verify unable to login SES.WEB with invalid pwd ")
+    @Test(alwaysRun = true,description = "Test case SDTC....: Login SES.WEB with invalid PWD")
     public void loginInvalidCredentials(String browser) throws MalformedURLException {
 //        WebDriver driver;
         driver=getDriver(browser);

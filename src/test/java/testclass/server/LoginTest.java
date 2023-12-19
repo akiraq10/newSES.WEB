@@ -17,7 +17,7 @@ public class LoginTest extends DriverBase {
 
     @Feature("Login Test")
     @Description(" Verify login SES.WEB with valid pwd success")
-    @Test(description = " Test case SDTC....: Login SES.WEB with valid PWD")
+    @Test(alwaysRun = true,description = " Test case SDTC....: Login SES.WEB with valid PWD")
     public void loginValidCredentials(){
         WebDriver driver;
         driver=getDriver();

@@ -83,7 +83,7 @@ public class UsersTest extends DriverBase {
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
-    @Test(description = "Test case SDTC....:Verify admin can add email for an existing user")
+    @Test(alwaysRun = true,description = "Test case SDTC....:Verify admin can add email for an existing user")
     public void ModifyUserAddEmail() throws InterruptedException {
         WebDriver driver;
         driver = getDriver();

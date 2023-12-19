@@ -14,7 +14,8 @@ import static com.clean.pages.users.addgroup.AddGroupPage.addGroupPage;
 
 public class GroupTest extends DriverBase {
     @Description("Test case ID:")
-    @Test(description = " Test Case ID...: Check create new group with valid data success")
+    @Test(alwaysRun = true,
+            description = " Test Case ID...: Check create new group with valid data success")
     public void CreateNewGroup(){
         WebDriver driver;
         driver = getDriver();

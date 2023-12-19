@@ -11,7 +11,8 @@ import static com.clean.pages.profiles.ProfilePage.profilePage;
 import static com.clean.pages.profiles.addprofile.AddProfilePage.addProfilePage;
 
 public class ProfileTest extends DriverBase {
-    @Test(description = "Test case SDTC....: Verify add new OSA profile success")
+    @Test(alwaysRun = true,
+            description = "Test case SDTC....: Verify add new OSA profile success")
     public void AddNewOSAProfile(){
         WebDriver driver;
         driver = getDriver();

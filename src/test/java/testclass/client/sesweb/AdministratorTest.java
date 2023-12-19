@@ -14,7 +14,8 @@ import static com.clean.pages.login.LoginPage.loginPage;
 import static com.clean.datatest.AdminRoleData.*;
 
 public class AdministratorTest extends DriverBase {
-    @Test(description = "Test case SDTC....: Add new Administrator user")
+    @Test(alwaysRun = true,
+            description = "Test case SDTC....: Add new Administrator user")
     public void addNewAdministratorUser() throws InterruptedException {
         WebDriver driver;
         driver = getDriver();
