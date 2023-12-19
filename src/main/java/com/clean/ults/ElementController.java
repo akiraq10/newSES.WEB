@@ -82,7 +82,16 @@ public class ElementController {
 
     public static void verify(WebDriver driver, WebElement element, String expected) {
        waitForElementVisibility(driver,element);
-       assertEquals(element.getText(), expected);
+
+        if (!element.isDisplayed())
+        {
+            fail("ERR| " + element + " Not Found");
+        }
+        else
+        {
+
+            assertEquals(element.getText(), expected,"Test case is failed");
+        }
     }
     public static void verifyTextInElement(WebDriver driver, WebElement element, String expected) {
         waitForElementVisibility(driver,element);

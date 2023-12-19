@@ -28,5 +28,10 @@ public class AddGroupController {
        click(driver,getElement(driver).saveBtn);
         return this;
     }
+    @Step("Create a new Group : {groupName}")
+    public AddGroupController createANewGroup(String groupName){
+        fillGroupName(groupName).clickOnSaveButton();
+        return this;
+    }
 
 }
