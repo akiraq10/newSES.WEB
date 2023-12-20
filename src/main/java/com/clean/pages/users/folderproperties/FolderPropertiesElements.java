@@ -84,7 +84,6 @@ public class FolderPropertiesElements {
     WebElement removeGroupOpt;
 
 
-
     
     private FolderPropertiesElements(WebDriver driver) {
         PageFactory.initElements(driver, this);

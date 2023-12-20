@@ -2,6 +2,7 @@ package testclass.client.sesweb;
 
 import com.clean.datatest.AlertData;
 import com.clean.datatest.FolderData;
+import com.clean.datatest.GroupData;
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
 import io.qameta.allure.Step;
@@ -490,7 +491,7 @@ public class FolderTest extends DriverBase {
         assignGroupPage(driver).verify()
                 .isCheckAssignGroupPageDisplay();
         assignGroupPage(driver).act()
-                .clickOnTheGroup(UserData.GROUP_NAME.getValue())
+                .clickOnTheGroup(GroupData.GROUP_NAME.getValue())
                 .clickOnSaveBtn();
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
@@ -513,12 +514,12 @@ public class FolderTest extends DriverBase {
                 .isCheckFolderPropertiesBreadcrumbDisplay();
         folderPropertiesPage(driver).act()
                 .clickOnGroupTab()
-                .selectGroupName(UserData.GROUP_NAME.getValue())
+                .selectGroupName(GroupData.GROUP_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnRemoveGroupOpt();
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay()
-                .isCheckGroupIsRemoved(UserData.GROUP_NAME.getValue());
+                .isCheckGroupIsRemoved(GroupData.GROUP_NAME.getValue());
     }
 
     @Test(
