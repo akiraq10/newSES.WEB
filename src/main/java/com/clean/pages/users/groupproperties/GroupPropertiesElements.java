@@ -26,11 +26,11 @@ public class GroupPropertiesElements {
     WebElement backOpt;
     @FindBy(linkText = "Permissions")
     WebElement permissionsTab;
-    @FindBy(linkText = "Keys")
+    @FindBy(xpath = "//li/a[text()='Keys']")
     WebElement keysTab;
     @FindBy(linkText = "Service Providers")
     WebElement serviceProviderTab;
-    @FindBy(linkText = "Groups")
+    @FindBy(xpath = "//*[@class='options-nav-header']//a[text()='Groups']")
     WebElement groupsTab;
     @FindBy(id = "GroupName")
     WebElement groupNameTxt;
@@ -40,6 +40,29 @@ public class GroupPropertiesElements {
     WebElement saveBtn;
     @FindBy(css =".alert.success")
     WebElement alertSuccess;
+    @FindBy(id = "Actions_Type_Group_Basic")
+    WebElement groupMenu;
+    @FindBy(id = "Actions_Group_AssignKey")
+    WebElement assignKeyOpt;
+    @FindBy(id = "Actions_Group_RemoveKey")
+    WebElement removeKeyOpt;
+    @FindBy(css ="table[data-role='selectable']")
+    WebElement selectTable;
+    @FindBy(id = "Actions_Group_AssignParentGroup")
+    WebElement assignGroupOpt;
+    @FindBy(id = "Actions_Group_RemoveParentGroup")
+    WebElement removeGroupOpt;
+    @FindBy(xpath = "//button[text()='Yes']")
+    WebElement yesOnConfirmationDialogBtn;
+    @FindBy(xpath = "//button[text()='No']")
+    WebElement noOnConfirmationDialogBtn;
+    @FindBy(id = "Actions_Group_AssignServiceProviders")
+    WebElement assignServiceProviderOpt;
+    @FindBy(id = "Actions_Group_RemoveServiceProviders")
+    WebElement removeServiceProviderOpt;
+    @FindBy(id = "AllowOob")
+    WebElement allowOOBChk;
+
 
 
     private GroupPropertiesElements(WebDriver driver) {
