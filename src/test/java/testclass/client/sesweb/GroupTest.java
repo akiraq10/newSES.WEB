@@ -39,7 +39,7 @@ public class GroupTest extends DriverBase {
                 .clickOnAddGroup();
 
         addGroupPage(driver).act()
-                .fillGroupName(GroupData.GROUP_NAME.getValue())
+                .fillGroupName(browser+"_"+GroupData.GROUP_NAME.getValue())
                 .clickOnSaveButton();
 
         addGroupPage(driver).verify().isCheckAddGroupSuccess(AlertData.ALERT_SUCCESS.getValue());
@@ -61,7 +61,7 @@ public class GroupTest extends DriverBase {
                 .clickOnAddGroup();
 
         addGroupPage(driver).act()
-                .fillGroupName(GroupData.GROUP_NAME_TEST_UPDATE.getValue())
+                .fillGroupName(browser+"_"+GroupData.GROUP_NAME_TEST_UPDATE.getValue())
                 .fillDescription(GroupData.GROUP_DESCRIPTION.getValue())
                 .clickOnSaveButton();
 
@@ -79,16 +79,16 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_TEST_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_TEST_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_TEST_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_TEST_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
         groupPropertiesPage(driver).verify()
                 .isCheckGeneralPageDisplay();
         groupPropertiesPage(driver).act()
-                .enterGroupName(GroupData.GROUP_NAME_UPDATE.getValue())
+                .enterGroupName(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue())
                 .clickOnSaveBtn();
         groupPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
@@ -104,9 +104,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -129,9 +129,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -141,7 +141,7 @@ public class GroupTest extends DriverBase {
                 .hoverToGeneralMenu()
                 .clickOnBackOption();
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
     }
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40313 : Group Properties: Permissions > Back",
@@ -154,9 +154,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -184,9 +184,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -213,9 +213,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -241,9 +241,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -271,9 +271,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -301,9 +301,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -330,9 +330,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -360,9 +360,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -376,7 +376,7 @@ public class GroupTest extends DriverBase {
                 .hoverToGroupMenu()
                 .clickOnAssignGroup();
         assignGroupPage(driver).act()
-                .clickOnTheGroup(GroupData.GROUP_NAME.getValue())
+                .clickOnTheGroup(browser+"_"+GroupData.GROUP_NAME.getValue())
                 .clickOnSaveBtn();
         groupPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
@@ -393,9 +393,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -406,13 +406,13 @@ public class GroupTest extends DriverBase {
         groupPropertiesPage(driver).verify()
                 .isCheckGroupsPageDisplay();
          groupPropertiesPage(driver).act()
-                .selectGroupNameInTable(GroupData.GROUP_NAME.getValue())
+                .selectGroupNameInTable(browser+"_"+GroupData.GROUP_NAME.getValue())
                 .hoverToGroupMenu()
                 .clickOnRemoveGroup()
                 .clickOnYesBtnOnConfirmationDialog();
         groupPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay()
-                .isCheckGroupIsRemoved(GroupData.GROUP_NAME.getValue());
+                .isCheckGroupIsRemoved(browser+"_"+GroupData.GROUP_NAME.getValue());
 
     }
     @Parameters({"browser","uri"})
@@ -426,9 +426,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();
@@ -461,9 +461,9 @@ public class GroupTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectGroupOnFolderTree(GroupData.GROUP_NAME_UPDATE.getValue());
+                .selectGroupOnFolderTree(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).verify()
-                .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
+                .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
         groupPage(driver).act()
                 .hoverToGroupMenu()
                 .clickOnGroupPropertiesOpt();

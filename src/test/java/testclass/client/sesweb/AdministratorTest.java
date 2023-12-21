@@ -35,8 +35,8 @@ public class AdministratorTest extends DriverBase {
                 .clickOnAddNewAdminOpt();
         addNewAdminPage(driver).verify().isSelectUserPageDisplay();
         addNewAdminPage(driver).act()
-                .searchAdminUser(UserData.REGULAR_USERNAME.getValue())
-                .selectAdminUser(UserData.REGULAR_USERNAME.getValue())
+                .searchAdminUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
+                .selectAdminUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
                 .clickOnSaveButton();
         addNewAdminPage(driver).verify().isAlertSuccessDisplay();
     }
@@ -57,7 +57,7 @@ public class AdministratorTest extends DriverBase {
         adminPAge(driver).verify().isAdministratorPageDisplay();
 
         adminPAge(driver).act()
-                .selectAdminUser(UserData.REGULAR_USERNAME.getValue())
+                .selectAdminUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
                 .hoverOnAdministratorMenu()
                 .clickOnViewPropertiesOpt();
 

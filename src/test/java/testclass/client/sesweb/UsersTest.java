@@ -30,7 +30,7 @@ public class UsersTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddUser();
         addUserPage(driver).act()
-                .fillUserID(UserData.REGULAR_USERNAME.getValue())
+                .fillUserID(browser+"_"+UserData.REGULAR_USERNAME.getValue())
                 .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.REGULAR)
                 .clickOnSaveBtn();
@@ -50,7 +50,7 @@ public class UsersTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddUser();
         addUserPage(driver).act()
-                .fillUserID(UserData.REGULAR_USERNAME2.getValue())
+                .fillUserID(browser+"_"+UserData.REGULAR_USERNAME2.getValue())
                 .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.REGULAR)
                 .unCheckFinalPassword()
@@ -71,7 +71,7 @@ public class UsersTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddUser();
         addUserPage(driver).act()
-                .fillUserID(UserData.TEMPORARY_USERNAME.getValue())
+                .fillUserID(browser+"_"+UserData.TEMPORARY_USERNAME.getValue())
                 .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.TEMPORARY)
                 .clickOnSaveBtn();
@@ -91,7 +91,7 @@ public class UsersTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddUser();
         addUserPage(driver).act()
-                .fillUserID(UserData.AUTO_USERNAME.getValue())
+                .fillUserID(browser+"_"+UserData.AUTO_USERNAME.getValue())
                 .fillPWD(UserData.USER_PASSWORD.getValue())
                 .selectUserType(UserData.AUTO)
                 .clickOnSaveBtn();
@@ -107,7 +107,7 @@ public class UsersTest extends DriverBase {
         driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
-        userPage(driver).act().selectExistingUser(UserData.REGULAR_USERNAME.getValue());
+        userPage(driver).act().selectExistingUser(browser+"_"+UserData.REGULAR_USERNAME.getValue());
         editUserPage(driver).act().fillEmail(readConfigFile.idPEmailUser())
                 .clickOnSaveBtn();
         editUserPage(driver).verify().isAlertSuccessDisplay();

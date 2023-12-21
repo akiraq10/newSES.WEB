@@ -30,7 +30,7 @@ public class ProfileTest extends DriverBase {
                 .clickOnAddProfile();
        profilePage(driver).verify().isAddProfilePageDisplay();
        addProfilePage(driver).act()
-               .fillProfileName(ProfilesData.OSA_PROFILE_NAME.getValue())
+               .fillProfileName(browser+"_"+ProfilesData.OSA_PROFILE_NAME.getValue())
                .fillProfileComment(ProfilesData.DESCRIPTION.getValue())
                .selectTargetPlatform(ProfilesData.TARGET_PLATFORM_ENDPOINT.getValue())
                .selectProfileType(ProfilesData.OSA_PROFILE_TYPE.getValue())
@@ -81,7 +81,7 @@ public class ProfileTest extends DriverBase {
                 .clickOnAddProfile();
         profilePage(driver).verify().isAddProfilePageDisplay();
         addProfilePage(driver).act()
-                .fillProfileName(ProfilesData.ENDPOINT_PROFILE_NAME.getValue())
+                .fillProfileName(browser+"_"+ProfilesData.ENDPOINT_PROFILE_NAME.getValue())
                 .fillProfileComment(ProfilesData.DESCRIPTION.getValue())
                 .selectTargetPlatform(ProfilesData.TARGET_PLATFORM_ENDPOINT.getValue())
                 .selectProfileType(ProfilesData.ENDPOINT_PROFILE_TYPE.getValue())
@@ -105,7 +105,7 @@ public class ProfileTest extends DriverBase {
                 .clickOnAddProfile();
         profilePage(driver).verify().isAddProfilePageDisplay();
         addProfilePage(driver).act()
-                .fillProfileName(ProfilesData.MACOS_PROFILE_NAME.getValue())
+                .fillProfileName(browser+"_"+ProfilesData.MACOS_PROFILE_NAME.getValue())
                 .fillProfileComment(ProfilesData.DESCRIPTION.getValue())
                 .selectTargetPlatform(ProfilesData.TARGET_PLATFORM_ENDPOINT.getValue())
                 .selectProfileType(ProfilesData.MACOS_PROFILE_TYPE.getValue())
@@ -129,7 +129,7 @@ public class ProfileTest extends DriverBase {
                 .clickOnAddProfile();
         profilePage(driver).verify().isAddProfilePageDisplay();
         addProfilePage(driver).act()
-                .fillProfileName(ProfilesData.ENDPOINT_LINUX_PROFILE_NAME.getValue())
+                .fillProfileName(browser+"_"+ProfilesData.ENDPOINT_LINUX_PROFILE_NAME.getValue())
                 .fillProfileComment(ProfilesData.DESCRIPTION.getValue())
                 .selectTargetPlatform(ProfilesData.TARGET_PLATFORM_ENDPOINT.getValue())
                 .selectProfileType(ProfilesData.LINUX_PROFILE_TYPE.getValue())

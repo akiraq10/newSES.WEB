@@ -34,7 +34,7 @@ public class FolderTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddFolder();
         addFolderPage(driver).act()
-                .fillFolderName(UserData.FOLDER_NAME.getValue())
+                .fillFolderName(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .fillDescription(UserData.DESCRIPTION.getValue())
                 .clickOnSaveBtn();
         addFolderPage(driver).verify().VerifyCreateFolderSuccess(AlertData.ALERT_SUCCESS.getValue());
@@ -52,8 +52,22 @@ public class FolderTest extends DriverBase {
         userPage(driver).act()
                 .hoverOnFolderMenu()
                 .clickOnAddFolder();
+
+        switch (browser) {
+            case "chrome":
+                addFolderPage(driver).act()
+                        .fillFolderName(FolderData.FOLDER_1_CHAR_GG.getValue());
+                break;
+            case "firefox":
+                addFolderPage(driver).act()
+                        .fillFolderName(FolderData.FOLDER_1_CHAR_FF.getValue());
+                break;
+            default:
+                System.out.println(browser +" NOT available" );
+                break;
+        }
+
         addFolderPage(driver).act()
-                .fillFolderName(FolderData.FOLDER_1_CHAR.getValue())
                 .fillDescription(FolderData.FOLDER_DESCRIPTION.getValue())
                 .clickOnSaveBtn();
         addFolderPage(driver).verify().VerifyCreateFolderSuccess(AlertData.ALERT_SUCCESS.getValue());
@@ -101,7 +115,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -126,7 +140,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -134,7 +148,7 @@ public class FolderTest extends DriverBase {
         folderPropertiesPage(driver).act()
                 .hoverOnFolderMenu()
                 .clickOnAddFolderOpt()
-                .fillFolderName(FolderData.FOLDER_SUB.getValue())
+                .fillFolderName(browser+"_"+FolderData.FOLDER_SUB.getValue())
                 .fillDescription(FolderData.FOLDER_DESCRIPTION.getValue())
                 .clickOnSaveBtn();
         folderPropertiesPage(driver).verify()
@@ -154,7 +168,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -162,7 +176,7 @@ public class FolderTest extends DriverBase {
         folderPropertiesPage(driver).act()
                 .hoverOnFolderMenu()
                 .clickOnAddNewGroupOpt()
-                .fillGroupName(FolderData.GROUP_SUB.getValue())
+                .fillGroupName(browser+"_"+FolderData.GROUP_SUB.getValue())
                 .fillDescription(FolderData.FOLDER_DESCRIPTION.getValue())
                 .clickOnSaveBtn();
         folderPropertiesPage(driver).verify()
@@ -182,7 +196,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -190,7 +204,7 @@ public class FolderTest extends DriverBase {
         folderPropertiesPage(driver).act()
                 .hoverOnFolderMenu()
                 .clickOnAddNewUserOpt()
-                .fillUserID(FolderData.USER_SUB.getValue())
+                .fillUserID(browser+"_"+FolderData.USER_SUB.getValue())
                 .fillPassword(FolderData.PASSWORD_USER_SUB.getValue())
                 .clickOnSaveBtn();
         folderPropertiesPage(driver).verify()
@@ -210,7 +224,7 @@ public class FolderTest extends DriverBase {
             loginPage(driver).act()
                     .loginSESWEB(readConfigFile.username(), readConfigFile.password());
             userPage(driver).act()
-                    .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                    .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                     .hoverOnFolderMenu()
                     .clickOnFolderPropertiesOpt();
             folderPropertiesPage(driver).verify()
@@ -237,7 +251,7 @@ public class FolderTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddFolder();
         addFolderPage(driver).act()
-                .fillFolderName(FolderData.FOLDER_DELETE.getValue())
+                .fillFolderName(browser+"_"+FolderData.FOLDER_DELETE.getValue())
                 .fillDescription(FolderData.FOLDER_DESCRIPTION.getValue())
                 .clickOnSaveBtn();
         addFolderPage(driver).verify().VerifyCreateFolderSuccess(AlertData.ALERT_SUCCESS.getValue());
@@ -265,7 +279,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -289,12 +303,12 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
                 .isCheckFolderPropertiesBreadcrumbDisplay()
-                .isCheckFolderNameInProperties(UserData.FOLDER_NAME.getValue());
+                .isCheckFolderNameInProperties(browser+"_"+UserData.FOLDER_NAME.getValue());
 
     }
     @Parameters({"browser","uri"})
@@ -309,7 +323,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -331,16 +345,16 @@ public class FolderTest extends DriverBase {
                 .hoverOnFolderMenu()
                 .clickOnAddFolder();
         addFolderPage(driver).act()
-                .fillFolderName(FolderData.FOLDER_NEW.getValue())
+                .fillFolderName(browser+"_"+FolderData.FOLDER_NEW.getValue())
                 .fillDescription(FolderData.FOLDER_DESCRIPTION.getValue())
                 .clickOnSaveBtn();
         addFolderPage(driver).verify().VerifyCreateFolderSuccess(AlertData.ALERT_SUCCESS.getValue());
         userPage(driver).act()
-                .selectFolderOnFolderTree(FolderData.FOLDER_NEW.getValue())
+                .selectFolderOnFolderTree(browser+"_"+FolderData.FOLDER_NEW.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).act()
-                .fillFolderName(FolderData.FOLDER_RENAME.getValue())
+                .fillFolderName(browser+"_"+FolderData.FOLDER_RENAME.getValue())
                 .clickOnSaveBtn();
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
@@ -357,7 +371,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -386,7 +400,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -412,7 +426,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -440,7 +454,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -452,7 +466,7 @@ public class FolderTest extends DriverBase {
         assignUserPage(driver).verify()
                 .isCheckAssignUserPageDisplay();
         assignUserPage(driver).act()
-                .selectUser(UserData.REGULAR_USERNAME.getValue())
+                .selectUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
                 .clickOnSaveBtn();
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
@@ -471,19 +485,19 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
                 .isCheckFolderPropertiesBreadcrumbDisplay();
         folderPropertiesPage(driver).act()
                 .clickOnUserTab()
-                .selectUserName(UserData.REGULAR_USERNAME.getValue())
+                .selectUserName(browser+"_"+UserData.REGULAR_USERNAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnRemoveUserOpt();
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay()
-                .isCheckUserIsRemoved(UserData.REGULAR_USERNAME.getValue());
+                .isCheckUserIsRemoved(browser+"_"+UserData.REGULAR_USERNAME.getValue());
 
 
     }
@@ -499,7 +513,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -526,7 +540,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
@@ -538,7 +552,7 @@ public class FolderTest extends DriverBase {
         assignGroupPage(driver).verify()
                 .isCheckAssignGroupPageDisplay();
         assignGroupPage(driver).act()
-                .clickOnTheGroup(GroupData.GROUP_NAME.getValue())
+                .clickOnTheGroup(browser+"_"+GroupData.GROUP_NAME.getValue())
                 .clickOnSaveBtn();
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
@@ -556,19 +570,19 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()
                 .isCheckFolderPropertiesBreadcrumbDisplay();
         folderPropertiesPage(driver).act()
                 .clickOnGroupTab()
-                .selectGroupName(GroupData.GROUP_NAME.getValue())
+                .selectGroupName(browser+"_"+GroupData.GROUP_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnRemoveGroupOpt();
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay()
-                .isCheckGroupIsRemoved(GroupData.GROUP_NAME.getValue());
+                .isCheckGroupIsRemoved(browser+"_"+GroupData.GROUP_NAME.getValue());
     }
 
     @Parameters({"browser","uri"})
@@ -583,7 +597,7 @@ public class FolderTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectFolderOnFolderTree(UserData.FOLDER_NAME.getValue())
+                .selectFolderOnFolderTree(browser+"_"+UserData.FOLDER_NAME.getValue())
                 .hoverOnFolderMenu()
                 .clickOnFolderPropertiesOpt();
         folderPropertiesPage(driver).verify()

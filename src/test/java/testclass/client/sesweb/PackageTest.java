@@ -33,7 +33,7 @@ public class PackageTest extends DriverBase {
         addPkgPage(driver).act()
                 .selectTargetPlatform(PackagesData.TARGET_PLATFORM_ENDPOINT.getValue())
                 .selectPackageType(PackagesData.OSA_PACKAGE_TYPE.getValue())
-                .selectProfileName(ProfilesData.OSA_PROFILE_NAME.getValue())
+                .selectProfileName(browser+"_"+ProfilesData.OSA_PROFILE_NAME.getValue())
                 .fillDescription(PackagesData.DESCRIPTION.getValue())
                 .clickOnRecoveryAccessSettingPage()
                 .fillInitialPWD(PackagesData.OSA_INITIAL_PASSWORD.getValue())
@@ -87,7 +87,7 @@ public class PackageTest extends DriverBase {
         addPkgPage(driver).act()
                 .selectTargetPlatform(PackagesData.TARGET_PLATFORM_ENDPOINT.getValue())
                 .selectPackageType(PackagesData.ENDPOINT_PACKAGE_TYPE.getValue())
-                .selectProfileName(ProfilesData.ENDPOINT_PROFILE_NAME.getValue())
+                .selectProfileName(browser+"_"+ProfilesData.ENDPOINT_PROFILE_NAME.getValue())
                 .fillDescription(PackagesData.DESCRIPTION.getValue())
                 .clickOnSubmitBtn();
         addPkgPage(driver).verify().isConfirmationDialogDisplay(PackagesData.PACKAGE_SUCCESS_ALERT.getValue());
@@ -113,7 +113,7 @@ public class PackageTest extends DriverBase {
         addPkgPage(driver).act()
                 .selectTargetPlatform(PackagesData.TARGET_PLATFORM_ENDPOINT.getValue())
                 .selectPackageType(PackagesData.MACOS_PACKAGE_TYPE.getValue())
-                .selectProfileName(ProfilesData.MACOS_PROFILE_NAME.getValue())
+                .selectProfileName(browser+"_"+ProfilesData.MACOS_PROFILE_NAME.getValue())
                 .fillDescription(PackagesData.DESCRIPTION.getValue())
                 .clickOnSubmitBtn();
         addPkgPage(driver).verify().isConfirmationDialogDisplay(PackagesData.PACKAGE_SUCCESS_ALERT.getValue());
@@ -138,7 +138,7 @@ public class PackageTest extends DriverBase {
         addPkgPage(driver).act()
                 .selectTargetPlatform(PackagesData.TARGET_PLATFORM_ENDPOINT.getValue())
                 .selectPackageType(PackagesData.LINUX_PACKAGE_TYPE.getValue())
-                .selectProfileName(ProfilesData.ENDPOINT_LINUX_PROFILE_NAME.getValue())
+                .selectProfileName(browser+"_"+ProfilesData.ENDPOINT_LINUX_PROFILE_NAME.getValue())
                 .fillDescription(PackagesData.DESCRIPTION.getValue())
                 .clickOnSubmitBtn();
         addPkgPage(driver).verify().isConfirmationDialogDisplay(PackagesData.PACKAGE_SUCCESS_ALERT.getValue());

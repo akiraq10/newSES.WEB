@@ -1,7 +1,8 @@
 package com.clean.datatest;
 
 public enum FolderData {
-    FOLDER_1_CHAR("k"),
+    FOLDER_1_CHAR_GG("g"),
+    FOLDER_1_CHAR_FF("f"),
     FOLDER_64_CHAR("this is the test case to create a folder with over 64 characters kkk"),
     FOLDER_DESCRIPTION("Hell word"),
     GROUP_SUB("Group_Sub1"),
