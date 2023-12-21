@@ -5,7 +5,10 @@ import com.clean.datatest.FolderData;
 import com.clean.datatest.GroupData;
 import com.clean.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import java.net.MalformedURLException;
 
 import static com.clean.pages.login.LoginPage.loginPage;
 
@@ -20,12 +23,14 @@ import static com.clean.pages.users.grouppropertiespermission.PermissionPage.per
 
 public class GroupTest extends DriverBase {
 
+    @Parameters({"browser","uri"})
     @Test(alwaysRun = true,
-            description = "SDTC...: Check create new group without Description")
-    public void CreateNewGroup(){
+            description = "SDTC...: Check create new group without Description",
+            groups = {"basic","regression"})
+    public void CreateNewGroup(String browser,String uri) throws MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
 
@@ -40,12 +45,14 @@ public class GroupTest extends DriverBase {
         addGroupPage(driver).verify().isCheckAddGroupSuccess(AlertData.ALERT_SUCCESS.getValue());
 
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-....:Create new group with group name + description",
-    alwaysRun = true)
-    public void CreateNewGroupToTestUpdate(){
+    alwaysRun = true,
+            groups = {"basic","regression"})
+    public void CreateNewGroupToTestUpdate(String browser,String uri) throws MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
 
@@ -61,12 +68,14 @@ public class GroupTest extends DriverBase {
         addGroupPage(driver).verify().isCheckAddGroupSuccess(AlertData.ALERT_SUCCESS.getValue());
 
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-26728 : Group Properties: General > Change group name",
-    dependsOnMethods = "CreateNewGroupToTestUpdate")
-    public void ChangeTheGroupName() throws InterruptedException {
+    dependsOnMethods = "CreateNewGroupToTestUpdate",
+            groups = {"regression"})
+    public void ChangeTheGroupName(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -84,12 +93,14 @@ public class GroupTest extends DriverBase {
         groupPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-40311 : Group Properties: General > Change Description",
-    dependsOnMethods = "ChangeTheGroupName")
-    public void ChangeTheDescription() throws InterruptedException {
+    dependsOnMethods = "ChangeTheGroupName",
+            groups = {"regression"})
+    public void ChangeTheDescription(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -107,12 +118,14 @@ public class GroupTest extends DriverBase {
         groupPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-40312 : Group Properties: General > Back",
-    dependsOnMethods = "ChangeTheGroupName")
-    public void VerifyBackFeatureFromGroupProperties() throws InterruptedException {
+    dependsOnMethods = "ChangeTheGroupName",
+            groups = {"regression"})
+    public void VerifyBackFeatureFromGroupProperties(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -130,12 +143,14 @@ public class GroupTest extends DriverBase {
         groupPage(driver).verify()
                 .isCheckGroupPageDisplay(GroupData.GROUP_NAME_UPDATE.getValue());
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-40313 : Group Properties: Permissions > Back",
-    dependsOnMethods = "ChangeTheGroupName")
-    public void VerifyBackFeatureFromPermissionTab() throws InterruptedException {
+    dependsOnMethods = "ChangeTheGroupName",
+            groups = {"regression"})
+    public void VerifyBackFeatureFromPermissionTab(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -158,12 +173,14 @@ public class GroupTest extends DriverBase {
                 .isCheckGeneralPageDisplay();
 
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-40314 : Group Properties: Permissions > Edit Privileges",
-    dependsOnMethods = "ChangeTheGroupName")
-    public void EditPermissionOfGroupProperties() throws InterruptedException {
+    dependsOnMethods = "ChangeTheGroupName",
+            groups = {"regression"})
+    public void EditPermissionOfGroupProperties(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -185,12 +202,14 @@ public class GroupTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-40315 : Group Properties: Permissions > Edit PBConnex policies (e.g: PBN AutoBoot",
-            dependsOnMethods = "ChangeTheGroupName"   )
-    public void EditPBNPolicyOfGroupProperties() throws InterruptedException {
+            dependsOnMethods = "ChangeTheGroupName",
+            groups = {"regression"})
+    public void EditPBNPolicyOfGroupProperties(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -211,12 +230,14 @@ public class GroupTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
     }
 
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-40316 : Group Properties: Keys > Back",
-            dependsOnMethods = "ChangeTheGroupName"   )
-    public void VerifyBackFeatureFromKeysTab() throws InterruptedException {
+            dependsOnMethods = "ChangeTheGroupName",
+            groups = {"regression"})
+    public void VerifyBackFeatureFromKeysTab(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -239,12 +260,14 @@ public class GroupTest extends DriverBase {
                 .isCheckGeneralPageDisplay();
 
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-40317 : Group Properties: Keys > Assign key",
-    dependsOnMethods = "ChangeTheGroupName")
-    public void AssignKeyToGroupProperties() throws InterruptedException {
+    dependsOnMethods = "ChangeTheGroupName",
+            groups = {"regression"})
+    public void AssignKeyToGroupProperties(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -267,12 +290,14 @@ public class GroupTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-40318 : Group Properties: Keys > Remove key",
-    dependsOnMethods = {"AssignKeyToGroupProperties"})
-    public void RemoveKeyToGroupProperties() throws InterruptedException {
+    dependsOnMethods = {"AssignKeyToGroupProperties"},
+            groups = {"regression"})
+    public void RemoveKeyToGroupProperties(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -294,12 +319,14 @@ public class GroupTest extends DriverBase {
                 .isCheckKeyIsRemoved(FolderData.DEVICE_KEY.getValue());
     }
 
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-40319 : Group Properties: Groups > Back",
-            dependsOnMethods = "ChangeTheGroupName"    )
-    public void VerifyBackFeatureFromGroupsTab() throws InterruptedException {
+            dependsOnMethods = "ChangeTheGroupName",
+            groups = {"regression"})
+    public void VerifyBackFeatureFromGroupsTab(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -322,12 +349,14 @@ public class GroupTest extends DriverBase {
                 .isCheckGeneralPageDisplay();
 
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-26684 : Group Properties: Groups > Assign to group",
-    dependsOnMethods = "ChangeTheGroupName")
-    public void AssignGroupToGroupProperties() throws InterruptedException {
+    dependsOnMethods = "ChangeTheGroupName",
+            groups = {"regression"})
+    public void AssignGroupToGroupProperties(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -353,12 +382,14 @@ public class GroupTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-40320 : Group Properties: Groups > Remove from parent group",
-    dependsOnMethods = "AssignGroupToGroupProperties")
-    public void RemoveGroupToGroupProperties() throws InterruptedException {
+    dependsOnMethods = "AssignGroupToGroupProperties",
+            groups = {"regression"})
+    public void RemoveGroupToGroupProperties(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -384,12 +415,14 @@ public class GroupTest extends DriverBase {
                 .isCheckGroupIsRemoved(GroupData.GROUP_NAME.getValue());
 
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-44654 : Group Properties: Service Provider > Assign Service Providers",
-    dependsOnMethods = "ChangeTheGroupName")
-    public void AssignTheSPToGroup() throws InterruptedException {
+    dependsOnMethods = "ChangeTheGroupName",
+            groups = {"regression"})
+    public void AssignTheSPToGroup(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -417,12 +450,14 @@ public class GroupTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+    @Parameters({"browser","uri"})
     @Test(description = "SDTC-44655 : Group Properties: Service Provider > Remove Service Providers",
-    dependsOnMethods = "AssignTheSPToGroup")
-    public void RemoveSPToGroupProperties() throws InterruptedException {
+    dependsOnMethods = "AssignTheSPToGroup",
+            groups = {"regression"})
+    public void RemoveSPToGroupProperties(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()

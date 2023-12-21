@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Basic Test2" parallel="methods" thread-count="4">
+    <listeners>
+        <listener class-name="com.clean.listener.ListenerEx"></listener>
+    </listeners>
+    <test name="Basic test ses.WEB">
+        <groups>
+            <run>
+                <include name="regression">
+                </include>
+            </run>
+        </groups>
+        <classes>
+            <class name="testclass.server.LoginTest"></class>
+            <class name="testclass.client.sesweb.UsersTest"/>
+            <class name="testclass.client.sesweb.GroupTest"></class>
+            <class name="testclass.client.sesweb.ProfileTest"></class>
+            <class name="testclass.client.sesweb.PackageTest"></class>
+            <class name="testclass.client.sesweb.AdministratorTest"></class>
+            <class name="testclass.client.sesweb.FolderTest"></class>
+        </classes>
+    </test>
+
+
+</suite>

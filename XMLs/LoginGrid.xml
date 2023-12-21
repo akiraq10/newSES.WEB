@@ -1,15 +1,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Basic Test grid" parallel="classes" thread-count="4">
+<suite name="Basic Test grid" parallel="methods" thread-count="4">
     <listeners>
         <listener class-name="com.clean.listener.ListenerEx"></listener>
     </listeners>
 
     <test name="Login feature" >
         <parameter name="browser" value="firefox"></parameter>
+        <parameter name="uri" value="google.com"></parameter>
         <classes>
 
-            <class name="testclass.server.LoginTestGrid"/>
+<!--            <class name="testclass.server.LoginTestGrid"/>-->
+            <class name="testclass.server.LoginTest"></class>
 
         </classes>
     </test>

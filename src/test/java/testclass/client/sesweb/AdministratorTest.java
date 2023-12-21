@@ -3,23 +3,28 @@ package testclass.client.sesweb;
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import java.net.MalformedURLException;
+
+import static com.clean.datatest.AdminRoleData.ADMIN_ROLE_NAME;
 import static com.clean.pages.configuration.ConfigurationPage.configurationPage;
 import static com.clean.pages.configuration.administratormanagement.AdminPage.adminPAge;
 import static com.clean.pages.configuration.administratormanagement.addnewadmin.AddNewAdminPage.addNewAdminPage;
 import static com.clean.pages.configuration.administratormanagement.assignrole.AssignRolePage.assignRolePage;
 import static com.clean.pages.configuration.administratormanagement.editadiminuser.ModifyAdminUserPage.modifyAdminUserPage;
 import static com.clean.pages.login.LoginPage.loginPage;
-import static com.clean.datatest.AdminRoleData.*;
 
 public class AdministratorTest extends DriverBase {
+    @Parameters({"browser","uri"})
     @Test(alwaysRun = true,
-            description = "Test case SDTC....: Add new Administrator user")
-    public void addNewAdministratorUser() throws InterruptedException {
+            description = "Test case SDTC....: Add new Administrator user",
+            groups = {"basic","regression"})
+    public void addNewAdministratorUser(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         configurationPage(driver).act().clickOnConfiguration()
@@ -35,11 +40,14 @@ public class AdministratorTest extends DriverBase {
                 .clickOnSaveButton();
         addNewAdminPage(driver).verify().isAlertSuccessDisplay();
     }
-    @Test(description = "Test case SDTC....: Assign the Admin role to an admin user",dependsOnMethods = "addNewAdministratorUser")
-    public void assignAdminRoleToAdminUser() throws InterruptedException {
+    @Parameters({"browser","uri"})
+    @Test(description = "Test case SDTC....: Assign the Admin role to an admin user",
+            dependsOnMethods = "addNewAdministratorUser",
+            groups = {"basic","regression"})
+    public void assignAdminRoleToAdminUser(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
 

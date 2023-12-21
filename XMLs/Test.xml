@@ -4,13 +4,13 @@
 
 
     <test name="Basic test ses.WEB">
+        <groups>
+            <run>
+                <include name="test1"></include>
+            </run>
+        </groups>
         <classes>
             <class name="testclass.testNG">
-                <methods>
-<!--                    <include name="AddNewOSAPackage"></include>-->
-                    <include name="LoginTest1"></include>
-                    <include name="LoginTest2"></include>
-                </methods>
             </class>
 
 

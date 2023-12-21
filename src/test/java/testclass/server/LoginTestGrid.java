@@ -18,13 +18,13 @@ public class LoginTestGrid extends DriverBase {
     WebDriver driver;
 
     @Feature("Login Test")
-    @Parameters({"browser"})
+    @Parameters({"browser","uri"})
     @Description(" Verify login SES.WEB with valid pwd success")
     @Test(description = " Test case SDTC....: Login SES.WEB with valid PWD")
-    public void loginValidCredentials(String browser) throws MalformedURLException {
+    public void loginValidCredentials(String browser,String Uri) throws MalformedURLException {
 //        WebDriver driver;
         driver=getDriver(browser);
-        driver.get(readConfigFile.urlSESWEB());
+        driver.get(Uri);
         loginPage(driver).act()
                 .fillUserName(readConfigFile.username())
                 .fillPassword(readConfigFile.password())
@@ -35,13 +35,13 @@ public class LoginTestGrid extends DriverBase {
 
     }
     @Feature("Login Test")
-    @Parameters({"browser"})
+    @Parameters({"browser","uri"})
     @Description("Verify unable to login SES.WEB with invalid pwd ")
     @Test(alwaysRun = true,description = "Test case SDTC....: Login SES.WEB with invalid PWD")
-    public void loginInvalidCredentials(String browser) throws MalformedURLException {
+    public void loginInvalidCredentials(String browser,String Uri) throws MalformedURLException {
 //        WebDriver driver;
         driver=getDriver(browser);
-        driver.get(readConfigFile.urlSESWEB());
+        driver.get(Uri);
         loginPage(driver).act()
                 .fillUserName(readConfigFile.username())
                 .fillPassword(readConfigFile.invalidPwd())

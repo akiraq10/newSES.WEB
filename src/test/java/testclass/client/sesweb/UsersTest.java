@@ -5,8 +5,10 @@ import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import static com.clean.pages.users.addfolder.AddFolderPage.addFolderPage;
+
+import java.net.MalformedURLException;
 import static com.clean.pages.users.adduser.AddUserPage.addUserPage;
 import static com.clean.pages.users.UserPage.userPage;
 import static com.clean.pages.login.LoginPage.loginPage;
@@ -14,11 +16,14 @@ import static com.clean.pages.users.edituser.EditUserPage.editUserPage;
 
 public class UsersTest extends DriverBase {
 
-    @Test(alwaysRun = true,description = "Test case SDTC....: Verify create new regular user success")
-    public void AddNewRegularUser(){
+    @Parameters({"browser","uri"})
+    @Test(alwaysRun = true,
+            description = "Test case SDTC....: Verify create new regular user success",
+            groups = {"basic","regression"})
+    public void AddNewRegularUser(String browser,String uri) throws MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -31,11 +36,14 @@ public class UsersTest extends DriverBase {
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
-    @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new regular user with final password")
-    public void AddNewRegularUserWithFinalPassowrd(){
+    @Parameters({"browser","uri"})
+    @Test(alwaysRun = true,
+            description = "Test case SDTC....: Verify can create new regular user with final password",
+            groups = {"basic","regression"})
+    public void AddNewRegularUserWithFinalPassowrd(String browser,String uri) throws MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -49,11 +57,14 @@ public class UsersTest extends DriverBase {
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
-    @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new temporary user success")
-    public void AddNewTempUser(){
+    @Parameters({"browser","uri"})
+    @Test(alwaysRun = true,
+            description = "Test case SDTC....: Verify can create new temporary user success",
+            groups = {"basic","regression"})
+    public void AddNewTempUser(String browser,String uri) throws MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -66,11 +77,14 @@ public class UsersTest extends DriverBase {
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
-    @Test(alwaysRun = true,description = "Test case SDTC....: Verify can create new  Autoboot user success ")
-    public void AddNewAutoBootUser(){
+    @Parameters({"browser","uri"})
+    @Test(alwaysRun = true,
+            description = "Test case SDTC....: Verify can create new  Autoboot user success ",
+            groups = {"basic","regression"})
+    public void AddNewAutoBootUser(String browser,String uri) throws MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
@@ -83,11 +97,14 @@ public class UsersTest extends DriverBase {
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
-    @Test(alwaysRun = true,description = "Test case SDTC....:Verify admin can add email for an existing user")
-    public void ModifyUserAddEmail() throws InterruptedException {
+    @Parameters({"browser","uri"})
+    @Test(alwaysRun = true,
+            description = "Test case SDTC....:Verify admin can add email for an existing user",
+            groups = {"basic","regression"})
+    public void ModifyUserAddEmail(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
-        driver = getDriver();
-        driver.get(readConfigFile.urlSESWEB());
+        driver = getDriver(browser);
+        driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act().selectExistingUser(UserData.REGULAR_USERNAME.getValue());
