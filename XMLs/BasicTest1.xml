@@ -3,6 +3,7 @@
 <suite name="Basic Test2" parallel="methods" thread-count="4">
     <listeners>
         <listener class-name="com.clean.listener.ListenerEx"></listener>
+        <listener class-name="com.clean.listener.RetestFailedCase"></listener>
     </listeners>
 
     <test name="Basic test ses.WEB">
