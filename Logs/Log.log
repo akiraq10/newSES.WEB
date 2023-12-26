@@ -100,3 +100,17 @@ testclass.testNG.test1() on instance testclass.testNG@6dd93a21]
 [INFO ] 2023-12-26 15:02:36.049 [TestNG-test=Basic test ses.WEB-3] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test5() on instance testclass.testNG@6dd93a21 depends on not successfully finished methods 
 [testclass.testNG.test4() on instance testclass.testNG@6dd93a21]
 [INFO ] 2023-12-26 15:02:36.053 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2023-12-26 15:09:26.480 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2023-12-26 15:09:26.635 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2023-12-26 15:09:26.636 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: expected:<false> but was:<true>
+[INFO ] 2023-12-26 15:09:26.783 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2023-12-26 15:09:26.802 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 15:09:26.803 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test4() on instance testclass.testNG@21719a0 depends on not successfully finished methods 
+[testclass.testNG.test3() on instance testclass.testNG@21719a0
+testclass.testNG.test1() on instance testclass.testNG@21719a0]
+[ERROR] 2023-12-26 15:09:26.826 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2023-12-26 15:09:26.827 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.AssertionError: test expected [true] but found [false]
+[INFO ] 2023-12-26 15:09:26.836 [TestNG-test=Basic test ses.WEB-3] Log -  Skipped
+[INFO ] 2023-12-26 15:09:26.837 [TestNG-test=Basic test ses.WEB-3] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test5() on instance testclass.testNG@21719a0 depends on not successfully finished methods 
+[testclass.testNG.test4() on instance testclass.testNG@21719a0]
+[INFO ] 2023-12-26 15:09:26.844 [main] Log - =========== onFinish :-Basic test ses.WEB-===============

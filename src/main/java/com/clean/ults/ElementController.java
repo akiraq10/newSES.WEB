@@ -194,7 +194,9 @@ public class ElementController {
             if (row.getText().equals(value))
             {
                 highLightElement(driver,row);
-                row.click();
+//                row.click();
+                driver.findElement(By.xpath(".//td[contains(.,'"+row.getText()+"')]/preceding-sibling::td/input[@type='checkbox']")).click();
+
                 break;
             }
 
