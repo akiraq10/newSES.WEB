@@ -2,7 +2,7 @@ package com.clean.datatest;
 
 public enum UserData {
     REGULAR_USERNAME("Regular"),
-    REGULAR_USERNAME2("Regular2"),
+    REGULAR_USERNAME2("Regulr2"),
     TEMPORARY_USERNAME("Temp"),
     AUTO_USERNAME("Auto"),
     USER_PASSWORD("12345678"),
