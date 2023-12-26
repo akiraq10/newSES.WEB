@@ -1,11 +1,15 @@
 package testclass;
 
 import com.clean.driver.DriverBase;
+import com.clean.listener.RetryFailCase;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertTrue;
+import static org.testng.AssertJUnit.assertEquals;
 
 @Feature("this is the @feature")
 public class testNG {
@@ -22,12 +26,14 @@ public class testNG {
     @Test(dependsOnMethods = "test1",priority = 1,groups = {"test1"})
     public void test2(){
         System.out.println("this is test2 method");
+        assertTrue(false,"test");
     }
     @Feature("this is the @feature_new")
     @Story("this is @story_test2")
-    @Test(priority = 3)
+    @Test()
     public void test3() {
         System.out.println(DriverBase.class.getName());
+        assertEquals(false, true);
 
     }
     @Feature("this is the @feature_new3")

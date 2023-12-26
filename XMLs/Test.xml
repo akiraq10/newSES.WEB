@@ -2,13 +2,12 @@
 
 <suite name="Basic Test2" parallel="classes" thread-count="4">
 
-
+    <listeners>
+        <listener class-name="com.clean.listener.ListenerEx"></listener>
+        <listener class-name="com.clean.listener.RetestFailedCase"></listener>
+    </listeners>
     <test name="Basic test ses.WEB">
-        <groups>
-            <run>
-                <include name="test1"></include>
-            </run>
-        </groups>
+
         <classes>
             <class name="testclass.testNG">
             </class>

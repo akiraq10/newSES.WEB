@@ -1,39 +1,102 @@
-[INFO ] 2023-12-21 10:15:56.222 [main] Log - =========== onStart :-Login feature-===============
-[INFO ] 2023-12-21 10:16:09.361 [TestNG-test=Login feature-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
-[INFO ] 2023-12-21 10:16:15.301 [TestNG-test=Login feature-1] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
-[INFO ] 2023-12-21 10:16:15.329 [TestNG-test=Login feature-1] Log -  Passed
-[INFO ] 2023-12-21 10:16:15.343 [main] Log - =========== onFinish :-Login feature-===============
-[INFO ] 2023-12-21 11:41:36.010 [main] Log - =========== onStart :-Login feature-===============
-[ERROR] 2023-12-21 11:41:36.037 [TestNG-test=Login feature-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
-[ERROR] 2023-12-21 11:41:36.037 [TestNG-test=Login feature-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
-[INFO ] 2023-12-21 11:41:36.037 [TestNG-test=Login feature-2] Log - Failed because of - org.testng.TestNGException: 
-Cannot inject @Test annotated Method [loginValidCredentials] with [class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
-[INFO ] 2023-12-21 11:41:36.038 [TestNG-test=Login feature-1] Log - Failed because of - org.testng.TestNGException: 
-Cannot inject @Test annotated Method [loginInvalidCredentials] with [class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
-[INFO ] 2023-12-21 11:41:36.165 [main] Log - =========== onFinish :-Login feature-===============
-[INFO ] 2023-12-21 11:42:52.230 [main] Log - =========== onStart :-Login feature-===============
-[ERROR] 2023-12-21 11:43:01.261 [TestNG-test=Login feature-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
-[ERROR] 2023-12-21 11:43:01.261 [TestNG-test=Login feature-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
-[INFO ] 2023-12-21 11:43:01.265 [TestNG-test=Login feature-1] Log - Failed because of - org.openqa.selenium.InvalidArgumentException: invalid argument
-  (Session info: chrome=120.0.6099.110)
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [8f4998b3caf86cc6034439083bb4ad51, get {url=google.com}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63128}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.19:4444/sess..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8f4998b3caf86cc6034439083bb4ad51
-[INFO ] 2023-12-21 11:43:01.266 [TestNG-test=Login feature-2] Log - Failed because of - org.openqa.selenium.InvalidArgumentException: invalid argument
-  (Session info: chrome=120.0.6099.110)
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [1944b33f573df97cad15a5d71975409e, get {url=google.com}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63127}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.19:4444/sess..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1944b33f573df97cad15a5d71975409e
-[INFO ] 2023-12-21 11:43:02.178 [main] Log - =========== onFinish :-Login feature-===============
-[INFO ] 2023-12-21 11:45:27.744 [main] Log - =========== onStart :-Login feature-===============
-[INFO ] 2023-12-21 11:45:40.599 [TestNG-test=Login feature-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
-[INFO ] 2023-12-21 11:45:47.807 [TestNG-test=Login feature-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
-[INFO ] 2023-12-21 11:45:47.844 [main] Log - =========== onFinish :-Login feature-===============
+[INFO ] 2023-12-26 14:18:18.186 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2023-12-26 14:18:18.283 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2023-12-26 14:18:18.370 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2023-12-26 14:18:18.379 [TestNG-test=Basic test ses.WEB-2] Log -  Passed
+[ERROR] 2023-12-26 14:18:18.391 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2023-12-26 14:18:18.392 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.AssertionError: test expected [true] but found [false]
+[INFO ] 2023-12-26 14:18:18.402 [TestNG-test=Basic test ses.WEB-3] Log -  Passed
+[INFO ] 2023-12-26 14:18:18.406 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2023-12-26 14:51:32.712 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2023-12-26 14:51:32.813 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2023-12-26 14:51:32.813 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - java.lang.AssertionError: expected:<false> but was:<true>
+[INFO ] 2023-12-26 14:51:32.892 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2023-12-26 14:51:32.892 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - java.lang.AssertionError: expected:<false> but was:<true>
+[ERROR] 2023-12-26 14:51:32.898 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2023-12-26 14:51:32.898 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: expected:<false> but was:<true>
+[INFO ] 2023-12-26 14:51:32.912 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2023-12-26 14:51:32.921 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 14:51:32.922 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test4() on instance testclass.testNG@452c8a40 depends on not successfully finished methods 
+[testclass.testNG.test3() on instance testclass.testNG@452c8a40
+testclass.testNG.test1() on instance testclass.testNG@452c8a40]
+[INFO ] 2023-12-26 14:51:32.938 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 14:51:32.938 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.AssertionError: test expected [true] but found [false]
+[INFO ] 2023-12-26 14:51:32.942 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 14:51:32.942 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.AssertionError: test expected [true] but found [false]
+[ERROR] 2023-12-26 14:51:32.946 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2023-12-26 14:51:32.946 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.AssertionError: test expected [true] but found [false]
+[INFO ] 2023-12-26 14:51:32.951 [TestNG-test=Basic test ses.WEB-3] Log -  Skipped
+[INFO ] 2023-12-26 14:51:32.952 [TestNG-test=Basic test ses.WEB-3] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test5() on instance testclass.testNG@452c8a40 depends on not successfully finished methods 
+[testclass.testNG.test4() on instance testclass.testNG@452c8a40]
+[INFO ] 2023-12-26 14:51:32.956 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2023-12-26 14:59:17.749 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2023-12-26 14:59:17.841 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2023-12-26 14:59:17.842 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: expected:<false> but was:<true>
+[INFO ] 2023-12-26 14:59:17.921 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2023-12-26 14:59:17.933 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 14:59:17.934 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test4() on instance testclass.testNG@6f89f665 depends on not successfully finished methods 
+[testclass.testNG.test3() on instance testclass.testNG@6f89f665
+testclass.testNG.test1() on instance testclass.testNG@6f89f665]
+[ERROR] 2023-12-26 14:59:17.947 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2023-12-26 14:59:17.948 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.AssertionError: test expected [true] but found [false]
+[INFO ] 2023-12-26 14:59:17.953 [TestNG-test=Basic test ses.WEB-3] Log -  Skipped
+[INFO ] 2023-12-26 14:59:17.954 [TestNG-test=Basic test ses.WEB-3] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test5() on instance testclass.testNG@6f89f665 depends on not successfully finished methods 
+[testclass.testNG.test4() on instance testclass.testNG@6f89f665]
+[INFO ] 2023-12-26 14:59:17.957 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2023-12-26 15:00:04.205 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2023-12-26 15:00:04.309 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2023-12-26 15:00:04.310 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - java.lang.AssertionError: expected:<false> but was:<true>
+[INFO ] 2023-12-26 15:00:04.427 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2023-12-26 15:00:04.427 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - java.lang.AssertionError: expected:<false> but was:<true>
+[ERROR] 2023-12-26 15:00:04.438 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2023-12-26 15:00:04.438 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: expected:<false> but was:<true>
+[INFO ] 2023-12-26 15:00:04.456 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2023-12-26 15:00:04.473 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 15:00:04.474 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test4() on instance testclass.testNG@6dd93a21 depends on not successfully finished methods 
+[testclass.testNG.test3() on instance testclass.testNG@6dd93a21
+testclass.testNG.test1() on instance testclass.testNG@6dd93a21]
+[INFO ] 2023-12-26 15:00:04.492 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 15:00:04.493 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.AssertionError: test expected [true] but found [false]
+[INFO ] 2023-12-26 15:00:04.500 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 15:00:04.500 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.AssertionError: test expected [true] but found [false]
+[ERROR] 2023-12-26 15:00:04.509 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2023-12-26 15:00:04.510 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.AssertionError: test expected [true] but found [false]
+[INFO ] 2023-12-26 15:00:04.518 [TestNG-test=Basic test ses.WEB-3] Log -  Skipped
+[INFO ] 2023-12-26 15:00:04.519 [TestNG-test=Basic test ses.WEB-3] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test5() on instance testclass.testNG@6dd93a21 depends on not successfully finished methods 
+[testclass.testNG.test4() on instance testclass.testNG@6dd93a21]
+[INFO ] 2023-12-26 15:00:04.523 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2023-12-26 15:01:25.382 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2023-12-26 15:01:25.533 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2023-12-26 15:01:25.534 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: expected:<false> but was:<true>
+[INFO ] 2023-12-26 15:01:25.670 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2023-12-26 15:01:25.685 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 15:01:25.686 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test4() on instance testclass.testNG@77ee25f1 depends on not successfully finished methods 
+[testclass.testNG.test3() on instance testclass.testNG@77ee25f1
+testclass.testNG.test1() on instance testclass.testNG@77ee25f1]
+[ERROR] 2023-12-26 15:01:25.705 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2023-12-26 15:01:25.706 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.AssertionError: test expected [true] but found [false]
+[INFO ] 2023-12-26 15:01:25.714 [TestNG-test=Basic test ses.WEB-3] Log -  Skipped
+[INFO ] 2023-12-26 15:01:25.716 [TestNG-test=Basic test ses.WEB-3] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test5() on instance testclass.testNG@77ee25f1 depends on not successfully finished methods 
+[testclass.testNG.test4() on instance testclass.testNG@77ee25f1]
+[INFO ] 2023-12-26 15:01:25.722 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2023-12-26 15:02:35.665 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2023-12-26 15:02:35.788 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2023-12-26 15:02:35.789 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - java.lang.AssertionError: expected:<false> but was:<true>
+[INFO ] 2023-12-26 15:02:35.922 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2023-12-26 15:02:35.924 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - java.lang.AssertionError: expected:<false> but was:<true>
+[ERROR] 2023-12-26 15:02:35.935 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2023-12-26 15:02:35.936 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: expected:<false> but was:<true>
+[INFO ] 2023-12-26 15:02:35.953 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2023-12-26 15:02:35.973 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 15:02:35.973 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test4() on instance testclass.testNG@6dd93a21 depends on not successfully finished methods 
+[testclass.testNG.test3() on instance testclass.testNG@6dd93a21
+testclass.testNG.test1() on instance testclass.testNG@6dd93a21]
+[INFO ] 2023-12-26 15:02:35.999 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 15:02:35.999 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.AssertionError: test expected [true] but found [false]
+[INFO ] 2023-12-26 15:02:36.022 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2023-12-26 15:02:36.022 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.AssertionError: test expected [true] but found [false]
+[ERROR] 2023-12-26 15:02:36.041 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2023-12-26 15:02:36.041 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.AssertionError: test expected [true] but found [false]
+[INFO ] 2023-12-26 15:02:36.048 [TestNG-test=Basic test ses.WEB-3] Log -  Skipped
+[INFO ] 2023-12-26 15:02:36.049 [TestNG-test=Basic test ses.WEB-3] Log - Skipped because of - java.lang.Throwable: Method testclass.testNG.test5() on instance testclass.testNG@6dd93a21 depends on not successfully finished methods 
+[testclass.testNG.test4() on instance testclass.testNG@6dd93a21]
+[INFO ] 2023-12-26 15:02:36.053 [main] Log - =========== onFinish :-Basic test ses.WEB-===============

@@ -1,0 +1,39 @@
+[INFO ] 2023-12-21 10:15:56.222 [main] Log - =========== onStart :-Login feature-===============
+[INFO ] 2023-12-21 10:16:09.361 [TestNG-test=Login feature-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2023-12-21 10:16:15.301 [TestNG-test=Login feature-1] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2023-12-21 10:16:15.329 [TestNG-test=Login feature-1] Log -  Passed
+[INFO ] 2023-12-21 10:16:15.343 [main] Log - =========== onFinish :-Login feature-===============
+[INFO ] 2023-12-21 11:41:36.010 [main] Log - =========== onStart :-Login feature-===============
+[ERROR] 2023-12-21 11:41:36.037 [TestNG-test=Login feature-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
+[ERROR] 2023-12-21 11:41:36.037 [TestNG-test=Login feature-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2023-12-21 11:41:36.037 [TestNG-test=Login feature-2] Log - Failed because of - org.testng.TestNGException: 
+Cannot inject @Test annotated Method [loginValidCredentials] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+[INFO ] 2023-12-21 11:41:36.038 [TestNG-test=Login feature-1] Log - Failed because of - org.testng.TestNGException: 
+Cannot inject @Test annotated Method [loginInvalidCredentials] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+[INFO ] 2023-12-21 11:41:36.165 [main] Log - =========== onFinish :-Login feature-===============
+[INFO ] 2023-12-21 11:42:52.230 [main] Log - =========== onStart :-Login feature-===============
+[ERROR] 2023-12-21 11:43:01.261 [TestNG-test=Login feature-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
+[ERROR] 2023-12-21 11:43:01.261 [TestNG-test=Login feature-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2023-12-21 11:43:01.265 [TestNG-test=Login feature-1] Log - Failed because of - org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=120.0.6099.110)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [8f4998b3caf86cc6034439083bb4ad51, get {url=google.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63128}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.19:4444/sess..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f4998b3caf86cc6034439083bb4ad51
+[INFO ] 2023-12-21 11:43:01.266 [TestNG-test=Login feature-2] Log - Failed because of - org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=120.0.6099.110)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [1944b33f573df97cad15a5d71975409e, get {url=google.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63127}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.19:4444/sess..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1944b33f573df97cad15a5d71975409e
+[INFO ] 2023-12-21 11:43:02.178 [main] Log - =========== onFinish :-Login feature-===============
+[INFO ] 2023-12-21 11:45:27.744 [main] Log - =========== onStart :-Login feature-===============
+[INFO ] 2023-12-21 11:45:40.599 [TestNG-test=Login feature-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2023-12-21 11:45:47.807 [TestNG-test=Login feature-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2023-12-21 11:45:47.844 [main] Log - =========== onFinish :-Login feature-===============

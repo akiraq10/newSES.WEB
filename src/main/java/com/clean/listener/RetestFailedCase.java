@@ -1,7 +1,8 @@
 package com.clean.listener;
 
+import org.testng.IAnnotationTransformer;
 import org.testng.annotations.ITestAnnotation;
-import org.testng.internal.annotations.IAnnotationTransformer;
+
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
