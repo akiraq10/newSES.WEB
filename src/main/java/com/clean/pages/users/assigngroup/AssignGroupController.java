@@ -14,7 +14,7 @@ public class AssignGroupController {
         this.driver = driver;
     }
     @Step("Select the Group: {groupName}")
-    public AssignGroupController clickOnTheGroup(String groupName) throws InterruptedException {
+    public AssignGroupController selectTheGroupToAssign(String groupName) throws InterruptedException {
         selectElementInTable(driver,getEle(driver).selectUserTable,groupName);
         return this;
     }

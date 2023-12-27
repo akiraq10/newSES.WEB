@@ -29,7 +29,7 @@ public class AdminController {
     }
     @Step("Select an admin user :{username}")
     public AdminController selectAdminUser(String username) throws InterruptedException {
-        selectElementInTable(driver,adminElement(driver).adminUserTable,username);
+        selectElementHasLinkInTable(driver,adminElement(driver).adminUserTable,username);
         return this;
     }
 }

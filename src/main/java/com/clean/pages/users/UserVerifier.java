@@ -26,6 +26,11 @@ public class UserVerifier {
         verify(driver,getUserElem(driver).usersBreadcrumb);
         return this;
     }
+    @Step("Verify The Alert Success is displayed")
+    public UserVerifier isCheckAlertSuccessDisplay(){
+        verify(driver,getUserElem(driver).successAlert);
+        return this;
+    }
 
 
 

@@ -1,4 +1,4 @@
-package testclass.client.sesweb;
+package testclass.client.sesweb.grouptest;
 
 import com.clean.datatest.AlertData;
 import com.clean.datatest.FolderData;
@@ -48,7 +48,7 @@ public class GroupTest extends DriverBase {
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-....:Create new group with group name + description",
     alwaysRun = true,
-            groups = {"basic","regression"})
+            groups = {"regression"})
     public void CreateNewGroupToTestUpdate(String browser,String uri) throws MalformedURLException {
         WebDriver driver;
         driver = getDriver(browser);
@@ -376,7 +376,7 @@ public class GroupTest extends DriverBase {
                 .hoverToGroupMenu()
                 .clickOnAssignGroup();
         assignGroupPage(driver).act()
-                .clickOnTheGroup(browser+"_"+GroupData.GROUP_NAME.getValue())
+                .selectTheGroupToAssign(browser+"_"+GroupData.GROUP_NAME.getValue())
                 .clickOnSaveBtn();
         groupPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();

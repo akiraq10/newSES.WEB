@@ -11,7 +11,9 @@ public enum GroupData {
     GROUP_KEYS_BREADCRUMB("Group properties : Keys"),
     GROUP_SERVICE_PROVIDER_BREADCRUMB("Group properties : Service Providers"),
     GROUP_GROUPS_BREADCRUMB("Group properties : Groups"),
-    GROUP_SERVICE_PROVIDER_NAME("AzureAD")
+    GROUP_SERVICE_PROVIDER_NAME("AzureAD"),
+    OPERATION_ALERT("Operation succeeded."),
+    COMMAND_SUCCESS_ALERT("Command has been saved successfully.")
     ;
 
     private String value;

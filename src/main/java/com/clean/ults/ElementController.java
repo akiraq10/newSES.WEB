@@ -187,7 +187,6 @@ public class ElementController {
         waitForElementVisibility(driver,table);
         Thread.sleep(500);
         hover(driver, table);
-
         List<WebElement> rows = table.findElements(By.xpath(".//td"));
         for(WebElement row : rows){
             highLightElement(driver,table);
@@ -195,7 +194,31 @@ public class ElementController {
             {
                 highLightElement(driver,row);
 //                row.click();
-                driver.findElement(By.xpath(".//td[contains(.,'"+row.getText()+"')]/preceding-sibling::td/input[@type='checkbox']")).click();
+                driver.findElement(
+                        By.xpath(
+                                "//td[text()='"+row.getText()+"']/preceding-sibling::td/input[@type='checkbox']"
+                )).click();
+
+                break;
+            }
+
+        }
+    }
+    public static void selectElementHasLinkInTable(WebDriver driver, WebElement  table,String value) throws InterruptedException {
+        waitForElementVisibility(driver,table);
+        Thread.sleep(500);
+        hover(driver, table);
+        List<WebElement> rows = table.findElements(By.xpath(".//td"));
+        for(WebElement row : rows){
+            highLightElement(driver,table);
+            if (row.getText().equals(value))
+            {
+                highLightElement(driver,row);
+//                row.click();
+                driver.findElement(
+                        By.xpath(
+                                "//td[.//a[text()='"+row.getText()+"']]/preceding-sibling::td/input[@type='checkbox']"
+                        )).click();
 
                 break;
             }

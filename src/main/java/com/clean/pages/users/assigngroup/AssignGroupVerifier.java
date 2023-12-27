@@ -17,4 +17,11 @@ public class AssignGroupVerifier {
         verify(driver,getEle(driver).assignGroupBreadcrumb);
         return this;
     }
+    @Step("Verify the 'Operation succeeded.' is displayed")
+    public AssignGroupVerifier isCheckSuccessAlertDisplay(){
+        verify(driver,getEle(driver).successAlert);
+        return this;
+    }
+
+
 }

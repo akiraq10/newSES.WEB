@@ -1,6 +1,7 @@
 package testclass.client.sesweb;
 
 import com.clean.datatest.AlertData;
+import com.clean.datatest.GroupData;
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,8 @@ import java.net.MalformedURLException;
 import static com.clean.pages.users.adduser.AddUserPage.addUserPage;
 import static com.clean.pages.users.UserPage.userPage;
 import static com.clean.pages.login.LoginPage.loginPage;
+import static com.clean.pages.users.assigngroup.AssignGroupPage.assignGroupPage;
+import static com.clean.pages.users.assignuser.AssignUserPage.assignUserPage;
 import static com.clean.pages.users.edituser.EditUserPage.editUserPage;
 
 public class UsersTest extends DriverBase {
@@ -111,6 +114,28 @@ public class UsersTest extends DriverBase {
         editUserPage(driver).act().fillEmail(readConfigFile.idPEmailUser())
                 .clickOnSaveBtn();
         editUserPage(driver).verify().isAlertSuccessDisplay();
+    }
+    @Parameters({"browser","uri"})
+    @Test(  dependsOnMethods ={"AddNewRegularUser","CreateNewGroup"} ,
+            description = "Test case SDTC....:Verify Assign user to Group",
+            groups = {"basic","regression"})
+    public void AssignUserToGroup(String browser,String uri) throws InterruptedException, MalformedURLException {
+        WebDriver driver;
+        driver = getDriver(browser);
+        driver.get(uri);
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .searchUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
+                .selectExistingUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
+                .hoverOnUserMenu()
+                .clickOnAddUserToGroup();
+        assignGroupPage(driver).act()
+                .selectTheGroupToAssign(browser+"_"+GroupData.GROUP_NAME.getValue())
+                .clickOnSaveBtn();
+        assignGroupPage(driver).verify()
+                .isCheckSuccessAlertDisplay();
+
     }
 
 }

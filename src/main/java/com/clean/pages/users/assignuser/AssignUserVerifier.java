@@ -13,7 +13,7 @@ public class AssignUserVerifier {
     public AssignUserVerifier(WebDriver driver) {
         this.driver = driver;
     }
-    @Step("Verify the Assign key page is displayed")
+    @Step("Verify the Assign User page is displayed")
     public AssignUserVerifier isCheckAssignUserPageDisplay(){
         verify(driver,getAssignUserEle(driver).assignUserBreadcrumb);
         return this;

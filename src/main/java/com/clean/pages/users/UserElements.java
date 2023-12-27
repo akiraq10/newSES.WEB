@@ -37,6 +37,12 @@ public class UserElements {
     WebElement userListTbl;
     @FindBy(id = "breadcrumb_Folder_ViewFolder_2")
     WebElement usersBreadcrumb;
+    @FindBy(id = "Actions_User_AssignGroups")
+    WebElement addUserToGroupOpt;
+    @FindBy(css ="input[placeholder='Search...']")
+    WebElement searchText;
+ @FindBy(css =".alert.success")
+ WebElement successAlert;
     private UserElements(WebDriver driver) {
 
         PageFactory.initElements(driver, this);

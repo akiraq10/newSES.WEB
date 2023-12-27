@@ -14,7 +14,7 @@ public class AssignRoleController {
     }
     @Step("Select the role : {roleName}")
     public AssignRoleController selectRole(String roleName) throws InterruptedException {
-        selectElementInTable(driver,assignRoleElement(driver).roleListTable,roleName);
+        selectElementHasLinkInTable(driver,assignRoleElement(driver).roleListTable,roleName);
         return this;
     }
     @Step("Click on OK button")

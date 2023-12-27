@@ -15,7 +15,7 @@
         <classes>
             <class name="testclass.server.LoginTest"></class>
             <class name="testclass.client.sesweb.UsersTest"/>
-            <class name="testclass.client.sesweb.GroupTest"></class>
+            <class name="testclass.client.sesweb.grouptest.GroupTest"></class>
             <class name="testclass.client.sesweb.ProfileTest"></class>
             <class name="testclass.client.sesweb.PackageTest"></class>
             <class name="testclass.client.sesweb.AdministratorTest"></class>

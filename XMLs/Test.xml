@@ -11,9 +11,6 @@
         <classes>
             <class name="testclass.testNG">
             </class>
-
-
-
             <!--            <class name="testclass.client.idp.IdPLoginTest"></class>-->
         </classes>
     </test>

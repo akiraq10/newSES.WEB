@@ -12,8 +12,8 @@ public class GroupElements {
     WebElement groupMenu;
     @FindBy(id = "Actions_Group_ViewGroupGeneral")
     WebElement groupPropertiesOpt;
-    @FindBy(id = "Actions_Group_MoveGroup")
-    WebElement moveToFolderOpt;
+//    @FindBy(id = "Actions_Group_MoveGroup")
+//    WebElement moveToFolderOpt;
     @FindBy(id = "Actions_Group_DeleteGroupConfirmed")
     WebElement deleteGroupOpt;
     @FindBy(css ="tbody[role=rowgroup]")
@@ -24,6 +24,25 @@ public class GroupElements {
     WebElement userMenu;
     @FindBy(id = "Actions_Type_User_Advanced")
     WebElement userAdvancedMenu;
+    @FindBy(id = "Actions_User_ViewUserGeneral")
+    WebElement viewPropertiesOpt;
+    @FindBy(id = "Actions_User_AssignGroups")
+    WebElement addUserToGroupOpt;
+    @FindBy(id = "Actions_User_MoveUser")
+    WebElement moveToFolderOpt;
+    @FindBy(id = "Actions_User_AssignKeys")
+    WebElement assignKeyToUser;
+    @FindBy(id = "Actions_User_ViewLogs")
+    WebElement viewLogsOpt;
+
+    @FindBy(id = "Actions_Group_RemoveUserConfirmed")
+    WebElement removeUserFromGroupOpt;
+    @FindBy(id = "Actions_User_DeleteUserConfirmed")
+    WebElement deleteUserOpt;
+    @FindBy(xpath = "//button[text()='Yes']")
+    WebElement yesOnConfirmDialogBtn;
+    @FindBy(css =".alert.success")
+    WebElement successAlert;
     private GroupElements(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }

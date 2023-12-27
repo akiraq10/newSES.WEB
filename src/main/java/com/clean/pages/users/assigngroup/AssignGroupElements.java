@@ -18,6 +18,8 @@ public class AssignGroupElements {
     WebElement saveBtn;
     @FindBy(css =".alert.warning")
     WebElement redWarningAlert;
+    @FindBy(css =".alert.success")
+    WebElement successAlert;
 
     private AssignGroupElements(WebDriver driver) {
         PageFactory.initElements(driver,this);

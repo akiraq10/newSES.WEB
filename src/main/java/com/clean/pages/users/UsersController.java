@@ -21,6 +21,12 @@ public class UsersController {
         hover(driver, getUserElem(driver).folderMenu);
         return this;
     }
+    @Step("Hover mouse on the User menu")
+    public UsersController hoverOnUserMenu() {
+
+        hover(driver, getUserElem(driver).userMenu);
+        return this;
+    }
     @Step("Click on the Add Folder option")
     public UsersController clickOnAddFolder() {
         click(driver, getUserElem(driver).addFolderOpt);
@@ -36,6 +42,11 @@ public class UsersController {
         click(driver, getUserElem(driver).addGroupOpt);
         return this;
     }
+    @Step("Click on the Add User(s) to Group option")
+    public UsersController clickOnAddUserToGroup() {
+        click(driver, getUserElem(driver).addUserToGroupOpt);
+        return this;
+    }
 
 
 
@@ -46,7 +57,12 @@ public class UsersController {
     }
     @Step("Select User as {username}")
     public UsersController selectExistingUser(String username) throws InterruptedException {
-        selectElementInTable(driver,getUserElem(driver).userListTbl,username);
+        selectElementHasLinkInTable(driver,getUserElem(driver).userListTbl,username);
+        return this;
+    }
+    @Step("Enter user: {userName} at Search textbox ")
+    public UsersController searchUser(String userName){
+        fill(driver,getUserElem(driver).searchText,userName);
         return this;
     }
 
@@ -72,6 +88,5 @@ public class UsersController {
         return this;
 
     }
-
 
 }

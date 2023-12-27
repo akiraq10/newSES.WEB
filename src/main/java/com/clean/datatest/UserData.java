@@ -2,7 +2,7 @@ package com.clean.datatest;
 
 public enum UserData {
     REGULAR_USERNAME("Regular"),
-    REGULAR_USERNAME2("Regulr2"),
+    REGULAR_USERNAME2("User_FinalPWD"),
     TEMPORARY_USERNAME("Temp"),
     AUTO_USERNAME("Auto"),
     USER_PASSWORD("12345678"),
@@ -12,6 +12,8 @@ public enum UserData {
     AUTO("Autoboot User"),
     TEMPORARY("Temporary User"),
     DESCRIPTION("hello word"),
+    REMOVE_USERNAME("Remove"),
+    DELETE_USERNAME("Delete"),
 
 
     CONFIRM_DELETE_MSG("Warning ! You are about to delete a folder that may contain user(s), key(s), and device(s). All references to this folder will be removed from the Users and Devices views."),

@@ -17,4 +17,9 @@ public class GroupVerified {
         verify(driver,getEle(driver).groupBreadcrumb,groupName);
         return this;
     }
+    @Step("Verify the '{expect}' alert is displayed")
+    public GroupVerified isCheckAlertSuccessDisplayed(String expect){
+        verify(driver,getEle(driver).successAlert,expect);
+        return this;
+    }
 }

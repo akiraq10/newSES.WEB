@@ -552,7 +552,7 @@ public class FolderTest extends DriverBase {
         assignGroupPage(driver).verify()
                 .isCheckAssignGroupPageDisplay();
         assignGroupPage(driver).act()
-                .clickOnTheGroup(browser+"_"+GroupData.GROUP_NAME.getValue())
+                .selectTheGroupToAssign(browser+"_"+GroupData.GROUP_NAME.getValue())
                 .clickOnSaveBtn();
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
