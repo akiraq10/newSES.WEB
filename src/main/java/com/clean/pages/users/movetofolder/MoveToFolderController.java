@@ -3,8 +3,6 @@ package com.clean.pages.users.movetofolder;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
-import java.util.PrimitiveIterator;
-
 import static com.clean.pages.users.movetofolder.MoveToFolderElements.getElem;
 import static com.clean.ults.ElementController.click;
 import static com.clean.ults.ElementController.selectElementInList;

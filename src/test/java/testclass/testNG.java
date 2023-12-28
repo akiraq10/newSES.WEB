@@ -1,7 +1,6 @@
 package testclass;
 
 import com.clean.driver.DriverBase;
-import com.clean.listener.RetryFailCase;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;

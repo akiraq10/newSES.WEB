@@ -4,7 +4,8 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.configuration.administratormanagement.assignrole.AssignRoleElement.assignRoleElement;
-import static com.clean.ults.ElementController.*;
+import static com.clean.ults.ElementController.click;
+import static com.clean.ults.ElementController.selectElementHasLinkInTable;
 
 public class AssignRoleController {
     private WebDriver driver;

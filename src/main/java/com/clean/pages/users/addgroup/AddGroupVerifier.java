@@ -3,8 +3,9 @@ package com.clean.pages.users.addgroup;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
-import static com.clean.ults.ElementController.*;
+
 import static com.clean.pages.users.addgroup.AddGroupElement.getElement;
+import static com.clean.ults.ElementController.verify;
 
 public class AddGroupVerifier {
     private WebDriver driver;

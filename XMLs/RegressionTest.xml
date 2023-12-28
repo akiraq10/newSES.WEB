@@ -20,6 +20,7 @@
             <class name="testclass.client.sesweb.PackageTest"></class>
             <class name="testclass.client.sesweb.AdministratorTest"></class>
             <class name="testclass.client.sesweb.FolderTest"></class>
+            <class name="testclass.client.sesweb.grouptest.ActionFromUserMenu"></class>
         </classes>
     </test>
 

@@ -2,8 +2,10 @@ package com.clean.pages.profiles;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
-import static com.clean.ults.ElementController.*;
+
 import static com.clean.pages.profiles.ProfileElement.element;
+import static com.clean.ults.ElementController.click;
+import static com.clean.ults.ElementController.hover;
 
 public class ProfileController {
     private WebDriver driver;

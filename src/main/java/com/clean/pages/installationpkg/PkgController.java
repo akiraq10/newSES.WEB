@@ -4,7 +4,8 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.installationpkg.PkgElement.pkgElement;
-import static com.clean.ults.ElementController.*;
+import static com.clean.ults.ElementController.click;
+import static com.clean.ults.ElementController.hover;
 
 public class PkgController {
     private WebDriver driver;

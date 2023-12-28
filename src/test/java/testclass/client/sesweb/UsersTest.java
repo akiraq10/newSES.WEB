@@ -5,16 +5,15 @@ import com.clean.datatest.GroupData;
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
-
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
-import static com.clean.pages.users.adduser.AddUserPage.addUserPage;
-import static com.clean.pages.users.UserPage.userPage;
+
 import static com.clean.pages.login.LoginPage.loginPage;
+import static com.clean.pages.users.UserPage.userPage;
+import static com.clean.pages.users.adduser.AddUserPage.addUserPage;
 import static com.clean.pages.users.assigngroup.AssignGroupPage.assignGroupPage;
-import static com.clean.pages.users.assignuser.AssignUserPage.assignUserPage;
 import static com.clean.pages.users.edituser.EditUserPage.editUserPage;
 
 public class UsersTest extends DriverBase {

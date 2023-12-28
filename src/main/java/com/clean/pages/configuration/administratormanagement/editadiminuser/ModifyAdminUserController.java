@@ -2,11 +2,10 @@ package com.clean.pages.configuration.administratormanagement.editadiminuser;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 import static com.clean.pages.configuration.administratormanagement.editadiminuser.ModifyAdminUserElement.modifyAdminUserElement;
-import static com.clean.ults.ElementController.*;
+import static com.clean.ults.ElementController.click;
+import static com.clean.ults.ElementController.hover;
 
 
 public class ModifyAdminUserController {

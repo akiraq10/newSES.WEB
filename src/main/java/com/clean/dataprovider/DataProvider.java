@@ -1,10 +1,8 @@
 package com.clean.dataprovider;
 
 import com.clean.ults.ExcelReaderUtls;
-import org.apache.poi.ss.usermodel.*;
 
 import java.io.File;
-import java.io.FileInputStream;
 
 public class DataProvider {
     private String excelFilename ="DataTest.xlsx";

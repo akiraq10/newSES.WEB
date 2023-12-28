@@ -1,6 +1,5 @@
 package com.clean.pages.users.groupproperties;
 
-import com.clean.dataprovider.DataProvider;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 

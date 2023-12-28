@@ -2,7 +2,6 @@ package com.clean.pages.users.viewauditlogs;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
 
 import static com.clean.pages.users.viewauditlogs.ViewAuditLogsElements.getElem;
 import static com.clean.ults.ElementController.verify;

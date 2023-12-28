@@ -1,7 +1,6 @@
 package com.clean.pages.profiles;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v85.profiler.model.Profile;
 
 public class ProfilePage {
     ProfileController profileController;

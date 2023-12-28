@@ -1,9 +1,8 @@
 package com.clean.alluremanagement;
 
 import com.google.common.collect.ImmutableMap;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
+
 import static com.github.automatedowl.tools.AllureEnvironmentWriter.allureEnvironmentWriter;
 
 public class AllureManagement {

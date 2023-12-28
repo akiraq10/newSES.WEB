@@ -4,9 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.login.LoginElement.getLoginElement;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
-import static com.clean.ults.ElementController.*;
+import static com.clean.ults.ElementController.verify;
 
 
 public class LoginVerifier {

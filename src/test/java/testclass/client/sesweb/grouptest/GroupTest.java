@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 
 import static com.clean.pages.login.LoginPage.loginPage;
-
 import static com.clean.pages.users.UserPage.userPage;
 import static com.clean.pages.users.addgroup.AddGroupPage.addGroupPage;
 import static com.clean.pages.users.assignKey.AssignKeyPage.assignKeyPage;

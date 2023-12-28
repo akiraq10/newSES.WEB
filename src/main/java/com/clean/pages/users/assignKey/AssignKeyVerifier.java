@@ -4,7 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.users.assignKey.AssignKeyElement.getAssignElement;
-import static com.clean.ults.ElementController.*;
+import static com.clean.ults.ElementController.verify;
 
 public class AssignKeyVerifier {
     WebDriver driver;
