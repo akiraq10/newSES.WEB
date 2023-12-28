@@ -22,6 +22,7 @@ public class DriverFactory {
             ChromeOptions chromeOptions=new ChromeOptions();
             chromeOptions.setAcceptInsecureCerts(true);
             webDriver= new ChromeDriver(chromeOptions);
+            webDriver.manage().window().maximize();
         }
         return webDriver;
     }
@@ -39,6 +40,7 @@ public class DriverFactory {
 
             webDriver = new RemoteWebDriver(new URL(readConfigFile.seleniumGridHub()),
                     capabilities);
+            webDriver.manage().window().maximize();
             return webDriver;
 
 

@@ -3,16 +3,15 @@
 <suite name="Basic Test2" parallel="methods" thread-count="4">
     <listeners>
         <listener class-name="com.clean.listener.ListenerEx"></listener>
-        <listener class-name="com.clean.listener.RetestFailedCase"></listener>
+<!--        <listener class-name="com.clean.listener.RetestFailedCase"></listener>-->
     </listeners>
+    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="uri" value="https://me9tjy7s9bfg.magicendpoint-dev-ses.com/"></parameter>
     <test name="Basic test ses.WEB">
 
         <classes>
-            <class name="testclass.client.sesweb.grouptest.GroupTest"></class>
-            <class name="testclass.client.sesweb.UsersTest"/>
-            <class name="testclass.client.sesweb.grouptest.ActionFromUserMenu"></class>
-            <class name="testclass.client.sesweb.FolderTest"></class>
-
+       
+            <class name="testclass.client.sesweb.AdministratorTest"></class>
         </classes>
     </test>
 

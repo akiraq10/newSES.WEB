@@ -19,7 +19,7 @@ public class AddNewAdminController {
     }
     @Step("Select the admin user : {username}")
     public AddNewAdminController selectAdminUser(String username) throws InterruptedException {
-        selectElementInTable(driver,addNewAdminElement(driver).adminUserTable,username);
+        selectElementHasSpaceInTextInTable(driver,addNewAdminElement(driver).adminUserTable,username);
         return this;
     }
     @Step("Click on the Save button")
