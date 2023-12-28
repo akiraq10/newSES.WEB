@@ -19,7 +19,7 @@ public class AddNewAdminElement {
     WebElement searchTxt;
     @FindBy(xpath = "//tbody")
     WebElement adminUserTable;
-    @FindBy(name ="save")
+    @FindBy(css =".submit[name='save']")
     WebElement saveBtn;
     @FindBy(xpath = "//div[@class='alert success']")
     WebElement successAlert;
