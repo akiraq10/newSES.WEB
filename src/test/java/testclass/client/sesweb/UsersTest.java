@@ -114,27 +114,5 @@ public class UsersTest extends DriverBase {
                 .clickOnSaveBtn();
         editUserPage(driver).verify().isAlertSuccessDisplay();
     }
-    @Parameters({"browser","uri"})
-    @Test(  dependsOnMethods ={"AddNewRegularUser","CreateNewGroup"} ,
-            description = "Test case SDTC....:Verify Assign user to Group",
-            groups = {"basic","regression"})
-    public void AssignUserToGroup(String browser,String uri) throws InterruptedException, MalformedURLException {
-        WebDriver driver;
-        driver = getDriver(browser);
-        driver.get(uri);
-        loginPage(driver).act()
-                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
-        userPage(driver).act()
-                .searchUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
-                .selectExistingUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
-                .hoverOnUserMenu()
-                .clickOnAddUserToGroup();
-        assignGroupPage(driver).act()
-                .selectTheGroupToAssign(browser+"_"+GroupData.GROUP_NAME.getValue())
-                .clickOnSaveBtn();
-        assignGroupPage(driver).verify()
-                .isCheckSuccessAlertDisplay();
-
-    }
 
 }

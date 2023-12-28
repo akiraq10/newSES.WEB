@@ -22,6 +22,29 @@ import static com.clean.pages.users.userproperties.UserPropertiesPage.userProper
 import static com.clean.pages.users.viewauditlogs.ViewAuditLogsPage.viewAuditLogsPage;
 
 public class ActionFromUserMenu extends DriverBase {
+    @Parameters({"browser","uri"})
+    @Test(  dependsOnMethods ={"AddNewRegularUser","CreateNewGroup"} ,
+            description = "Test case SDTC....:Verify Assign user to Group",
+            groups = {"basic","regression"})
+    public void AssignUserToGroup(String browser,String uri) throws InterruptedException, MalformedURLException {
+        WebDriver driver;
+        driver = getDriver(browser);
+        driver.get(uri);
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .searchUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
+                .selectExistingUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
+                .hoverOnUserMenu()
+                .clickOnAddUserToGroup();
+        assignGroupPage(driver).act()
+                .selectTheGroupToAssign(browser+"_"+GroupData.GROUP_NAME.getValue())
+                .clickOnSaveBtn();
+        assignGroupPage(driver).verify()
+                .isCheckSuccessAlertDisplay();
+
+    }
+
     @Feature("Test Suite : Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40301 : Group > User > View Properties",
@@ -126,7 +149,7 @@ public class ActionFromUserMenu extends DriverBase {
     @Feature("Test Suite : Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40305 : Group > User > View logsr",
-            dependsOnMethods = {"AssignUserToGroup"},
+            dependsOnMethods = "AssignUserToGroup",
             groups = {"regression"})
     public void verifyAudiLogsPageOfUserBelongGroup(String browser,String uri) throws MalformedURLException, InterruptedException {
         WebDriver driver;
@@ -146,7 +169,7 @@ public class ActionFromUserMenu extends DriverBase {
     @Feature("Test Suite : Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40302 : Group > User > Delete User",
-            dependsOnMethods = {"verifyRemoveUserFromGroup"},
+            dependsOnMethods = "verifyRemoveUserFromGroup",
             groups = {"regression"})
     public void verifyDeleteUserBelongGroup(String browser,String uri) throws MalformedURLException, InterruptedException {
         WebDriver driver;
@@ -180,7 +203,7 @@ public class ActionFromUserMenu extends DriverBase {
     @Feature("Test Suite : Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40306 : Group > User > Remove user from group",
-            dependsOnMethods = {"CreateNewGroup"},
+            dependsOnMethods = "CreateNewGroup",
             groups = {"regression"})
     public void verifyRemoveUserFromGroup(String browser,String uri) throws MalformedURLException, InterruptedException {
         WebDriver driver;

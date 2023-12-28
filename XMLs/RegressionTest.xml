@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Basic Test2" parallel="methods" thread-count="4">
+<suite name="Regression Test" parallel="methods" thread-count="4">
     <listeners>
         <listener class-name="com.clean.listener.ListenerEx"></listener>
         <listener class-name="com.clean.listener.RetestFailedCase"></listener>
