@@ -4,8 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.users.assignuser.AssignUserElement.getAssignUserEle;
-import static com.clean.ults.ElementController.click;
-import static com.clean.ults.ElementController.selectElementInTable;
+import static com.clean.ults.ElementController.*;
 
 public class AssignUserController {
     WebDriver driver;
@@ -15,7 +14,7 @@ public class AssignUserController {
     }
     @Step("Select the user: {username}")
     public AssignUserController selectUser(String username) throws InterruptedException {
-        selectElementInTable(driver,getAssignUserEle(driver).selectUserTable,username);
+        selectElementHasSpaceInTextInTable(driver,getAssignUserEle(driver).selectUserTable,username);
         return this;
 
     }
