@@ -13,6 +13,8 @@ public class UserElements {
     WebElement userMenu;
     @FindBy(id = "Actions_Type_User_Advanced")
     WebElement userAdvancedMenu;
+    @FindBy(id = "Actions_User_ViewUserGeneral")
+    WebElement viewPropertiesOpt;
     @FindBy(id = "Actions_Type_Folder_Basic")
     WebElement folderMenu;
     @FindBy(id = "Actions_Folder_AddFolder")

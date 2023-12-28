@@ -36,7 +36,7 @@ public class AdministratorTest extends DriverBase {
         addNewAdminPage(driver).verify().isSelectUserPageDisplay();
         addNewAdminPage(driver).act()
                 .searchAdminUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
-                .selectAdminUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
+                .selectAdminUser(" "+browser+"_"+UserData.REGULAR_USERNAME.getValue()+" ")
                 .clickOnSaveButton();
         addNewAdminPage(driver).verify().isAlertSuccessDisplay();
     }

@@ -32,6 +32,11 @@ public class UsersController {
         click(driver, getUserElem(driver).addFolderOpt);
         return this;
     }
+    @Step("Click on the View Properties option")
+    public UsersController clickOnViewPropertiesOpt() {
+        click(driver, getUserElem(driver).viewPropertiesOpt);
+        return this;
+    }
     @Step("Click on the Add User option")
     public UsersController clickOnAddUser() {
         click(driver, getUserElem(driver).addUserOpt);

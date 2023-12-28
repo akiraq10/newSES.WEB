@@ -109,8 +109,12 @@ public class UsersTest extends DriverBase {
         driver.get(uri);
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
-        userPage(driver).act().selectExistingUser(browser+"_"+UserData.REGULAR_USERNAME.getValue());
-        editUserPage(driver).act().fillEmail(readConfigFile.idPEmailUser())
+        userPage(driver).act()
+                .selectExistingUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
+                .hoverOnUserMenu()
+                .clickOnViewPropertiesOpt();
+        editUserPage(driver).act()
+                .fillEmail(readConfigFile.idPEmailUser())
                 .clickOnSaveBtn();
         editUserPage(driver).verify().isAlertSuccessDisplay();
     }
