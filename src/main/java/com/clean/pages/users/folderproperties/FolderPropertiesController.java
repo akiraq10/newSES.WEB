@@ -140,7 +140,7 @@ public class FolderPropertiesController {
     }
     @Step("Select the user name : {userName}")
     public FolderPropertiesController selectUserName(String userName) throws InterruptedException {
-        selectElementInTable(driver,getFolderElement(driver).selectTable,userName);
+        selectElementHasSpaceInTextInTable(driver,getFolderElement(driver).selectTable,userName);
         return this;
     }
     @Step("Click on the Group tab")
