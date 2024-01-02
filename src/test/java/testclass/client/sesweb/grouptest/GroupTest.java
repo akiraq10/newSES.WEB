@@ -4,6 +4,7 @@ import com.clean.datatest.AlertData;
 import com.clean.datatest.FolderData;
 import com.clean.datatest.GroupData;
 import com.clean.driver.DriverBase;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -67,6 +68,7 @@ public class GroupTest extends DriverBase {
         addGroupPage(driver).verify().isCheckAddGroupSuccess(AlertData.ALERT_SUCCESS.getValue());
 
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-26728 : Group Properties: General > Change group name",
     dependsOnMethods = "CreateNewGroupToTestUpdate",
@@ -92,6 +94,7 @@ public class GroupTest extends DriverBase {
         groupPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40311 : Group Properties: General > Change Description",
     dependsOnMethods = "ChangeTheGroupName",
@@ -117,6 +120,7 @@ public class GroupTest extends DriverBase {
         groupPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40312 : Group Properties: General > Back",
     dependsOnMethods = "ChangeTheGroupName",
@@ -142,6 +146,7 @@ public class GroupTest extends DriverBase {
         groupPage(driver).verify()
                 .isCheckGroupPageDisplay(browser+"_"+GroupData.GROUP_NAME_UPDATE.getValue());
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40313 : Group Properties: Permissions > Back",
     dependsOnMethods = "ChangeTheGroupName",
@@ -172,6 +177,7 @@ public class GroupTest extends DriverBase {
                 .isCheckGeneralPageDisplay();
 
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40314 : Group Properties: Permissions > Edit Privileges",
     dependsOnMethods = "ChangeTheGroupName",
@@ -201,6 +207,7 @@ public class GroupTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40315 : Group Properties: Permissions > Edit PBConnex policies (e.g: PBN AutoBoot",
             dependsOnMethods = "ChangeTheGroupName",
@@ -229,6 +236,7 @@ public class GroupTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
     }
 
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40316 : Group Properties: Keys > Back",
             dependsOnMethods = "ChangeTheGroupName",
@@ -259,6 +267,7 @@ public class GroupTest extends DriverBase {
                 .isCheckGeneralPageDisplay();
 
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40317 : Group Properties: Keys > Assign key",
     dependsOnMethods = "ChangeTheGroupName",
@@ -289,6 +298,7 @@ public class GroupTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40318 : Group Properties: Keys > Remove key",
     dependsOnMethods = {"AssignKeyToGroupProperties"},
@@ -318,6 +328,7 @@ public class GroupTest extends DriverBase {
                 .isCheckKeyIsRemoved(FolderData.DEVICE_KEY.getValue());
     }
 
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40319 : Group Properties: Groups > Back",
             dependsOnMethods = "ChangeTheGroupName",
@@ -348,6 +359,7 @@ public class GroupTest extends DriverBase {
                 .isCheckGeneralPageDisplay();
 
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-26684 : Group Properties: Groups > Assign to group",
     dependsOnMethods = "ChangeTheGroupName",
@@ -381,6 +393,7 @@ public class GroupTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40320 : Group Properties: Groups > Remove from parent group",
     dependsOnMethods = "AssignGroupToGroupProperties",
@@ -414,6 +427,7 @@ public class GroupTest extends DriverBase {
                 .isCheckGroupIsRemoved(browser+"_"+GroupData.GROUP_NAME.getValue());
 
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-44654 : Group Properties: Service Provider > Assign Service Providers",
     dependsOnMethods = "ChangeTheGroupName",
@@ -449,6 +463,7 @@ public class GroupTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+    @Feature("Test Suite : Group-> Group Properties")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-44655 : Group Properties: Service Provider > Remove Service Providers",
     dependsOnMethods = "AssignTheSPToGroup",

@@ -43,6 +43,12 @@ public class GroupElements {
     WebElement yesOnConfirmDialogBtn;
     @FindBy(css =".alert.success")
     WebElement successAlert;
+    @FindBy(id = "Actions_User_ChallengeResponse")
+    WebElement challengeResponseOpt;
+    @FindBy(id = "Actions_User_CheckPBConnex")
+    WebElement checkPBConnexOpt;
+    @FindBy(id = "Actions_User_ResetFailedLoginsConfirmed")
+    WebElement resetFailedRebootLoginOpt;
     private GroupElements(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }

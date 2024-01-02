@@ -13,8 +13,8 @@ public enum GroupData {
     GROUP_GROUPS_BREADCRUMB("Group properties : Groups"),
     GROUP_SERVICE_PROVIDER_NAME("AzureAD"),
     OPERATION_ALERT("Operation succeeded."),
-    COMMAND_SUCCESS_ALERT("Command has been saved successfully.")
-    ;
+    COMMAND_SUCCESS_ALERT("Command has been saved successfully."),
+    CHALLENGE_STRING("6d 22 49 aa 7d 09 09");
 
     private String value;
 

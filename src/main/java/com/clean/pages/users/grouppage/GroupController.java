@@ -72,4 +72,26 @@ public class GroupController {
          selectElementHasLinkInTable(driver,getEle(driver).groupTable,userName);
          return this;
     }
+    @Step("Hover mouse to User Advanced Menu")
+    public GroupController hoverMouseToUserAdvancedMenu() {
+         hover(driver,getEle(driver).userAdvancedMenu);
+         return this;
+    }
+    @Step("Click on the Challenge Response option")
+    public GroupController clickOnTheChallengeResponseOpt() {
+         click(driver,getEle(driver).challengeResponseOpt);
+         return this;
+    }
+    @Step("Click on the Check PBConnex option")
+    public GroupController clickOnTheCheckPBConnexOpt() {
+         click(driver,getEle(driver).checkPBConnexOpt);
+         return this;
+    }
+    @Step("Click on the Reset Failed Preboot Login option")
+    public GroupController clickOnTheResetFailedPrebootLoginOpt() {
+         click(driver,getEle(driver).resetFailedRebootLoginOpt);
+         return this;
+    }
+
+
 }

@@ -5,6 +5,7 @@ import com.clean.datatest.FolderData;
 import com.clean.datatest.GroupData;
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -40,6 +41,7 @@ public class FolderTest extends DriverBase {
         addFolderPage(driver).verify().VerifyCreateFolderSuccess(AlertData.ALERT_SUCCESS.getValue());
 
     }
+    @Feature("Test Suite : Folder-> GUI")
     @Parameters({"browser","uri"})
     @Test(alwaysRun = true,description = "SDTC-41715 : Create folder name containing 1 char ",
             groups = {"regression"})
@@ -72,6 +74,7 @@ public class FolderTest extends DriverBase {
                 .clickOnSaveBtn();
         addFolderPage(driver).verify().VerifyCreateFolderSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
+    @Feature("Test Suite : Folder-> GUI")
     @Parameters({"browser","uri"})
     @Test(alwaysRun = true,
             description = "SDTC-38626 : Check Extend icon on folder tree in SESWeb",
@@ -84,6 +87,8 @@ public class FolderTest extends DriverBase {
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).verify().isCheckExtendIconOnFolderTree();
     }
+
+    @Feature("Test Suite : Folder-> GUI")
     @Parameters({"browser","uri"})
     @Test(alwaysRun = true,
             description = "SDTC-40400 : Not allow to create folder with name over 64 chars",
@@ -104,6 +109,7 @@ public class FolderTest extends DriverBase {
         addFolderPage(driver).verify().isCheckAlertDeniedDisplay(AlertData.ALERT_64_CHARACTERS.getValue());
     }
 
+    @Feature("Test Suite : Folder-> General")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40294 : Folder Properties - General > Back",
             dependsOnMethods = "AddNewFolder",
@@ -127,6 +133,7 @@ public class FolderTest extends DriverBase {
                 .isCheckUserBreadcrumbDisplay();
 
     }
+    @Feature("Test Suite : Folder-> General")
     @Parameters({"browser","uri"})
     @Test(
             description = "SDTC-38627 : Folder Properties - Folder > Add Folder",
@@ -155,6 +162,7 @@ public class FolderTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+    @Feature("Test Suite : Folder-> General")
     @Parameters({"browser","uri"})
     @Test(
     description = "SDTC-38628 : Folder Properties - Folder > Add new Group",
@@ -183,6 +191,8 @@ public class FolderTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+
+    @Feature("Test Suite : Folder-> General")
     @Parameters({"browser","uri"})
     @Test(
     description = "SDTC-40296 : Folder Properties - Folder > Add new user",
@@ -211,6 +221,7 @@ public class FolderTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
     }
 
+    @Feature("Test Suite : Folder-> General")
     @Parameters({"browser","uri"})
     @Test(
     description = "SDTC-40295 : Folder Properties - Folder > Challenge Response",
@@ -237,6 +248,7 @@ public class FolderTest extends DriverBase {
                     .isCheckChallengeResponsePageDisplay()
                     .isCheckGetResponseBtnDisplay();
         }
+    @Feature("Test Suite : Folder-> General")
     @Parameters({"browser","uri"})
     @Test(alwaysRun = true,
     description = "SDTC-38642 : Folder Properties - Folder > Delete folder",
@@ -267,6 +279,7 @@ public class FolderTest extends DriverBase {
                 .isCheckDeleteMsgSuccess(FolderData.DELETE_FOLDER_SUCCESS_MSG.getValue());
 
     }
+    @Feature("Test Suite : Folder-> General")
     @Parameters({"browser","uri"})
     @Test(
     description = "SDTC-40297 : Folder Properties - Folder > View logs",
@@ -291,6 +304,7 @@ public class FolderTest extends DriverBase {
                 .isCheckViewLogPageDisplay();
 
     }
+    @Feature("Test Suite : Folder-> General")
     @Parameters({"browser","uri"})
     @Test(
     description = "SDTC-38630 : Folder properties - Folder Name",
@@ -311,6 +325,7 @@ public class FolderTest extends DriverBase {
                 .isCheckFolderNameInProperties(browser+"_"+UserData.FOLDER_NAME.getValue());
 
     }
+    @Feature("Test Suite : Folder-> General")
     @Parameters({"browser","uri"})
     @Test(alwaysRun = true,
     description = "SDTC-38631 : Folder properties - Description",
@@ -331,6 +346,7 @@ public class FolderTest extends DriverBase {
                 .isCheckDescription(UserData.DESCRIPTION.getValue());
 
     }
+    @Feature("Test Suite : Folder-> General")
     @Parameters({"browser","uri"})
     @Test(alwaysRun = true,
     description = "SDTC-40443 : Folder properties - Folder Name - Rename",
@@ -359,6 +375,7 @@ public class FolderTest extends DriverBase {
         folderPropertiesPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
     }
+    @Feature("Test Suite : Folder-> Keys")
     @Parameters({"browser","uri"})
     @Test(
             description = "SDTC-38632 : Folder properties - Keys - Assign key",
@@ -388,6 +405,7 @@ public class FolderTest extends DriverBase {
         assignKeyPage(driver).verify()
                 .isCheckAlertSuccessDisplay();
     }
+    @Feature("Test Suite : Folder-> Keys")
     @Parameters({"browser","uri"})
     @Test(
             description = "SDTC-38633 : Folder properties - Keys - Remove key",
@@ -414,6 +432,7 @@ public class FolderTest extends DriverBase {
                 .isCheckAlertSuccessDisplay()
                 .isCheckKeyIsRemoved(FolderData.DEVICE_KEY.getValue());
     }
+    @Feature("Test Suite : Folder-> Keys")
     @Parameters({"browser","uri"})
     @Test(
             description = "SDTC-40298 : Folder properties - Keys - Back",
@@ -442,6 +461,7 @@ public class FolderTest extends DriverBase {
                 .isCheckFolderPropertiesBreadcrumbDisplay();
     }
 
+    @Feature("Test Suite : Folder-> Users")
     @Parameters({"browser","uri"})
     @Test(
     description = "SDTC-38635 : Folder properties - Users - Assign user",
@@ -473,6 +493,7 @@ public class FolderTest extends DriverBase {
 
     }
 
+    @Feature("Test Suite : Folder-> Users")
     @Parameters({"browser","uri"})
     @Test(
     description = "SDTC-38636 : Folder properties - Users - Remove user",
@@ -501,6 +522,7 @@ public class FolderTest extends DriverBase {
 
 
     }
+    @Feature("Test Suite : Folder-> Users")
     @Parameters({"browser","uri"})
     @Test(
             description = "SDTC-40299 : Folder properties - Users - Back",
@@ -528,6 +550,7 @@ public class FolderTest extends DriverBase {
         folderPropertiesPage(driver).verify()
                 .isCheckFolderPropertiesBreadcrumbDisplay();
     }
+    @Feature("Test Suite : Folder-> Groups")
     @Parameters({"browser","uri"})
     @Test(
     description = "SDTC-38641 : Folder properties - Groups - Assign group",
@@ -558,6 +581,7 @@ public class FolderTest extends DriverBase {
                 .isCheckAlertSuccessDisplay();
 
     }
+    @Feature("Test Suite : Folder-> Groups")
     @Parameters({"browser","uri"})
     @Test(
     description = "SDTC-38640 : Folder properties - Groups - Remove group",
@@ -585,6 +609,7 @@ public class FolderTest extends DriverBase {
                 .isCheckGroupIsRemoved(browser+"_"+GroupData.GROUP_NAME.getValue());
     }
 
+    @Feature("Test Suite : Folder-> Groups")
     @Parameters({"browser","uri"})
     @Test(
     description = "SDTC-40300 : Folder properties - Groups - Back",
