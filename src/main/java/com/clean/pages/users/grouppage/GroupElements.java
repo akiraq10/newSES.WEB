@@ -12,8 +12,8 @@ public class GroupElements {
     WebElement groupMenu;
     @FindBy(id = "Actions_Group_ViewGroupGeneral")
     WebElement groupPropertiesOpt;
-//    @FindBy(id = "Actions_Group_MoveGroup")
-//    WebElement moveToFolderOpt;
+   @FindBy(id = "Actions_Group_MoveGroup")
+    WebElement moveGroupToFolderOpt;
     @FindBy(id = "Actions_Group_DeleteGroupConfirmed")
     WebElement deleteGroupOpt;
     @FindBy(css ="tbody[role=rowgroup]")
@@ -29,7 +29,7 @@ public class GroupElements {
     @FindBy(id = "Actions_User_AssignGroups")
     WebElement addUserToGroupOpt;
     @FindBy(id = "Actions_User_MoveUser")
-    WebElement moveToFolderOpt;
+    WebElement moveUserToFolder;
     @FindBy(id = "Actions_User_AssignKeys")
     WebElement assignKeyToUser;
     @FindBy(id = "Actions_User_ViewLogs")

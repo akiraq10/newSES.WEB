@@ -37,14 +37,24 @@ public class GroupController {
         click(driver,getEle(driver).deleteUserOpt);
         return this;
     }
+    @Step("Click on the Delete Group option")
+    public GroupController  clickOnDeleteGroupOpt() {
+        click(driver,getEle(driver).deleteGroupOpt);
+        return this;
+    }
     @Step("Click on the Add user to groups option")
     public GroupController  clickOnAddUserToGroupOpt() {
          click(driver,getEle(driver).addUserToGroupOpt);
          return this;
     }
     @Step("Click on the Move To Folder option")
-    public GroupController  clickOnMoveToFolderOpt() {
-         click(driver,getEle(driver).moveToFolderOpt);
+    public GroupController clickOnUserMoveToFolder() {
+         click(driver,getEle(driver).moveUserToFolder);
+         return this;
+    }
+    @Step("Click on the Move To Folder option")
+    public GroupController clickOnGroupMoveToFolder() {
+         click(driver,getEle(driver).moveGroupToFolderOpt);
          return this;
     }
     @Step("Click on the Assign Key To User option")

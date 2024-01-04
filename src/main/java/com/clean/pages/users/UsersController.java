@@ -92,6 +92,12 @@ public class UsersController {
         Thread.sleep(2000);
         return this;
 
+    } @Step("Select the folder as {groupName}")
+    public UsersController selectGroupOnFolderTreeNotClickExpandIcon(String groupName) throws InterruptedException {
+        selectElementInList(driver,getUserElem(driver).folderTree,groupName);
+        Thread.sleep(2000);
+        return this;
+
     }
 
 }

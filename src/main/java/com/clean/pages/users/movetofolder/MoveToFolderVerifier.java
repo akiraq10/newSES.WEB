@@ -13,8 +13,13 @@ public class MoveToFolderVerifier {
         this.driver = driver;
     }
     @Step("Verify The Move to Folder Page is displayed")
-    public MoveToFolderVerifier isCheckMoveToFolderPageDisplay(){
-        verify(driver,getElem(driver).moveToFolderBreadcrumb);
+    public MoveToFolderVerifier isCheckMoveUserToFolderPageDisplay(){
+        verify(driver,getElem(driver).moveUserToFolderBreadcrumb);
+        return this;
+    }
+    @Step("Verify The Move to Folder Page is displayed")
+    public MoveToFolderVerifier isCheckMoveGroupToFolderPageDisplay(){
+        verify(driver,getElem(driver).moveGroupToFolderBreadcrumb);
         return this;
     }
     @Step("Verify the Move Button is displayed")

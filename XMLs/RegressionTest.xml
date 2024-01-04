@@ -22,6 +22,7 @@
             <class name="testclass.client.sesweb.FolderTest"></class>
             <class name="testclass.client.sesweb.grouptest.ActionFromUserMenu"></class>
             <class name="testclass.client.sesweb.grouptest.ActionFromUserAdvancedMenu"></class>
+            <class name="testclass.client.sesweb.grouptest.ActionFromGroupMenu"></class>
         </classes>
     </test>
 

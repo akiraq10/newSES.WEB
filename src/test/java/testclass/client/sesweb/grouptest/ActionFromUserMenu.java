@@ -45,7 +45,7 @@ public class ActionFromUserMenu extends DriverBase {
 
     }
 
-    @Feature("Test Suite : Action from User menu")
+    @Feature("Test Suite : Group -> Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40301 : Group > User > View Properties",
     dependsOnMethods = "AssignUserToGroup",
@@ -67,7 +67,7 @@ public class ActionFromUserMenu extends DriverBase {
 
     }
 
-    @Feature("Test Suite : Action from User menu")
+    @Feature("Test Suite : Group -> Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-26844 : Group > User > Add user to group",
             dependsOnMethods = {"AssignUserToGroup","ChangeTheGroupName"},
@@ -92,7 +92,7 @@ public class ActionFromUserMenu extends DriverBase {
 
     }
 
-    @Feature("Test Suite : Action from User menu")
+    @Feature("Test Suite : Group -> Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40303 : Group > User > Move to folder",
             dependsOnMethods = {"AssignUserToGroup","VerifyRenameFolder"},
@@ -108,9 +108,9 @@ public class ActionFromUserMenu extends DriverBase {
         groupPage(driver).act()
                 .selectUserInGroup(browser+"_"+ UserData.REGULAR_USERNAME.getValue())
                 .hoverToUserMenu()
-                .clickOnMoveToFolderOpt();
+                .clickOnUserMoveToFolder();
         moveToFolderPage(driver).verify()
-                .isCheckMoveToFolderPageDisplay();
+                .isCheckMoveUserToFolderPageDisplay();
         moveToFolderPage(driver).act()
                 .selectFolder(browser+"_"+FolderData.FOLDER_RENAME.getValue());
         moveToFolderPage(driver).verify()
@@ -121,7 +121,7 @@ public class ActionFromUserMenu extends DriverBase {
                 .isCheckAlertSuccessDisplay();
     }
 
-    @Feature("Test Suite : Action from User menu")
+    @Feature("Test Suite : Group -> Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40304 : Group > User > Assign key to user",
             dependsOnMethods = {"AssignUserToGroup"},
@@ -146,7 +146,7 @@ public class ActionFromUserMenu extends DriverBase {
 
     }
 
-    @Feature("Test Suite : Action from User menu")
+    @Feature("Test Suite : Group -> Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40305 : Group > User > View logsr",
             dependsOnMethods = "AssignUserToGroup",
@@ -166,7 +166,7 @@ public class ActionFromUserMenu extends DriverBase {
         viewAuditLogsPage(driver).verify().isCheckViewAuditLogsPageDisplay();
     }
 
-    @Feature("Test Suite : Action from User menu")
+    @Feature("Test Suite : Group -> Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40302 : Group > User > Delete User",
             dependsOnMethods = "verifyRemoveUserFromGroup",
@@ -200,7 +200,7 @@ public class ActionFromUserMenu extends DriverBase {
 
     }
 
-    @Feature("Test Suite : Action from User menu")
+    @Feature("Test Suite : Group -> Action from User menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-40306 : Group > User > Remove user from group",
             dependsOnMethods = "CreateNewGroup",

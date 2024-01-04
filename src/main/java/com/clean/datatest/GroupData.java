@@ -3,6 +3,7 @@ package com.clean.datatest;
 public enum GroupData {
     GROUP_NAME("Group1"),
     GROUP_NAME_TEST_UPDATE("Group2"),
+    GROUP_NAME_TEST_DELETE("Delete"),
     GROUP_DESCRIPTION("this is description"),
     GROUP_DESCRIPTION_UPDATE("update the description"),
     GROUP_NAME_UPDATE("Group_name_updated"),
