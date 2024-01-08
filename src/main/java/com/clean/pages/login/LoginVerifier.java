@@ -20,7 +20,7 @@ public class LoginVerifier {
 
 //        waitElement(driver,getLoginElement(driver).logoBtn);
 //       assertTrue(getLoginElement(driver).logoBtn.isDisplayed(),"Not Found");
-        verify(driver,getLoginElement(driver).logoBtn);
+        verify(driver,getLoginElement(driver).logoWMGBtn);
         return this;
     }
     @Step("Verify fail to login to SES.WEB with invalid password. The Error is displayed")

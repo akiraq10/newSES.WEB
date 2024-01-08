@@ -279,7 +279,6 @@ public class ElementController {
             }
         }
     }
-
     private static void highLightElement(WebDriver driver, WebElement element)
     {
         JavascriptExecutor js=(JavascriptExecutor)driver;

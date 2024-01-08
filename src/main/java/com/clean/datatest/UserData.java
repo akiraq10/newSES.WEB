@@ -6,6 +6,7 @@ public enum UserData {
     TEMPORARY_USERNAME("Temp"),
     AUTO_USERNAME("Auto"),
     USER_PASSWORD("12345678"),
+    NEW_USER_PASSWORD("87654321"),
     GROUP_NAME("Group1"),
     FOLDER_NAME("Folder1"),
     REGULAR("Regular User"),
@@ -15,7 +16,7 @@ public enum UserData {
     REMOVE_USERNAME("Remove"),
     DELETE_USERNAME("Delete"),
 
-
+    ADMIN_USERNAME("admin1"),
     CONFIRM_DELETE_MSG("Warning ! You are about to delete a folder that may contain user(s), key(s), and device(s). All references to this folder will be removed from the Users and Devices views."),
     FAILPW_RULE_MSG("Password is too short. See minimum password length in password rules"),
     USERPW_ERROR("The password may not be empty, nor consist only of spaces"),

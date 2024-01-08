@@ -23,6 +23,7 @@
             <class name="testclass.client.sesweb.grouptest.ActionFromUserMenu"></class>
             <class name="testclass.client.sesweb.grouptest.ActionFromUserAdvancedMenu"></class>
             <class name="testclass.client.sesweb.grouptest.ActionFromGroupMenu"></class>
+            <class name="testclass.client.sesweb.user.viewproperties.GeneralTest"></class>
         </classes>
     </test>
 

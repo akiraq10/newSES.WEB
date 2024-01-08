@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.users.UserElements.getUserElem;
 import static com.clean.ults.ElementController.*;
+import static com.clean.ults.ElementController.zoomInPage;
+import static java.lang.Thread.sleep;
 
 
 public class UsersController {
@@ -57,7 +59,7 @@ public class UsersController {
 
     private UsersController clickOnExpandIcon() throws InterruptedException {
         click(driver, getUserElem(driver).expandFolderIcon);
-        Thread.sleep(1000);
+        sleep(1000);
         return this;
     }
     @Step("Select User as {username}")
@@ -75,7 +77,7 @@ public class UsersController {
     public UsersController selectFolderOnFolderTree(String folderName) throws InterruptedException {
         clickOnExpandIcon();
         selectElementInList(driver,getUserElem(driver).folderTree,folderName);
-        Thread.sleep(2000);
+        sleep(2000);
         return this;
 
     }
@@ -89,15 +91,20 @@ public class UsersController {
     public UsersController selectGroupOnFolderTree(String groupName) throws InterruptedException {
         clickOnExpandIcon();
         selectElementInList(driver,getUserElem(driver).folderTree,groupName);
-        Thread.sleep(2000);
-        return this;
-
-    } @Step("Select the folder as {groupName}")
-    public UsersController selectGroupOnFolderTreeNotClickExpandIcon(String groupName) throws InterruptedException {
-        selectElementInList(driver,getUserElem(driver).folderTree,groupName);
-        Thread.sleep(2000);
+        sleep(2000);
         return this;
 
     }
+    @Step("Select the folder as {groupName}")
+    public UsersController selectGroupOnFolderTreeNotClickExpandIcon(String groupName) throws InterruptedException {
+        selectElementInList(driver,getUserElem(driver).folderTree,groupName);
+        sleep(2000);
+        return this;
 
+    }
+    @Step("Click on the Log off Option at top right corner")
+    public UsersController clickOnLogOff()  {
+        click(driver,getUserElem(driver).logOffOpt);
+        return this;
+    }
 }

@@ -12,6 +12,32 @@ public class UserPropertiesElements {
     WebElement userMenu;
     @FindBy(id = "Actions_User_AssignGroups")
     WebElement addUserToGroupOpt;
+    @FindBy(id = "User_Name")
+    WebElement userNameTxt;
+    @FindBy(id = "password-input")
+    WebElement passwordTxt;
+    @FindBy(id = "LogonNameUPN")
+    WebElement upnNameTxt;
+    @FindBy(id = "SAMName")
+    WebElement samNameTxt;
+    @FindBy(id = "DomainName")
+    WebElement domainTxt;
+    @FindBy(id = "Email")
+    WebElement emailTXt;
+    @FindBy(id = "IsAdminSetPassword")
+    WebElement userMustChangePwdChk;
+    @FindBy(id = "Description")
+    WebElement descriptionTxt;
+    @FindBy(id = "FirstName")
+    WebElement firstNameTxt;
+    @FindBy(id = "LastName")
+    WebElement lastNameTxt;
+    @FindBy(id = "Phone")
+    WebElement phoneTxt;
+    @FindBy(id = "edit-user-submit")
+    WebElement saveBtn;
+    @FindBy(css =".alert.success")
+    WebElement successAlert;
     private UserPropertiesElements(WebDriver driver) {
         PageFactory.initElements(driver,this);
     }

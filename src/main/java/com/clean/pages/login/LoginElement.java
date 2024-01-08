@@ -23,7 +23,7 @@ public class LoginElement {
     @FindBy(id = "ses-submit-btn")
     WebElement loginBtn;
     @FindBy(id = "breadcrumb_Folder_ViewFolder_0")
-    WebElement logoBtn;
+    WebElement logoWMGBtn;
     @FindBy(className = "loginValidationErrors")
     WebElement unsuccessfulError;
 

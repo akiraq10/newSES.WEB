@@ -41,8 +41,10 @@ public class UserElements {
     WebElement addUserToGroupOpt;
     @FindBy(css ="input[placeholder='Search...']")
     WebElement searchText;
- @FindBy(css =".alert.success")
- WebElement successAlert;
+    @FindBy(css =".alert.success")
+    WebElement successAlert;
+    @FindBy(id = "header_logoffbutton")
+    WebElement logOffOpt;
     private UserElements(WebDriver driver) {
 
         PageFactory.initElements(driver, this);
