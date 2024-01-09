@@ -41,7 +41,7 @@ public class UsersTest extends DriverBase {
     @Test(alwaysRun = true,
             description = "Test case SDTC....: Verify can create new regular user with final password",
             groups = {"basic","regression"})
-    public void AddNewRegularUserWithFinalPassowrd(String browser,String uri) throws MalformedURLException {
+    public void addNewRegularUserWithFinalPassword(String browser,String uri) throws MalformedURLException {
         WebDriver driver;
         driver = getDriver(browser);
         driver.get(uri);
