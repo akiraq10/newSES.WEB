@@ -45,6 +45,12 @@ public class UserElements {
     WebElement successAlert;
     @FindBy(id = "header_logoffbutton")
     WebElement logOffOpt;
+    @FindBy(id = "Actions_User_DeleteUserConfirmed")
+    WebElement deleteUserOptInUserMenu;
+    @FindBy(xpath = "//button[text()='Yes']")
+    WebElement yesBtnOnConfirmationDialog;
+    @FindBy(linkText = "Folders")
+    WebElement rootFolders;
     private UserElements(WebDriver driver) {
 
         PageFactory.initElements(driver, this);

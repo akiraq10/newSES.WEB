@@ -7,7 +7,7 @@ import static com.clean.pages.users.userproperties.UserPropertiesElements.getEle
 import static com.clean.ults.ElementController.*;
 
 public class UserPropertiesController {
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public UserPropertiesController(WebDriver driver) {
         this.driver = driver;
@@ -33,4 +33,31 @@ public class UserPropertiesController {
         click(driver,getElement(driver).saveBtn);
         return this;
     }
+    @Step("Enter the Description as : {description}")
+    public UserPropertiesController fillDescription(String description) {
+        fill(driver,getElement(driver).descriptionTxt,description);
+        return this;
+    }
+
+    @Step("Click on the User -> Delete user  option")
+    public UserPropertiesController clickOnDeleteUserOpt() {
+        click(driver,getElement(driver).deleteUserOpt);
+        return this;
+    }
+    @Step("Click on the Yes button on the confirmation dialog")
+    public UserPropertiesController clickOnYesBtnOnConfirmation() {
+        click(driver,getElement(driver).yesBtnOnConfirmationDialog);
+        return this;
+    }
+    @Step("Click on the User-> Move to Folder option")
+    public UserPropertiesController clickOnMoveToFolderOption() {
+        click(driver,getElement(driver).moveToFolderOpt);
+        return this;
+    }
+    @Step("Click on the User-> Assign Key to User option")
+    public UserPropertiesController clickOnAssignKeyToUserOption() {
+        click(driver,getElement(driver).assignKeyToUserOpt);
+        return this;
+    }
+
 }

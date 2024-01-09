@@ -19,8 +19,7 @@ import static com.clean.pages.users.groupproperties.GroupPropertiesPage.groupPro
 import static com.clean.pages.users.movetofolder.MoveToFolderPage.moveToFolderPage;
 
 public class ActionFromGroupMenu extends DriverBase {
-    String browser="chrome";
-    String uri="https://messo.asia";
+
     @Feature("Test Suite : Group -> Action from Group menu")
     @Parameters({"browser","uri"})
     @Test(description = "SDTC-44663 : Group > Group > Group Properties",

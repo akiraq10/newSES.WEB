@@ -106,4 +106,19 @@ public class UsersController {
         click(driver,getUserElem(driver).logOffOpt);
         return this;
     }
+    @Step("Click on the User -> Delete user option")
+    public UsersController clickOnDeleteUserOpt() {
+        click(driver,getUserElem(driver).deleteUserOptInUserMenu);
+        return this;
+    }
+    @Step("Click on the Yes button on the Confirmation dialog")
+    public UsersController clickOnYesBtnOnConfirmationDialog() {
+        click(driver,getUserElem(driver).yesBtnOnConfirmationDialog);
+        return this;
+    }
+    @Step("Click on the root Folder")
+    public UsersController clickOnTheRootFolder() {
+        click(driver,getUserElem(driver).rootFolders);
+        return this;
+    }
 }

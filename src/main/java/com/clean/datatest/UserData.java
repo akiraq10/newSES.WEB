@@ -13,6 +13,7 @@ public enum UserData {
     AUTO("Autoboot User"),
     TEMPORARY("Temporary User"),
     DESCRIPTION("hello word"),
+    DESCRIPTION_UPDATE("update description"),
     REMOVE_USERNAME("Remove"),
     DELETE_USERNAME("Delete"),
 

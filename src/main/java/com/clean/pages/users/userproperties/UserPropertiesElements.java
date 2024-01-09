@@ -38,6 +38,15 @@ public class UserPropertiesElements {
     WebElement saveBtn;
     @FindBy(css =".alert.success")
     WebElement successAlert;
+    @FindBy(id = "Actions_User_DeleteUserConfirmed")
+    WebElement deleteUserOpt;
+    @FindBy(xpath = "//button[text()='Yes']")
+    WebElement yesBtnOnConfirmationDialog;
+    @FindBy(id = "Actions_User_MoveUser")
+    WebElement moveToFolderOpt;
+
+    @FindBy(id = "Actions_User_AssignKeys")
+    WebElement assignKeyToUserOpt;
     private UserPropertiesElements(WebDriver driver) {
         PageFactory.initElements(driver,this);
     }

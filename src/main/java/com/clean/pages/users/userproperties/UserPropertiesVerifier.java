@@ -34,9 +34,14 @@ public class UserPropertiesVerifier {
         verify(driver,getElement(driver).phoneTxt);
         return this;
     }
-    @Step("Verify the Success alert: {} is displayed")
+    @Step("Verify the Success alert: {expect} is displayed")
     public UserPropertiesVerifier isCheckSuccessAlertDisplayed(String expect) {
         verify(driver,getElement(driver).successAlert,expect);
+        return this;
+    }
+    @Step("Verify the Description is displayed as: {} ")
+    public UserPropertiesVerifier isCheckDescription(String expect) {
+        verify(driver,getElement(driver).descriptionTxt,expect);
         return this;
     }
 }

@@ -1,7 +1,6 @@
 package testclass.client.sesweb;
 
 import com.clean.datatest.AlertData;
-import com.clean.datatest.GroupData;
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +12,6 @@ import java.net.MalformedURLException;
 import static com.clean.pages.login.LoginPage.loginPage;
 import static com.clean.pages.users.UserPage.userPage;
 import static com.clean.pages.users.adduser.AddUserPage.addUserPage;
-import static com.clean.pages.users.assigngroup.AssignGroupPage.assignGroupPage;
 import static com.clean.pages.users.edituser.EditUserPage.editUserPage;
 
 public class UsersTest extends DriverBase {
@@ -34,6 +32,7 @@ public class UsersTest extends DriverBase {
         addUserPage(driver).act()
                 .fillUserID(browser+"_"+UserData.REGULAR_USERNAME.getValue())
                 .fillPWD(UserData.USER_PASSWORD.getValue())
+                .fillDescription(browser+"_"+UserData.REGULAR_USERNAME.getValue())
                 .selectUserType(UserData.REGULAR)
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
@@ -54,6 +53,7 @@ public class UsersTest extends DriverBase {
         addUserPage(driver).act()
                 .fillUserID(browser+"_"+UserData.REGULAR_USERNAME2.getValue())
                 .fillPWD(UserData.USER_PASSWORD.getValue())
+                .fillDescription(browser+"_"+UserData.REGULAR_USERNAME2.getValue())
                 .selectUserType(UserData.REGULAR)
                 .unCheckFinalPassword()
                 .clickOnSaveBtn();
@@ -75,6 +75,7 @@ public class UsersTest extends DriverBase {
         addUserPage(driver).act()
                 .fillUserID(browser+"_"+UserData.TEMPORARY_USERNAME.getValue())
                 .fillPWD(UserData.USER_PASSWORD.getValue())
+                .fillDescription(browser+"_"+UserData.TEMPORARY_USERNAME.getValue())
                 .selectUserType(UserData.TEMPORARY)
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
@@ -95,14 +96,16 @@ public class UsersTest extends DriverBase {
         addUserPage(driver).act()
                 .fillUserID(browser+"_"+UserData.AUTO_USERNAME.getValue())
                 .fillPWD(UserData.USER_PASSWORD.getValue())
+                .fillDescription(browser+"_"+UserData.AUTO_USERNAME.getValue())
                 .selectUserType(UserData.AUTO)
                 .clickOnSaveBtn();
         addUserPage(driver).verify().verifyCreateUserSuccess(AlertData.ALERT_SUCCESS.getValue());
     }
     @Parameters({"browser","uri"})
-    @Test(alwaysRun = true,
+    @Test(
             description = "Test case SDTC....:Verify admin can add email for an existing user",
-            groups = {"basic","regression"})
+            groups = {"basic","regression"},
+    dependsOnMethods = "AddNewRegularUser")
     public void ModifyUserAddEmail(String browser,String uri) throws InterruptedException, MalformedURLException {
         WebDriver driver;
         driver = getDriver(browser);
