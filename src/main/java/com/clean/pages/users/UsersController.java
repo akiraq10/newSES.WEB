@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 import static com.clean.pages.users.UserElements.getUserElem;
 import static com.clean.ults.ElementController.*;
-import static com.clean.ults.ElementController.zoomInPage;
 import static java.lang.Thread.sleep;
 
 
