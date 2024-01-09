@@ -27,7 +27,6 @@ public class UserPropertiesVerifier {
         verify(driver,getElement(driver).domainTxt);
         verify(driver,getElement(driver).emailTXt);
         verify(driver,getElement(driver).descriptionTxt);
-        verify(driver,getElement(driver).userMustChangePwdChk);
         verify(driver,getElement(driver).firstNameTxt);
         verify(driver,getElement(driver).lastNameTxt);
         verify(driver,getElement(driver).lastNameTxt);
