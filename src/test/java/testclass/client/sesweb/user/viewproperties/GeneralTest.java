@@ -2,6 +2,7 @@ package testclass.client.sesweb.user.viewproperties;
 
 import com.clean.datatest.AlertData;
 import com.clean.datatest.FolderData;
+import com.clean.datatest.GroupData;
 import com.clean.datatest.UserData;
 import com.clean.driver.DriverBase;
 import io.qameta.allure.Feature;
@@ -15,6 +16,7 @@ import static com.clean.pages.login.LoginPage.loginPage;
 import static com.clean.pages.users.UserPage.userPage;
 import static com.clean.pages.users.adduser.AddUserPage.addUserPage;
 import static com.clean.pages.users.assignKey.AssignKeyPage.assignKeyPage;
+import static com.clean.pages.users.assigngroup.AssignGroupPage.assignGroupPage;
 import static com.clean.pages.users.movetofolder.MoveToFolderPage.moveToFolderPage;
 import static com.clean.pages.users.userproperties.UserPropertiesPage.userPropertiesPage;
 
@@ -178,5 +180,31 @@ public class GeneralTest extends DriverBase {
                 .isCheckSuccessAlertDisplayed(AlertData.ALERT_SUCCESS.getValue());
     }
 
+
+    @Feature("Test Suite : Users -> View Properties->General")
+    @Parameters({"browser","uri"})
+    @Test(  description = "SDTC-40234 : User Properties: General - Add user to group",
+            groups = {"regression"},
+            dependsOnMethods = "AddNewAutoBootUser")
+    void verifyAssignUserToGroup(String browser,String uri) throws MalformedURLException, InterruptedException {
+        WebDriver driver;
+        driver = getDriver(browser);
+        driver.get(uri);
+        loginPage(driver).act()
+                .loginSESWEB(readConfigFile.username(), readConfigFile.password());
+        userPage(driver).act()
+                .searchUser(browser+"_"+UserData.AUTO_USERNAME.getValue())
+                .selectExistingUser(browser+"_"+UserData.AUTO_USERNAME.getValue())
+                .hoverOnUserMenu()
+                .clickOnViewPropertiesOpt();
+        userPropertiesPage(driver).act()
+                .hoverToUserMenu()
+                .clickOnAddUserToGroupOpt();
+        assignGroupPage(driver).act()
+                .selectTheGroupToAssign(browser+"_"+ GroupData.GROUP_NAME.getValue())
+                .clickOnSaveBtn();
+        assignGroupPage(driver).verify()
+                .isCheckSuccessAlertDisplay();
+    }
 
 }

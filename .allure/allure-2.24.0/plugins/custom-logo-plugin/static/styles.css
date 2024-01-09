@@ -1,4 +1,4 @@
 .side-nav__brand {
-  background: url('custom-logo.svg') no-repeat left center !important;
+  background: url('.allure/allure-2.24.0/plugins/custom-logo-plugin/static/winmagic.svg') no-repeat left center !important;
   margin-left: 10px;
 }

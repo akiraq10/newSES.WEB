@@ -1,10 +1,8 @@
 package testclass;
 
 import com.clean.driver.DriverBase;
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
@@ -12,6 +10,10 @@ import static org.testng.AssertJUnit.assertEquals;
 
 @Feature("this is the @feature")
 public class testNG {
+
+
+
+
     @Feature("this is the @feature")
     @Description("this is @Description_test1")
     @Story("this is @story_test1")
