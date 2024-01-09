@@ -25,7 +25,7 @@ public class GeneralTest extends DriverBase {
     @Parameters({"browser","uri"})
     @Test(  description = "SDTC-11401 : User Properties: General",
             groups = {"regression"},
-            dependsOnMethods = "AddNewRegularUser")
+            dependsOnMethods = "AddNewTempUser")
     public void verifyAllTextFieldsInUserProperties(String browser,String uri) throws MalformedURLException, InterruptedException {
         WebDriver driver;
         driver = getDriver(browser);
@@ -33,7 +33,7 @@ public class GeneralTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectExistingUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
+                .selectExistingUser(browser+"_"+UserData.TEMPORARY_USERNAME.getValue())
                 .hoverOnUserMenu()
                 .clickOnViewPropertiesOpt();
         userPropertiesPage(driver).verify()
@@ -73,7 +73,7 @@ public class GeneralTest extends DriverBase {
     @Parameters({"browser","uri"})
     @Test(  description = "SDTC-11402 : User Properties: General - Modify info",
             groups = {"regression"},
-            dependsOnMethods = "AddNewRegularUser")
+            dependsOnMethods = "AddNewTempUser")
     public void verifyTheUserInfo(String browser,String uri) throws MalformedURLException, InterruptedException {
         WebDriver driver;
         driver = getDriver(browser);
@@ -81,7 +81,7 @@ public class GeneralTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .selectExistingUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
+                .selectExistingUser(browser+"_"+UserData.TEMPORARY_USERNAME.getValue())
                 .hoverOnUserMenu()
                 .clickOnViewPropertiesOpt();
         userPropertiesPage(driver).act()
@@ -156,7 +156,7 @@ public class GeneralTest extends DriverBase {
     @Parameters({"browser","uri"})
     @Test(  description = "SDTC-40233 : User Properties: General - Assign key to user ",
             groups = {"regression"},
-            dependsOnMethods = "AddNewRegularUser")
+            dependsOnMethods = "AddNewTempUser")
     void verifyAssignKeyToUser(String browser, String uri) throws MalformedURLException, InterruptedException {
         WebDriver driver;
         driver = getDriver(browser);
@@ -164,8 +164,8 @@ public class GeneralTest extends DriverBase {
         loginPage(driver).act()
                 .loginSESWEB(readConfigFile.username(), readConfigFile.password());
         userPage(driver).act()
-                .searchUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
-                .selectExistingUser(browser+"_"+UserData.REGULAR_USERNAME.getValue())
+                .searchUser(browser+"_"+UserData.TEMPORARY_USERNAME.getValue())
+                .selectExistingUser(browser+"_"+UserData.TEMPORARY_USERNAME.getValue())
                 .hoverOnUserMenu()
                 .clickOnViewPropertiesOpt();
         userPropertiesPage(driver).act()
