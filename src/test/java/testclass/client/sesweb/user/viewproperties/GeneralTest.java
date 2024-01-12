@@ -185,7 +185,7 @@ public class GeneralTest extends DriverBase {
     @Parameters({"browser","uri"})
     @Test(  description = "SDTC-40234 : User Properties: General - Add user to group",
             groups = {"regression"},
-            dependsOnMethods = "AddNewAutoBootUser")
+            dependsOnMethods = "ChangeTheGroupName")
     void verifyAssignUserToGroup(String browser,String uri) throws MalformedURLException, InterruptedException {
         WebDriver driver;
         driver = getDriver(browser);
@@ -201,7 +201,7 @@ public class GeneralTest extends DriverBase {
                 .hoverToUserMenu()
                 .clickOnAddUserToGroupOpt();
         assignGroupPage(driver).act()
-                .selectTheGroupToAssign(browser+"_"+ GroupData.GROUP_NAME.getValue())
+                .selectTheGroupToAssign(browser+"_"+ GroupData.GROUP_NAME_UPDATE.getValue())
                 .clickOnSaveBtn();
         assignGroupPage(driver).verify()
                 .isCheckSuccessAlertDisplay();
