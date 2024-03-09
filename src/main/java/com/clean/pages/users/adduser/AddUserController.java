@@ -79,6 +79,35 @@ public class AddUserController {
         }
         return this;
     }
+    @Step("Select the user type as : {type}")
+    public AddUserController selectUserType(String type) {
+        try {
+            if(type==null){
+                throw new IllegalArgumentException("[ERR] The user type cannot null");
+            }else select(AddUserElement.getAddUserElem(driver).userTypeOpt,type);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+//        switch (type){
+//            case "Regular User" :
+//                select(AddUserElement.getAddUserElem(driver).userTypeOpt,type);
+//                break;
+//            case "Autoboot User":
+//                select(AddUserElement.getAddUserElem(driver).userTypeOpt,type);
+//                break;
+//            case "Temporary User":
+//                select(AddUserElement.getAddUserElem(driver).userTypeOpt, type);
+//                break;
+//            default:
+//                System.out.println(type + "NOT available");
+//                break;
+//
+//        }
+        return this;
+    }
     @Step("Click on the Save button")
     public AddUserController clickOnSaveBtn(){
         click(driver, AddUserElement.getAddUserElem(driver).saveBtn);

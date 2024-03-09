@@ -1,0 +1,944 @@
+[INFO ] 2024-03-08 11:31:33.997 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 11:31:37.780 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 11:31:37.781 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Unable to obtain: Capabilities {browserName: chrome, platformName: Windows 11}, error Failed to parse json output, executed: [--browser, chrome, --output, json]
+{
+  "logs": [
+    {
+      "level": "INFO",
+      "timestamp": 1709872297,
+      "message": "Driver path: C:\\Users\\T14s-client\\.cache\\selenium\\chromedriver\\win64\\122.0.6261.111\\chromedriver.exe"
+    },
+    {
+      "level": "INFO",
+      "timestamp": 1709872297,
+      "message": "Browser path: C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    }
+  ],
+  "result": {
+    "code": 0,
+    "message": "C:\\Users\\T14s-client\\.cache\\selenium\\chromedriver\\win64\\122.0.6261.111\\chromedriver.exe",
+    "driver_path": "C:\\Users\\T14s-client\\.cache\\selenium\\chromedriver\\win64\\122.0.6261.111\\chromedriver.exe",
+    "browser_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  }
+ 
+Host info: host: 'T14S', ip: '192.168.2.15'
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}]}]
+Capabilities {browserName: chrome}
+[INFO ] 2024-03-08 11:31:41.470 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 11:33:05.913 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 11:33:16.179 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 11:33:16.180 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+[INFO ] 2024-03-08 11:33:16.944 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 11:34:35.626 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 11:34:45.244 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 11:34:45.487 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 11:35:47.981 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 11:35:57.603 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 11:35:57.764 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 11:36:35.715 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 11:36:47.984 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 11:36:48.139 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 11:40:53.817 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 11:41:07.993 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 11:41:08.143 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 12:02:11.236 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 12:02:29.394 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[ERROR] 2024-03-08 12:02:45.797 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 12:02:45.797 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| [[RemoteWebDriver: chrome on Windows 11 (584a364c38269ce6f96928f2b8e860b2)] -> class name: loginValidationErrors] Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 12:02:48.206 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 12:02:50.366 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 12:02:50.393 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 12:07:23.861 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 12:07:39.244 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[ERROR] 2024-03-08 12:07:56.654 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 12:07:56.654 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| [[RemoteWebDriver: chrome on Windows 11 (e1d6c9913d9ddaa4bb1cbc131f8164f3)] -> css selector: div.loginValidationErrors] Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 12:07:59.417 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 12:08:01.206 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 12:08:01.243 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 12:09:03.923 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 12:09:17.071 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[ERROR] 2024-03-08 12:09:34.013 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 12:09:34.015 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| [[RemoteWebDriver: chrome on Windows 11 (9bc76dc4489290c92e07e3f01e15eab2)] -> css selector: div.loginValidationErrors] Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 12:09:36.366 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 12:09:38.111 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 12:09:38.798 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 12:10:23.935 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 12:10:35.311 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 12:10:37.445 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 12:10:38.708 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 12:10:39.185 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 12:10:39.221 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 13:13:56.326 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 13:14:39.685 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 13:14:39.685 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 13:15:03.907 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 13:15:03.907 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 13:15:28.303 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 13:15:28.304 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 13:15:28.496 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 13:16:17.269 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 13:16:17.430 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:16:17.431 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[ERROR] 2024-03-08 13:16:22.136 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:16:22.137 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: null value in entry: url=null
+[ERROR] 2024-03-08 13:16:22.263 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:16:22.263 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: null value in entry: url=null
+[INFO ] 2024-03-08 13:16:33.295 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 13:16:33.335 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 13:20:02.270 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 13:20:02.412 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:20:02.413 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 13:20:02.530 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 13:20:02.530 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 13:20:02.540 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 13:20:02.541 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 13:20:17.142 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 13:20:17.205 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 13:50:04.055 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 13:50:04.223 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:50:04.224 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[ERROR] 2024-03-08 13:50:11.122 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:50:11.124 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: null value in entry: url=null
+[ERROR] 2024-03-08 13:50:11.330 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:50:11.330 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: null value in entry: url=null
+[INFO ] 2024-03-08 13:50:38.663 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 13:50:38.733 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 13:52:03.976 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 13:52:04.151 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:52:04.152 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[ERROR] 2024-03-08 13:52:07.535 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:52:07.535 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: null value in entry: url=null
+[ERROR] 2024-03-08 13:52:07.697 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:52:07.698 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: null value in entry: url=null
+[INFO ] 2024-03-08 13:52:16.062 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 13:52:16.396 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 13:53:02.099 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 13:53:02.279 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:53:02.280 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[ERROR] 2024-03-08 13:53:05.643 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:53:05.643 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: null value in entry: url=null
+[ERROR] 2024-03-08 13:53:05.769 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:53:05.769 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: null value in entry: url=null
+[INFO ] 2024-03-08 13:53:14.604 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 13:53:15.083 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 13:54:14.196 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 13:54:14.376 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:54:14.377 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 13:54:14.489 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 13:54:14.489 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 13:54:14.500 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 13:54:14.500 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 13:54:26.212 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 13:54:26.367 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 13:55:27.164 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 13:55:27.368 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 13:55:27.369 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 13:55:27.504 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 13:55:27.505 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 13:55:27.513 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 13:55:27.513 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 13:55:38.955 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 13:55:39.587 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 13:55:52.926 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 13:56:25.722 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 13:56:25.723 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 13:56:50.430 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 13:56:50.430 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 13:57:14.873 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 13:57:14.874 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 13:57:15.259 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:02:51.691 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:02:51.831 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:02:51.831 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2024-03-08 14:02:51.832 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeSuite on method initWebDriverObject but has not been marked @Optional or defined
+in D:\JavaProject\Parallel\XMLs\Test.xml
+[INFO ] 2024-03-08 14:02:51.832 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeSuite on method initWebDriverObject but has not been marked @Optional or defined
+in D:\JavaProject\Parallel\XMLs\Test.xml
+[INFO ] 2024-03-08 14:02:51.872 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:02:51.872 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "java.lang.ThreadLocal.get()" because "testclass.BaseTest.driverThread" is null
+[INFO ] 2024-03-08 14:02:51.887 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:02:51.887 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "java.lang.ThreadLocal.get()" because "testclass.BaseTest.driverThread" is null
+[INFO ] 2024-03-08 14:02:51.902 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:11:03.821 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:11:04.335 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:11:04.335 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2024-03-08 14:11:04.335 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeSuite on method initWebDriverObject but has not been marked @Optional or defined
+in D:\JavaProject\Parallel\XMLs\Test.xml
+[INFO ] 2024-03-08 14:11:04.335 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeSuite on method initWebDriverObject but has not been marked @Optional or defined
+in D:\JavaProject\Parallel\XMLs\Test.xml
+[INFO ] 2024-03-08 14:11:04.491 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:11:04.491 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "java.lang.ThreadLocal.get()" because "testclass.BaseTest.driverThread" is null
+[INFO ] 2024-03-08 14:11:04.501 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:11:04.501 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "java.lang.ThreadLocal.get()" because "testclass.BaseTest.driverThread" is null
+[INFO ] 2024-03-08 14:11:04.507 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:12:00.435 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 14:12:00.578 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 14:12:00.580 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:12:00.691 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:12:00.691 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:12:00.700 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:12:00.700 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:12:16.838 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[INFO ] 2024-03-08 14:12:16.898 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:13:18.095 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:13:18.199 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2024-03-08 14:13:18.199 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:13:18.200 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeSuite on method initWebDriverObject but has not been marked @Optional or defined
+in D:\JavaProject\Parallel\XMLs\Test.xml
+[INFO ] 2024-03-08 14:13:18.200 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeSuite on method initWebDriverObject but has not been marked @Optional or defined
+in D:\JavaProject\Parallel\XMLs\Test.xml
+[INFO ] 2024-03-08 14:13:18.227 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:13:18.227 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "java.lang.ThreadLocal.get()" because "testclass.BaseTest.driverThread" is null
+[INFO ] 2024-03-08 14:13:18.235 [TestNG-test=Basic test ses.WEB-2] Log -  Skipped
+[INFO ] 2024-03-08 14:13:18.236 [TestNG-test=Basic test ses.WEB-2] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "java.lang.ThreadLocal.get()" because "testclass.BaseTest.driverThread" is null
+[INFO ] 2024-03-08 14:13:18.241 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:16:00.283 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:16:17.495 [TestNG-test=Basic test ses.WEB-1] Log -  Passed
+[ERROR] 2024-03-08 14:16:18.117 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 14:16:18.118 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - org.openqa.selenium.WebDriverException: Task java.util.concurrent.CompletableFuture$AsyncSupply@11432620 rejected from java.util.concurrent.ThreadPoolExecutor@78cff6ee[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 208]
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d3e73e7ade432163abbc59c5fd64fa15, findElement {using=id, value=User_Name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52662}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[ERROR] 2024-03-08 14:16:52.341 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 14:16:52.341 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 14:17:24.521 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 14:17:24.521 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 14:17:24.864 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:30:38.651 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:30:53.829 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 14:30:58.170 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 14:30:58.347 [TestNG-test=Basic test ses.WEB-3] Log -  Passed
+[ERROR] 2024-03-08 14:30:58.987 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 14:30:58.988 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, findElement {using=id, value=breadcrumb_Folder_ViewFolder_0}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54477}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[ERROR] 2024-03-08 14:31:06.896 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 14:31:06.896 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [ec4d2f5026ae80aeb6a29bd65a16643c, findElement {using=id, value=UserName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54655}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ec4d2f5026ae80aeb6a29bd65a16643c
+[INFO ] 2024-03-08 14:31:07.051 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 14:31:07.051 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [ec4d2f5026ae80aeb6a29bd65a16643c, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54655}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ec4d2f5026ae80aeb6a29bd65a16643c
+[INFO ] 2024-03-08 14:31:07.058 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 14:31:07.059 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - org.openqa.selenium.NoSuchSessionException: Cannot find session with id: b3380b0a310f3280f4b5e943d875d42c
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [b3380b0a310f3280f4b5e943d875d42c, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54670}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[INFO ] 2024-03-08 14:31:08.340 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 14:31:08.340 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - org.openqa.selenium.NoSuchSessionException: Cannot find session with id: b3380b0a310f3280f4b5e943d875d42c
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [b3380b0a310f3280f4b5e943d875d42c, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54670}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[INFO ] 2024-03-08 14:31:09.538 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:40:11.581 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 14:40:11.752 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[ERROR] 2024-03-08 14:40:11.752 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 14:40:11.753 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:40:11.753 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:40:11.950 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 14:40:11.950 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:40:11.989 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 14:40:11.989 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:40:25.179 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 14:40:26.696 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 14:40:28.432 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 14:40:31.760 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 14:40:32.045 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 14:52:18.933 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 14:52:19.109 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[ERROR] 2024-03-08 14:52:19.109 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 14:52:19.110 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:52:19.110 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:52:19.224 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 14:52:19.224 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:52:19.234 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 14:52:19.235 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 14:52:30.900 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 14:52:34.066 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 14:52:34.399 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 14:52:35.825 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 14:52:36.116 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:14:59.138 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:14:59.332 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[ERROR] 2024-03-08 15:14:59.332 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 15:14:59.333 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 15:14:59.333 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 15:14:59.457 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:14:59.457 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 15:14:59.467 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:14:59.468 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "browserName" is null
+[INFO ] 2024-03-08 15:15:13.721 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:15:15.147 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:15:16.439 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 15:15:16.925 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:15:17.194 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:30:32.275 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:30:32.449 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[ERROR] 2024-03-08 15:30:32.449 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 15:30:32.450 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:30:32.450 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:30:32.558 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:30:32.558 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:30:32.566 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:30:32.566 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:30:45.375 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:30:46.830 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:30:47.958 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 15:30:50.402 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:30:50.696 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:33:16.222 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:33:16.424 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[ERROR] 2024-03-08 15:33:16.424 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 15:33:16.425 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:33:16.425 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:33:16.544 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:33:16.545 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:33:16.552 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:33:16.553 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:33:29.465 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:33:30.879 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:33:32.094 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 15:33:32.631 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:33:32.676 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:33:49.409 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:34:23.979 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:34:23.979 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 15:34:49.970 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:34:49.971 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 15:35:14.343 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:35:14.343 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 15:35:14.556 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:35:48.665 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:36:25.720 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:36:25.721 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 15:36:50.723 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:36:50.723 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 15:37:18.060 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:37:18.060 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 15:37:18.266 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:39:32.562 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:39:32.736 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[ERROR] 2024-03-08 15:39:32.736 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 15:39:32.737 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:39:32.737 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:39:32.849 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:39:32.849 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:39:32.857 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:39:32.857 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:39:44.009 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:39:45.959 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:39:46.612 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 15:39:47.671 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:39:47.940 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:40:22.846 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:40:23.029 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[ERROR] 2024-03-08 15:40:23.029 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 15:40:23.029 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:40:23.029 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:40:23.187 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:40:23.187 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:40:23.198 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:40:23.198 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "String.hashCode()" because "<local3>" is null
+[INFO ] 2024-03-08 15:40:33.391 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:40:35.659 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:40:36.197 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 15:40:37.370 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:40:37.653 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:50:13.249 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:50:13.449 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[ERROR] 2024-03-08 15:50:13.449 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 15:50:13.450 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 15:50:13.450 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 15:50:13.587 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:50:13.587 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 15:50:13.596 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:50:13.596 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 15:50:25.291 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:50:27.361 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:50:29.039 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:50:30.960 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 15:50:31.282 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:52:19.772 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:52:52.608 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:52:52.609 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 15:53:17.251 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:53:17.251 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 15:53:41.933 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:53:41.933 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 15:53:42.321 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:56:38.047 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:56:38.151 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2024-03-08 15:56:38.151 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeSuite on method initWebDriverObject but has not been marked @Optional or defined
+in D:\JavaProject\Parallel\XMLs\Test.xml
+[INFO ] 2024-03-08 15:56:38.171 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2024-03-08 15:56:38.172 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeSuite on method initWebDriverObject but has not been marked @Optional or defined
+in D:\JavaProject\Parallel\XMLs\Test.xml
+[INFO ] 2024-03-08 15:56:38.178 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2024-03-08 15:56:38.178 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeSuite on method initWebDriverObject but has not been marked @Optional or defined
+in D:\JavaProject\Parallel\XMLs\Test.xml
+[INFO ] 2024-03-08 15:56:38.192 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:57:06.128 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:57:40.357 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:57:40.358 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 15:58:06.159 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:58:06.160 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 15:58:30.656 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 15:58:30.656 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 15:58:30.860 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 15:58:41.613 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 15:58:41.752 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[ERROR] 2024-03-08 15:58:41.752 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 15:58:41.752 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 15:58:41.752 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 15:58:41.865 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:58:41.865 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 15:58:41.873 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 15:58:41.873 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 15:58:54.665 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:58:56.199 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:58:58.589 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 15:58:58.825 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 15:58:59.519 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 16:14:17.430 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 16:14:17.619 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[ERROR] 2024-03-08 16:14:17.619 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 16:14:17.620 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 16:14:17.620 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 16:14:17.737 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 16:14:17.737 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 16:14:17.745 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 16:14:17.745 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 16:21:40.885 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 16:21:44.365 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 16:21:44.367 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Unable to obtain: Capabilities {browserName: chrome, platformName: Windows 11}, error Failed to parse json output, executed: [--browser, chrome, --output, json]
+{
+  "logs": [
+    {
+      "level": "INFO",
+      "timestamp": 1709889703,
+      "message": "Driver path: C:\\Users\\T14s-client\\.cache\\selenium\\chromedriver\\win64\\122.0.6261.111\\chromedriver.exe"
+    },
+    {
+      "level": "INFO",
+      "timestamp": 1709889703,
+      "message": "Browser path: C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    }
+  ],
+  "result": {
+    "code": 0,
+    "message": "C:\\Users\\T14s-client\\.cache\\selenium\\chromedriver\\win64\\122.0.6261.111\\chromedriver.exe",
+    "driver_path": "C:\\Users\\T14s-client\\.cache\\selenium\\chromedriver\\win64\\122.0.6261.111\\chromedriver.exe",
+    "browser_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  }
+ 
+Host info: host: 'T14S', ip: '192.168.2.15'
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}]}]
+Capabilities {browserName: chrome}
+[INFO ] 2024-03-08 16:21:53.720 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 16:21:56.494 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[ERROR] 2024-03-08 16:21:56.779 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 16:21:56.779 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [7074de11fec3f2f35d5cea2c4c11291e, findElement {using=id, value=breadcrumb_Folder_ViewFolder_0}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53958}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[INFO ] 2024-03-08 16:21:56.944 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 16:21:56.944 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.openqa.selenium.NoSuchSessionException: Cannot find session with id: 18e9088bb47407be0f0ee8fb21cfad53
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [18e9088bb47407be0f0ee8fb21cfad53, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[ERROR] 2024-03-08 16:21:58.262 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 16:21:58.263 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [29405e92a7d1f0fa31d0b76cce7a406a, findElement {using=id, value=breadcrumb_Folder_ViewFolder_0}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53996}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 29405e92a7d1f0fa31d0b76cce7a406a
+[INFO ] 2024-03-08 16:21:58.283 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 16:21:58.284 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.openqa.selenium.NoSuchSessionException: Cannot find session with id: 18e9088bb47407be0f0ee8fb21cfad53
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [18e9088bb47407be0f0ee8fb21cfad53, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[ERROR] 2024-03-08 16:22:29.605 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 16:22:29.606 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 16:22:29.752 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 16:42:04.077 [main] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 16:42:19.976 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-08 16:42:22.283 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 16:42:22.284 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, findElement {using=id, value=breadcrumb_Folder_ViewFolder_0}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55464}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[INFO ] 2024-03-08 16:42:22.556 [TestNG-test=Basic test ses.WEB-3] Log -  Passed
+[ERROR] 2024-03-08 16:42:22.667 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
+[INFO ] 2024-03-08 16:42:22.668 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [205d9fa7cd44d2e68c692b4c71338ac6, findElement {using=id, value=breadcrumb_Folder_ViewFolder_0}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55465}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[INFO ] 2024-03-08 16:42:22.853 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 16:42:22.854 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Unable to obtain: Capabilities {browserName: chrome, platformName: Windows 11}, error Failed to parse json output, executed: [--browser, chrome, --output, json]
+{
+  "logs": [
+    {
+      "level": "INFO",
+      "timestamp": 1709890942,
+      "message": "Driver path: C:\\Users\\T14s-client\\.cache\\selenium\\chromedriver\\win64\\122.0.6261.111\\chromedriver.exe"
+    },
+    {
+      "level": "INFO",
+      "timestamp": 1709890942,
+      "message": "Browser path: C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    }
+  ],
+  "result": {
+    "code": 0,
+    "message": "C:\\Users\\T14s-client\\.cache\\selenium\\chromedriver\\win64\\122.0.6261.111\\chromedriver.exe",
+    "driver_path": "C:\\Users\\T14s-client\\.cache\\selenium\\chromedriver\\win64\\122.0.6261.111\\chromedriver.exe",
+    "browser_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  }
+ 
+Host info: host: 'T14S', ip: '192.168.2.15'
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}]}]
+Capabilities {browserName: chrome}
+[INFO ] 2024-03-08 16:42:22.969 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 16:42:22.969 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - java.util.ConcurrentModificationException
+[INFO ] 2024-03-08 16:42:24.963 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 16:42:24.964 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.io.IOException: HTTP/1.1 header parser received no bytes
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [1eb7b9dc4e005df358f4b07b5d627f5c, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55546}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1eb7b9dc4e005df358f4b07b5d627f5c
+[INFO ] 2024-03-08 16:42:24.988 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 16:42:24.988 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - java.util.ConcurrentModificationException
+[INFO ] 2024-03-08 16:42:27.394 [main] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 16:44:26.333 [TestNG-tests-1] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 16:44:39.817 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-08 16:44:40.108 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 16:44:40.111 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - org.openqa.selenium.WebDriverException: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [b0cd8f63ea84ebc7341ebba0347aa0fc, findElement {using=id, value=ses-submit-btn}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55914}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[INFO ] 2024-03-08 16:44:42.391 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[ERROR] 2024-03-08 16:44:44.040 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 16:44:44.041 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - org.openqa.selenium.WebDriverException: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [7c32363629c562020abfd8e8f318fa5a, findElement {using=id, value=breadcrumb_Folder_ViewFolder_0}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7c32363629c562020abfd8e8f318fa5a
+[ERROR] 2024-03-08 16:44:51.492 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 16:44:51.493 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - org.openqa.selenium.WebDriverException: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d72719a387cf46e88470fbbd14c2313d, findElement {using=id, value=UserName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56132}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d72719a387cf46e88470fbbd14c2313d
+[ERROR] 2024-03-08 16:44:51.633 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 16:44:51.633 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [13b4b0536e0e18a082c0e8de6a21ea29, findElement {using=css selector, value=input[type='password']:nth-of-type(1)}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56131}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 13b4b0536e0e18a082c0e8de6a21ea29
+[INFO ] 2024-03-08 16:44:51.664 [TestNG-test=Basic test ses.WEB-4] Log -  Skipped
+[INFO ] 2024-03-08 16:44:51.664 [TestNG-test=Basic test ses.WEB-4] Log - Skipped because of - org.openqa.selenium.UnsupportedCommandException: Unable to find handler for (DELETE) /session/13b4b0536e0e18a082c0e8de6a21ea29/cookie
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [13b4b0536e0e18a082c0e8de6a21ea29, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56131}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[INFO ] 2024-03-08 16:44:53.755 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 16:44:53.755 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f8c1da0ec7e2707044cc770cdadae69f, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56214}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56214/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f8c1da0ec7e2707044cc770cdadae69f
+[INFO ] 2024-03-08 16:44:54.898 [TestNG-tests-1] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 16:45:59.212 [TestNG-tests-1] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 16:46:09.728 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-08 16:46:12.886 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
+[INFO ] 2024-03-08 16:46:12.887 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - org.openqa.selenium.WebDriverException: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [71789fb6ec68b89ca6787d5947dc21c5, findElement {using=id, value=breadcrumb_Folder_ViewFolder_0}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56396}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 71789fb6ec68b89ca6787d5947dc21c5
+[ERROR] 2024-03-08 16:46:19.696 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 16:46:19.696 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - org.openqa.selenium.WebDriverException: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [f4e485f8fbd73caab43a894ce53f5588, findElement {using=id, value=UserName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56452}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4e485f8fbd73caab43a894ce53f5588
+[INFO ] 2024-03-08 16:46:19.740 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 16:46:19.740 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.openqa.selenium.WebDriverException: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [f4e485f8fbd73caab43a894ce53f5588, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56452}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[ERROR] 2024-03-08 16:46:26.517 [TestNG-test=Basic test ses.WEB-2] Log -  Failed
+[INFO ] 2024-03-08 16:46:26.536 [TestNG-test=Basic test ses.WEB-2] Log - Failed because of - org.openqa.selenium.WebDriverException: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [63b98d318fcaca9adf97e0e21ba184fe, findElement {using=id, value=UserName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56582}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63b98d318fcaca9adf97e0e21ba184fe
+[ERROR] 2024-03-08 16:46:34.376 [TestNG-test=Basic test ses.WEB-1] Log -  Failed
+[INFO ] 2024-03-08 16:46:34.376 [TestNG-test=Basic test ses.WEB-1] Log - Failed because of - org.openqa.selenium.WebDriverException: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [f4bd2818e271d22ed0908be26bd64105, findElement {using=id, value=UserName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56638}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4bd2818e271d22ed0908be26bd64105
+[INFO ] 2024-03-08 16:46:34.407 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2024-03-08 16:46:34.408 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.openqa.selenium.UnsupportedCommandException: Unable to find handler for (DELETE) /session/f4bd2818e271d22ed0908be26bd64105/cookie
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [f4bd2818e271d22ed0908be26bd64105, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56638}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4bd2818e271d22ed0908be26bd64105
+[INFO ] 2024-03-08 16:46:36.047 [TestNG-test=Basic test ses.WEB-1] Log -  Skipped
+[INFO ] 2024-03-08 16:46:36.047 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.openqa.selenium.UnsupportedCommandException: Unable to find handler for (DELETE) /session/f4bd2818e271d22ed0908be26bd64105/cookie
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [f4bd2818e271d22ed0908be26bd64105, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56638}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4bd2818e271d22ed0908be26bd64105
+[INFO ] 2024-03-08 16:46:37.359 [TestNG-tests-1] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 17:15:14.272 [TestNG-tests-1] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 17:15:29.138 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 17:15:31.748 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[ERROR] 2024-03-08 17:15:32.073 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 17:15:32.074 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - org.openqa.selenium.WebDriverException: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [76a9e28228ead02105e60756022abbfe, findElement {using=id, value=breadcrumb_Folder_ViewFolder_0}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59261}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76a9e28228ead02105e60756022abbfe
+[INFO ] 2024-03-08 17:15:32.436 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 17:15:32.436 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.openqa.selenium.NoSuchSessionException: Cannot find session with id: 76a9e28228ead02105e60756022abbfe
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [76a9e28228ead02105e60756022abbfe, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59261}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[INFO ] 2024-03-08 17:15:33.945 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 17:15:33.945 [TestNG-test=Basic test ses.WEB-1] Log - Skipped because of - org.openqa.selenium.NoSuchSessionException: Cannot find session with id: 76a9e28228ead02105e60756022abbfe
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [76a9e28228ead02105e60756022abbfe, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59261}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[ERROR] 2024-03-08 17:16:07.266 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 17:16:07.266 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 17:16:38.729 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 17:16:38.729 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 17:16:39.160 [TestNG-tests-1] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 17:18:38.835 [TestNG-tests-1] Log - =========== onStart :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 17:18:49.976 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 17:18:54.002 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 17:18:58.789 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 17:19:07.090 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-08 17:19:18.917 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 17:19:18.918 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 17:19:52.544 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 17:19:52.544 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 17:20:25.005 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 17:20:25.005 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 17:20:25.330 [TestNG-tests-1] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 17:34:24.303 [TestNG-tests-1] Log - =========== onStart :-Basic test ses.WEB-===============
+[ERROR] 2024-03-08 17:34:24.481 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 17:34:24.482 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Name is null
+[ERROR] 2024-03-08 17:34:24.481 [TestNG-test=Basic test ses.WEB-3] Log -  Failed
+[INFO ] 2024-03-08 17:34:24.483 [TestNG-test=Basic test ses.WEB-3] Log - Failed because of - java.lang.NullPointerException: Name is null
+[ERROR] 2024-03-08 17:34:24.652 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 17:34:24.654 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Name is null
+[ERROR] 2024-03-08 17:34:24.660 [TestNG-test=Basic test ses.WEB-4] Log -  Failed
+[INFO ] 2024-03-08 17:34:24.660 [TestNG-test=Basic test ses.WEB-4] Log - Failed because of - java.lang.NullPointerException: Name is null
+[INFO ] 2024-03-08 17:34:35.129 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 17:34:36.502 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 17:34:37.805 [TestNG-test=Basic test ses.WEB-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 17:34:38.374 [TestNG-test=Basic test ses.WEB-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 17:34:38.382 [TestNG-tests-1] Log - =========== onFinish :-Basic test ses.WEB-===============
+[INFO ] 2024-03-08 17:37:21.406 [TestNG-tests-2] Log - =========== onStart :-firefox-===============
+[INFO ] 2024-03-08 17:37:21.406 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[ERROR] 2024-03-08 17:37:23.923 [TestNG-test=firefox-3] Log -  Failed
+[ERROR] 2024-03-08 17:37:23.923 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[ERROR] 2024-03-08 17:37:23.923 [TestNG-test=firefox-4] Log -  Failed
+[INFO ] 2024-03-08 17:37:23.923 [TestNG-test=firefox-3] Log - Failed because of - java.lang.IllegalArgumentException: [ERR] the browser cannot null
+[INFO ] 2024-03-08 17:37:23.924 [TestNG-test=firefox-1] Log - Failed because of - java.lang.IllegalArgumentException: [ERR] the browser cannot null
+[INFO ] 2024-03-08 17:37:23.924 [TestNG-test=firefox-4] Log - Failed because of - java.lang.IllegalArgumentException: [ERR] the browser cannot null
+[ERROR] 2024-03-08 17:37:23.924 [TestNG-test=firefox-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
+[INFO ] 2024-03-08 17:37:23.925 [TestNG-test=firefox-2] Log - Failed because of - java.lang.IllegalArgumentException: [ERR] the browser cannot null
+[INFO ] 2024-03-08 17:37:27.120 [TestNG-test=firefox-4] Log -  Skipped
+[INFO ] 2024-03-08 17:37:27.120 [TestNG-test=firefox-4] Log - Skipped because of - java.lang.IllegalArgumentException: [ERR] the browser cannot null
+[INFO ] 2024-03-08 17:37:27.620 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 17:37:27.621 [TestNG-test=firefox-1] Log - Skipped because of - java.lang.IllegalArgumentException: [ERR] the browser cannot null
+[INFO ] 2024-03-08 17:37:28.764 [TestNG-test=firefox-4] Log -  Skipped
+[INFO ] 2024-03-08 17:37:28.764 [TestNG-test=firefox-4] Log - Skipped because of - java.lang.IllegalArgumentException: [ERR] the browser cannot null
+[INFO ] 2024-03-08 17:37:28.929 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 17:37:28.929 [TestNG-test=firefox-1] Log - Skipped because of - java.lang.IllegalArgumentException: [ERR] the browser cannot null
+[INFO ] 2024-03-08 17:37:29.633 [TestNG-tests-2] Log - =========== onFinish :-firefox-===============
+[INFO ] 2024-03-08 17:37:36.695 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 17:37:40.320 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 17:37:40.338 [TestNG-test=chrome-3] Log -  Passed
+[INFO ] 2024-03-08 17:37:49.075 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 17:37:58.682 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-08 17:38:05.070 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-08 17:38:05.071 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 17:38:38.280 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-08 17:38:38.280 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 17:39:11.304 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-08 17:39:11.304 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 17:39:11.642 [TestNG-tests-1] Log - =========== onFinish :-chrome-===============
+[INFO ] 2024-03-08 17:42:40.432 [TestNG-tests-2] Log - =========== onStart :-firefox-===============
+[INFO ] 2024-03-08 17:42:40.432 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-08 17:43:16.013 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 17:43:19.320 [TestNG-test=chrome-3] Log -  Passed
+[INFO ] 2024-03-08 17:43:20.330 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 17:43:28.266 [TestNG-test=firefox-3] Log -  Passed
+[INFO ] 2024-03-08 17:43:29.948 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-08 17:43:32.235 [TestNG-test=firefox-4] Log -  Failed
+[INFO ] 2024-03-08 17:43:32.236 [TestNG-test=firefox-4] Log - Failed because of - org.openqa.selenium.ElementClickInterceptedException: Element <button id="new-user-submit" name="save"> is not clickable at point (1275,570) because another element <html class="k-ff k-ff124"> obscures it
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [acce020e-db39-4896-98cc-1b3d4166cdfc, clickElement {id=57ef4a77-8e11-4c29-ba94-90166ed1e0b5}]
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 124.0, moz:accessibilityChecks: false, moz:buildID: 20240304091753, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17032, moz:profile: C:\Users\T14S-C~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[RemoteWebDriver: firefox on Windows 11 (acce020e-db39-4896-98cc-1b3d4166cdfc)] -> id: new-user-submit]
+Session ID: acce020e-db39-4896-98cc-1b3d4166cdfc
+[INFO ] 2024-03-08 17:43:37.340 [TestNG-test=firefox-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 17:43:45.132 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-08 17:43:50.869 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-08 17:43:50.870 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 17:46:32.041 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 17:46:32.053 [TestNG-test=chrome-1] Log - Failed because of - org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'T14S', ip: '192.168.2.15'
+[INFO ] 2024-03-08 17:46:34.451 [TestNG-test=firefox-4] Log -  Skipped
+[INFO ] 2024-03-08 17:46:34.452 [TestNG-test=firefox-4] Log - Skipped because of - org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'T14S', ip: '192.168.2.15'
+[INFO ] 2024-03-08 17:46:45.897 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 17:46:45.897 [TestNG-test=firefox-1] Log - Skipped because of - org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'T14S', ip: '192.168.2.15'
+[INFO ] 2024-03-08 17:46:51.028 [TestNG-test=chrome-4] Log -  Skipped
+[INFO ] 2024-03-08 17:46:51.029 [TestNG-test=chrome-4] Log - Skipped because of - org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'T14S', ip: '192.168.2.15'
+[INFO ] 2024-03-08 17:48:42.071 [TestNG-test=chrome-4] Log -  Skipped
+[INFO ] 2024-03-08 17:48:42.075 [TestNG-test=chrome-4] Log - Skipped because of - org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'T14S', ip: '192.168.2.15'
+[INFO ] 2024-03-08 17:48:44.176 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 17:48:44.177 [TestNG-test=firefox-1] Log - Skipped because of - org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Could not start a new session. Unable to obtain: Capabilities {browserName: firefox, platformName: Windows 11}, error Failed to parse json output, executed: [--browser, firefox, --output, json]
+
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown 
+Host info: host: 'T14S', ip: '192.168.2.15'
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: unknown
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: firefox}]}]
+Capabilities {browserName: firefox}
+[INFO ] 2024-03-08 17:48:55.231 [TestNG-test=firefox-4] Log -  Skipped
+[INFO ] 2024-03-08 17:48:55.232 [TestNG-test=firefox-4] Log - Skipped because of - org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'T14S', ip: '192.168.2.15'
+[INFO ] 2024-03-08 17:48:55.551 [TestNG-tests-1] Log - =========== onFinish :-chrome-===============
+[INFO ] 2024-03-08 17:49:10.414 [TestNG-tests-2] Log - =========== onFinish :-firefox-===============
+[INFO ] 2024-03-08 18:03:44.024 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-08 18:03:44.024 [TestNG-tests-2] Log - =========== onStart :-firefox-===============
+[ERROR] 2024-03-08 18:03:48.303 [TestNG-test=firefox-3] Log -  Failed
+[INFO ] 2024-03-08 18:03:48.305 [TestNG-test=firefox-3] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "driver" is null
+[ERROR] 2024-03-08 18:03:48.305 [TestNG-test=firefox-4] Log -  Failed
+[INFO ] 2024-03-08 18:03:48.306 [TestNG-test=firefox-4] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "driver" is null
+[INFO ] 2024-03-08 18:04:08.982 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 18:04:11.806 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 18:04:12.653 [TestNG-test=chrome-3] Log -  Passed
+[INFO ] 2024-03-08 18:04:14.585 [TestNG-test=firefox-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 18:04:16.693 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-08 18:04:30.471 [TestNG-test=firefox-4] Log -  Failed
+[INFO ] 2024-03-08 18:04:30.489 [TestNG-test=firefox-4] Log - Failed because of - org.openqa.selenium.ElementClickInterceptedException: Element <button id="new-user-submit" name="save"> is not clickable at point (1275,570) because another element <html class="k-ff k-ff124"> obscures it
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [643f1300-c5b7-47eb-b963-e6c41d636cb0, clickElement {id=79c46acf-54d5-43ce-ae5e-d1f1d8f8066a}]
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 124.0, moz:accessibilityChecks: false, moz:buildID: 20240304091753, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12356, moz:profile: C:\Users\T14S-C~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[RemoteWebDriver: firefox on Windows 11 (643f1300-c5b7-47eb-b963-e6c41d636cb0)] -> id: new-user-submit]
+Session ID: 643f1300-c5b7-47eb-b963-e6c41d636cb0
+[ERROR] 2024-03-08 18:04:38.822 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-08 18:04:38.823 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 18:07:16.544 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 18:07:16.556 [TestNG-test=chrome-1] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "driver" is null
+[INFO ] 2024-03-08 18:07:21.186 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 18:07:21.187 [TestNG-test=firefox-1] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because the return value of "testclass.BaseTest.getDriver()" is null
+[INFO ] 2024-03-08 18:07:31.475 [TestNG-test=firefox-4] Log -  Skipped
+[INFO ] 2024-03-08 18:07:31.478 [TestNG-test=firefox-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because the return value of "testclass.BaseTest.getDriver()" is null
+[INFO ] 2024-03-08 18:07:43.918 [TestNG-test=chrome-4] Log -  Skipped
+[INFO ] 2024-03-08 18:07:43.918 [TestNG-test=chrome-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because the return value of "testclass.BaseTest.getDriver()" is null
+[INFO ] 2024-03-08 18:09:43.380 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Skipped
+[INFO ] 2024-03-08 18:09:43.390 [TestNG-test=firefox-1] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because the return value of "testclass.BaseTest.getDriver()" is null
+[INFO ] 2024-03-08 18:09:46.359 [TestNG-test=chrome-4] Log -  Skipped
+[INFO ] 2024-03-08 18:09:46.360 [TestNG-test=chrome-4] Log - Skipped because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because the return value of "testclass.BaseTest.getDriver()" is null
+[INFO ] 2024-03-08 18:09:50.848 [TestNG-tests-2] Log - =========== onFinish :-firefox-===============
+[INFO ] 2024-03-08 18:09:53.549 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 18:09:54.929 [TestNG-tests-1] Log - =========== onFinish :-chrome-===============
+[INFO ] 2024-03-08 18:15:01.905 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-08 18:15:01.906 [TestNG-tests-2] Log - =========== onStart :-firefox-===============
+[INFO ] 2024-03-08 18:15:25.357 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 18:15:32.601 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 18:15:32.601 [TestNG-test=chrome-3] Log -  Passed
+[INFO ] 2024-03-08 18:15:33.199 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 18:15:36.330 [TestNG-test=firefox-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[ERROR] 2024-03-08 18:15:51.428 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 18:15:51.444 [TestNG-test=chrome-1] Log - Failed because of - java.lang.AssertionError: ERR| [[RemoteWebDriver: chrome on Windows 11 (888d6b580e5702b7629dd59e83a16b41)] -> css selector: div.loginValidationErrors] Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 18:16:12.705 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-08 18:16:12.710 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 18:16:17.657 [TestNG-test=firefox-4] Log -  Failed
+[INFO ] 2024-03-08 18:16:17.659 [TestNG-test=firefox-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.id: User_Name' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 18:16:20.119 [TestNG-test=firefox-3] Log -  Failed
+[INFO ] 2024-03-08 18:16:20.121 [TestNG-test=firefox-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.id: breadcrumb_Folder_ViewFolder_0' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 18:16:29.555 [TestNG-test=firefox-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 18:16:29.556 [TestNG-test=firefox-1] Log - Failed because of - java.lang.AssertionError: ERR| [[RemoteWebDriver: firefox on Windows 11 (a435b4ae-2bd4-46ff-a89f-d2ac516b5ed4)] -> css selector: div.loginValidationErrors] Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 18:17:53.066 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-08 18:26:03.064 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-08 18:26:16.681 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 18:26:19.013 [TestNG-test=chrome-3] Log -  Passed
+[INFO ] 2024-03-08 18:26:19.407 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 18:26:25.735 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 18:26:34.030 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-08 18:26:57.116 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-08 18:26:57.117 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.id: Actions_Type_Folder_Basic' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 18:27:40.978 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-08 18:27:40.978 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-08 18:28:16.248 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-08 18:28:16.248 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-08 18:28:16.605 [TestNG-tests-1] Log - =========== onFinish :-chrome-===============
+[INFO ] 2024-03-08 18:29:59.431 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-08 18:30:13.763 [TestNG-test=chrome-3] Log -  Passed
+[INFO ] 2024-03-08 18:30:13.782 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-08 18:30:21.271 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-08 18:30:21.509 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-08 18:30:21.509 [TestNG-test=chrome-4] Log - Failed because of - org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [8450a69eee9b19e95daccca119daa6b0, findElement {using=id, value=UserName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53960}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8450a69eee9b19e95daccca119daa6b0
+[INFO ] 2024-03-08 18:30:21.548 [TestNG-test=chrome-4] Log -  Skipped
+[INFO ] 2024-03-08 18:30:21.548 [TestNG-test=chrome-4] Log - Skipped because of - org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [8450a69eee9b19e95daccca119daa6b0, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53960}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[INFO ] 2024-03-08 18:30:29.568 [TestNG-test=chrome-4] Log -  Skipped
+[INFO ] 2024-03-08 18:30:29.568 [TestNG-test=chrome-4] Log - Skipped because of - org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.ConnectException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [8450a69eee9b19e95daccca119daa6b0, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53960}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[ERROR] 2024-03-08 18:30:36.578 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-08 18:30:36.578 [TestNG-test=chrome-1] Log - Failed because of - org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, findElement {using=css selector, value=div.loginValidationErrors}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.111 (9d4c1072da6..., userDataDir: C:\Users\T14S-C~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54059}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 11, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.2.15:4444/sess..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+[INFO ] 2024-03-08 18:30:51.156 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-08 18:30:51.292 [TestNG-tests-1] Log - =========== onFinish :-chrome-===============

@@ -1,0 +1,47 @@
+[
+  {
+    "userID": "Regular",
+    "userPWD": "Regular@123",
+    "firstName": "",
+    "lastName": "",
+    "phone": "",
+    "email": "Regular@messo.asia",
+    "description": "User Regular",
+    "isFinalPwd": false,
+    "userType": "Regular User"
+  },
+  {
+    "userID": "Auto",
+    "userPWD": "Auto@123",
+    "firstName": "",
+    "lastName": "",
+    "phone": "",
+    "email": null,
+    "description": "User Autoboot",
+    "isFinalPwd": false,
+    "userType": "Autoboot User"
+
+  },
+  {
+    "userID": "Temp",
+    "userPWD": "Temp@123",
+    "firstName": "",
+    "lastName": "",
+    "phone": "",
+    "email": null,
+    "description": "abc",
+    "isFinalPwd": false,
+    "userType": "Temporary User"
+  },
+  {
+    "userID": "Regular_finalPWD",
+    "userPWD": "Regular@123",
+    "firstName": "",
+    "lastName": "",
+    "phone": "",
+    "email": "Regular_finalPWD@messo.asia",
+    "description": "Regular User with final pwd",
+    "isFinalPwd": true,
+    "userType": "Regular User"
+  }
+]

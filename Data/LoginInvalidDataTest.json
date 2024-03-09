@@ -1,0 +1,16 @@
+[
+
+  {
+    "username": "",
+    "pwd": "winmagic@123"
+  } ,
+  {
+    "username": "admin",
+    "pwd": ""
+  } ,
+  {
+    "username": "admin",
+    "pwd": "wrongPWD"
+  }
+
+]

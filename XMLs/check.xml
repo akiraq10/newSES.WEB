@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="REGRESSION TEST">
+    <listeners>
+        <listener class-name="com.clean.listener.ListenerEx"/>
+        <listener class-name="com.clean.listener.RetestFailedCase"/>
+    </listeners>
+    <test thread-count="4" parallel="methods" name="chrome">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="uri" value="https://nabi.asia"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testclass.client.LoginTest"/>
+        </classes>
+    </test> <!-- chrome -->
+    <test thread-count="4" parallel="methods" name="firefox">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="uri" value="https://nabi.asia"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testclass.client.LoginTest"/>
+
+        </classes>
+    </test> <!-- firefox -->
+</suite> <!-- REGRESSION TEST -->

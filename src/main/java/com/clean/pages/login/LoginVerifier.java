@@ -30,6 +30,11 @@ public class LoginVerifier {
         verify(driver,getLoginElement(driver).unsuccessfulError);
         return this;
     }
+    @Step("Verify fail to login to SES.WEB with invalid password. The Error is displayed")
+    public LoginVerifier isLoginWithoutUserNameFail(){
+        verify(driver,getLoginElement(driver).useNameErr);
+        return this;
+    }
 
 
 }

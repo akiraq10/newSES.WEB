@@ -6,7 +6,7 @@
     </listeners>
     <test name="Login feature" >
         <classes>
-            <class name="testclass.server.LoginTest"/>
+            <class name="testclass.client.LoginTest"/>
 
         </classes>
     </test>

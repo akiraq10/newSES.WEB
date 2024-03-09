@@ -1,0 +1,1 @@
+{"uuid":"b40b79a2-b507-45e5-9b97-09aaddf58dfa","name":"Regression","children":["be0d3534-f2e9-4736-aef3-2b08070dd11d"],"befores":[{"name":"initWebDriverObject","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1709358866971,"stop":1709358866976}],"afters":[],"start":1709358866957,"stop":1709358867390}

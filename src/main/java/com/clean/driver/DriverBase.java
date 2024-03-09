@@ -8,9 +8,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.io.InputStream;
@@ -27,7 +24,7 @@ public class DriverBase {
     public static ReadConfigFile readConfigFile= ConfigFactory.create(ReadConfigFile.class);
 
 
-   @BeforeSuite(alwaysRun = true)
+
     public static void initWebDriverObject(){
 
         driverThread = ThreadLocal.withInitial(()->{
@@ -39,20 +36,20 @@ public class DriverBase {
 
 
     public static WebDriver getDriver(){
-        return driverThread.get().getDriver();
+        return driverThread.get().getChromrDriver();
     }
     public static WebDriver getDriver(String browser) throws MalformedURLException {
-        return driverThread.get().getDriver(browser);
+        return driverThread.get().getChromrDriver();
     }
 
-  @AfterSuite(alwaysRun = true)
+
     public void afterSuite(){
         for(DriverFactory driver : webDriverThreadPool){
-            driver.quitDriver();
+            driver.quitDriverSession();
         }
     }
 
-    @AfterMethod(alwaysRun = true)
+
     public void afterMethod(ITestResult result){
         getDriver().manage().deleteAllCookies();
 
@@ -78,7 +75,7 @@ public class DriverBase {
 
 
             //3. Save screenshot to the system
-            File screenShot =((TakesScreenshot) driverThread.get().getDriver()).getScreenshotAs(OutputType.FILE);
+            File screenShot =((TakesScreenshot) driverThread.get().getChromrDriver()).getScreenshotAs(OutputType.FILE);
             try {
                 FileUtils.copyFile(screenShot, new File(fileLocaltion));
                 Path content = Paths.get(fileLocaltion);

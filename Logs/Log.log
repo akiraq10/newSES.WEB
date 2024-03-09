@@ -1,0 +1,93 @@
+[INFO ] 2024-03-09 09:01:06.034 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-09 09:01:40.311 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-09 09:01:49.324 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-09 09:01:57.015 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-09 09:02:05.249 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
+[INFO ] 2024-03-09 09:02:05.250 [TestNG-test=chrome-2] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.id: breadcrumb_Folder_ViewFolder_0' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 09:02:05.276 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 09:02:05.276 [TestNG-test=chrome-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.id: breadcrumb_Folder_ViewFolder_0' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 09:02:18.122 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-09 09:02:18.124 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.id: Actions_Type_Folder_Basic' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 09:02:59.746 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-09 09:02:59.747 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 09:03:36.748 [TestNG-test=chrome-4] Log -  Failed
+[INFO ] 2024-03-09 09:03:36.748 [TestNG-test=chrome-4] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-09 09:03:37.069 [TestNG-tests-1] Log - =========== onFinish :-chrome-===============
+[INFO ] 2024-03-09 10:06:55.950 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-09 10:07:25.398 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-09 10:07:30.368 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[ERROR] 2024-03-09 10:07:32.174 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 10:07:32.176 [TestNG-test=chrome-3] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:07:38.419 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-09 10:08:12.456 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-09 10:08:12.456 [TestNG-test=chrome-1] Log - Failed because of - java.lang.AssertionError: ERR| [[RemoteWebDriver: chrome on Windows 11 (5317cfa8d5c5937526804367975a29c5)] -> css selector: div.loginValidationErrors] Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:08:25.967 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 10:08:25.967 [TestNG-test=chrome-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:09:08.888 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 10:09:08.889 [TestNG-test=chrome-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-09 10:09:09.269 [TestNG-tests-1] Log - =========== onFinish :-chrome-===============
+[INFO ] 2024-03-09 10:11:45.504 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-09 10:11:58.694 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-09 10:12:01.329 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[INFO ] 2024-03-09 10:12:50.215 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-09 10:12:58.266 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-09 10:13:21.068 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 10:13:21.068 [TestNG-test=chrome-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.id: Actions_Type_Folder_Basic' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:14:05.645 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 10:14:05.647 [TestNG-test=chrome-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:14:49.470 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 10:14:49.471 [TestNG-test=chrome-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[INFO ] 2024-03-09 10:14:49.507 [TestNG-tests-1] Log - =========== onFinish :-chrome-===============
+[INFO ] 2024-03-09 10:17:35.323 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-09 10:17:47.460 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-09 10:18:49.470 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-09 10:18:50.555 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
+[INFO ] 2024-03-09 10:18:50.556 [TestNG-test=chrome-2] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.id: breadcrumb_Folder_ViewFolder_0' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:18:50.803 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 10:18:50.803 [TestNG-test=chrome-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.id: Actions_Type_Folder_Basic' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:20:56.517 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 10:20:56.525 [TestNG-test=chrome-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:22:20.621 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-09 10:22:20.625 [TestNG-test=chrome-1] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:24:52.437 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-09 10:25:03.595 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[INFO ] 2024-03-09 10:25:08.673 [TestNG-test=chrome-2] Log -  Test case SDTC....: Login SES.WEB with valid PWD Passed
+[ERROR] 2024-03-09 10:25:11.223 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 10:25:11.225 [TestNG-test=chrome-3] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[ERROR] 2024-03-09 10:25:55.767 [TestNG-test=chrome-3] Log -  Failed
+[INFO ] 2024-03-09 10:25:55.769 [TestNG-test=chrome-3] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:26:40.830 [TestNG-test=chrome-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-09 10:26:40.834 [TestNG-test=chrome-1] Log - Failed because of - java.lang.AssertionError: ERR| [[RemoteWebDriver: chrome on Windows 11 (4e84da878cbde664e4d5e748c7bdab49)] -> css selector: div.loginValidationErrors] Not displayed. Please recheck the locator
+[INFO ] 2024-03-09 10:27:45.270 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-09 10:30:44.070 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-09 10:31:03.086 [TestNG-PoolService-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Passed
+[ERROR] 2024-03-09 10:31:35.359 [TestNG-PoolService-0] Log -  Failed
+[INFO ] 2024-03-09 10:31:35.360 [TestNG-PoolService-0] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:32:25.066 [TestNG-PoolService-1] Log -  Failed
+[INFO ] 2024-03-09 10:32:25.084 [TestNG-PoolService-1] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:33:45.747 [TestNG-PoolService-2] Log -  Failed
+[ERROR] 2024-03-09 10:33:45.747 [TestNG-PoolService-0] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
+[ERROR] 2024-03-09 10:33:45.747 [TestNG-PoolService-2] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[ERROR] 2024-03-09 10:33:45.747 [TestNG-PoolService-0] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[INFO ] 2024-03-09 10:33:45.748 [TestNG-PoolService-0] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:33:45.748 [TestNG-PoolService-0] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:33:45.748 [TestNG-PoolService-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:33:45.748 [TestNG-PoolService-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:33:45.773 [TestNG-tests-1] Log - =========== onFinish :-chrome-===============
+[INFO ] 2024-03-09 10:34:29.535 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[INFO ] 2024-03-09 10:35:21.563 [TestNG-tests-1] Log - =========== onStart :-chrome-===============
+[ERROR] 2024-03-09 10:37:01.276 [TestNG-PoolService-2] Log -  Failed
+[INFO ] 2024-03-09 10:37:01.276 [TestNG-PoolService-2] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:37:25.423 [TestNG-PoolService-0] Log -  Failed
+[INFO ] 2024-03-09 10:37:25.424 [TestNG-PoolService-0] Log - Failed because of - java.lang.AssertionError: ERR| Proxy element for: DefaultElementLocator 'By.cssSelector: [class='alert success']' Not displayed. Please recheck the locator
+[ERROR] 2024-03-09 10:38:23.297 [TestNG-PoolService-1] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[ERROR] 2024-03-09 10:38:23.297 [TestNG-PoolService-0] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[ERROR] 2024-03-09 10:38:23.297 [TestNG-PoolService-1] Log -  Failed
+[ERROR] 2024-03-09 10:38:23.297 [TestNG-PoolService-2] Log - Test case SDTC....: Login SES.WEB with invalid PWD Failed
+[ERROR] 2024-03-09 10:38:23.297 [TestNG-PoolService-0] Log -  Test case SDTC....: Login SES.WEB with valid PWD Failed
+[INFO ] 2024-03-09 10:38:23.298 [TestNG-PoolService-2] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:38:23.298 [TestNG-PoolService-0] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:38:23.298 [TestNG-PoolService-1] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:38:23.298 [TestNG-PoolService-1] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:38:23.358 [TestNG-PoolService-0] Log - Failed because of - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.webDriver" is null
+[INFO ] 2024-03-09 10:38:23.385 [TestNG-tests-1] Log - =========== onFinish :-chrome-===============

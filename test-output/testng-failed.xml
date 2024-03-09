@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Regression]">
+  <listeners>
+    <listener class-name="com.clean.listener.ListenerEx"/>
+    <listener class-name="com.clean.listener.RetestFailedCase"/>
+  </listeners>
+  <test thread-count="2" parallel="methods" name="firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="uri" value="https://nabi.asia"/>
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testclass.client.sesweb.grouptest.ActionFromUserAdvancedMenu">
+        <methods>
+          <include name="verifyCheckPBConnexPage" invocation-numbers="0"/>
+          <include name="verifyTheChallengeResponsePage" invocation-numbers="0"/>
+          <include name="initWebDriverObject"/>
+          <include name="verifyResetFailedPrebootLogins" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testclass.client.sesweb.grouptest.ActionFromUserAdvancedMenu -->
+      <class name="testclass.client.sesweb.PackageTest">
+        <methods>
+          <include name="initWebDriverObject"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="AddNewWindowsEndpointPackage" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testclass.client.sesweb.PackageTest -->
+      <class name="testclass.client.sesweb.grouptest.ActionFromUserMenu">
+        <methods>
+          <include name="AssignUserToGroup" invocation-numbers="0"/>
+          <include name="initWebDriverObject"/>
+          <include name="verifyAssignUserToAnotherGroup"/>
+          <include name="verifyUserPropertiesOfUserBelongGroup"/>
+          <include name="verifyRemoveUserFromGroup" invocation-numbers="0"/>
+          <include name="verifyAudiLogsPageOfUserBelongGroup"/>
+          <include name="afterSuite"/>
+          <include name="verifyAssignKeyToUserBelongGroup"/>
+          <include name="afterMethod"/>
+          <include name="verifyMoveUserBelongGroupToAnotherFolder"/>
+          <include name="verifyDeleteUserBelongGroup"/>
+        </methods>
+      </class> <!-- testclass.client.sesweb.grouptest.ActionFromUserMenu -->
+      <class name="testclass.client.sesweb.grouptest.GroupTest">
+        <methods>
+          <include name="RemoveGroupToGroupProperties"/>
+          <include name="initWebDriverObject"/>
+          <include name="EditPBNPolicyOfGroupProperties"/>
+          <include name="AssignKeyToGroupProperties"/>
+          <include name="ChangeTheDescription"/>
+          <include name="CreateNewGroupToTestUpdate" invocation-numbers="0"/>
+          <include name="RemoveSPToGroupProperties"/>
+          <include name="EditPermissionOfGroupProperties"/>
+          <include name="CreateNewGroup" invocation-numbers="0"/>
+          <include name="VerifyBackFeatureFromGroupProperties"/>
+          <include name="AssignGroupToGroupProperties"/>
+          <include name="VerifyBackFeatureFromGroupsTab"/>
+          <include name="AssignTheSPToGroup"/>
+          <include name="VerifyBackFeatureFromKeysTab"/>
+          <include name="afterSuite"/>
+          <include name="ChangeTheGroupName"/>
+          <include name="VerifyBackFeatureFromPermissionTab"/>
+          <include name="afterMethod"/>
+          <include name="RemoveKeyToGroupProperties"/>
+        </methods>
+      </class> <!-- testclass.client.sesweb.grouptest.GroupTest -->
+      <class name="testclass.client.sesweb.grouptest.ActionFromGroupMenu">
+        <methods>
+          <include name="initWebDriverObject"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="verifyDeleteGroup" invocation-numbers="0"/>
+          <include name="verifyTheGroupProperties" invocation-numbers="0"/>
+          <include name="verifyMoveGroupToAnotherFolder"/>
+        </methods>
+      </class> <!-- testclass.client.sesweb.grouptest.ActionFromGroupMenu -->
+      <class name="testclass.client.LoginTest">
+        <methods>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- testclass.client.LoginTest -->
+      <class name="testclass.client.sesweb.ProfileTest">
+        <methods>
+          <include name="AddNewWindowsEndpointProfile" invocation-numbers="0"/>
+          <include name="initWebDriverObject"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testclass.client.sesweb.ProfileTest -->
+      <class name="testclass.client.sesweb.user.viewproperties.GeneralTest">
+        <methods>
+          <include name="verifyAssignUserToGroup" invocation-numbers="0"/>
+          <include name="initWebDriverObject"/>
+          <include name="verifyAllTextFieldsInUserProperties" invocation-numbers="0"/>
+          <include name="verifyTheUserInfo" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="verifyDeleteAUserInUSerProperties" invocation-numbers="0"/>
+          <include name="verifyChangePWDForAdmin" invocation-numbers="0"/>
+          <include name="verifyMoveUserToAnotherFolder" invocation-numbers="0"/>
+          <include name="verifyAssignKeyToUser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testclass.client.sesweb.user.viewproperties.GeneralTest -->
+      <class name="testclass.client.sesweb.UsersTest">
+        <methods>
+          <include name="initWebDriverObject"/>
+          <include name="AddNewTempUser" invocation-numbers="0"/>
+          <include name="addNewRegularUserWithFinalPassword" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+          <include name="ModifyUserAddEmail"/>
+          <include name="AddNewRegularUser" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="AddNewAutoBootUser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testclass.client.sesweb.UsersTest -->
+      <class name="testclass.client.sesweb.FolderTest">
+        <methods>
+          <include name="SelectFolderAndGotoFolderProperties"/>
+          <include name="initWebDriverObject"/>
+          <include name="addNewGroupInFolderProperties"/>
+          <include name="VerifyBackFeatureInKeyTab"/>
+          <include name="AssignGroupToFolder"/>
+          <include name="VerifyTheDescriptionAfterCreatedSuccess" invocation-numbers="0"/>
+          <include name="CreateNewFolderWith64Character" invocation-numbers="0"/>
+          <include name="VerifyTheFolderNameAfterCreatedSuccess"/>
+          <include name="AddNewFolderWithOneChar" invocation-numbers="0"/>
+          <include name="RemoveGroupToFolder"/>
+          <include name="AssignUserToFolder"/>
+          <include name="addNewUserInFolderProperties"/>
+          <include name="AddNewFolder" invocation-numbers="0"/>
+          <include name="DeleteFolderInFolderP" invocation-numbers="0"/>
+          <include name="verifyRMCEChallengeResponse"/>
+          <include name="AssignKeyToFolder"/>
+          <include name="RemoveKeyInFolder"/>
+          <include name="afterSuite"/>
+          <include name="VerifyViewLogPage"/>
+          <include name="VerifyBackFeatureAtGroupTab"/>
+          <include name="afterMethod"/>
+          <include name="VerifyRenameFolder" invocation-numbers="0"/>
+          <include name="VerifyBackFeatureInUserTab"/>
+          <include name="RemoveUserFolder"/>
+          <include name="addNewFolderInFolderProperties"/>
+        </methods>
+      </class> <!-- testclass.client.sesweb.FolderTest -->
+      <class name="testclass.client.sesweb.AdministratorTest">
+        <methods>
+          <include name="initWebDriverObject"/>
+          <include name="addNewAdministratorUser" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="assignAdminRoleToAdminUser"/>
+          <include name="createANewAdminUser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testclass.client.sesweb.AdministratorTest -->
+    </classes>
+  </test> <!-- firefox(failed) -->
+</suite> <!-- Failed suite [Regression] -->

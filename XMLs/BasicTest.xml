@@ -6,7 +6,7 @@
     </listeners>
     <test name="Basic test ses.WEB">
         <classes>
-            <class name="testclass.server.LoginTest"></class>
+            <class name="testclass.client.LoginTest"></class>
             <class name="testclass.client.sesweb.UsersTest"/>
             <class name="testclass.client.sesweb.grouptest.GroupTest"></class>
             <class name="testclass.client.sesweb.ProfileTest"></class>

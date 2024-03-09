@@ -11,7 +11,7 @@
         <classes>
 
 <!--            <class name="testclass.server.LoginTestGrid"/>-->
-            <class name="testclass.server.LoginTest"></class>
+            <class name="testclass.client.LoginTest"></class>
 
         </classes>
     </test>

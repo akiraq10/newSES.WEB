@@ -1,0 +1,26 @@
+[
+  {
+    "profileName": "Windows-Endpoint",
+    "comments":"Windows-Endpoint" ,
+    "targetPlatform": "Endpoint Devices",
+    "profileType": "SecureDoc Enterprise for Windows"
+  },
+  {
+    "profileName": "macOS-Endpoint",
+    "comments":"macOS-Endpoint" ,
+    "targetPlatform": "Endpoint Devices",
+    "profileType": "SecureDoc Enterprise for macOS"
+  },
+  {
+    "profileName": "Linux-Endpoint",
+    "comments":"Linux-Endpoint" ,
+    "targetPlatform": "Endpoint Devices",
+    "profileType": "SecureDoc Enterprise for Linux"
+  },
+  {
+    "profileName": "OSA_Endpoint",
+    "comments":"OSA_Endpoint" ,
+    "targetPlatform": "Endpoint Devices",
+    "profileType": "SecureDoc for OSA"
+  }
+]

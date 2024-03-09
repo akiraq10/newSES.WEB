@@ -24,8 +24,11 @@ public class LoginElement {
     WebElement loginBtn;
     @FindBy(id = "breadcrumb_Folder_ViewFolder_0")
     WebElement logoWMGBtn;
-    @FindBy(className = "loginValidationErrors")
+    @FindBy(css ="div.loginValidationErrors")
     WebElement unsuccessfulError;
+
+    @FindBy(id = "UserName-error")
+    WebElement useNameErr;
 
 
 }

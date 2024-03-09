@@ -9,48 +9,68 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import static com.clean.driver.DriverBase.readConfigFile;
 
 public class DriverFactory {
 
-    private  WebDriver webDriver;
+    private  WebDriver driver;
+
     //Singleton Design Pattern
-   WebDriver getDriver(){
-        if(webDriver == null){
+    public WebDriver getChromrDriver(){
+        if(driver == null){
             WebDriverManager.chromedriver().setup();
             ChromeOptions chromeOptions=new ChromeOptions();
             chromeOptions.setAcceptInsecureCerts(true);
-            webDriver= new ChromeDriver(chromeOptions);
-            webDriver.manage().window().maximize();
+            driver = new ChromeDriver(chromeOptions);
+            driver.manage().window().maximize();
         }
-        return webDriver;
+        return driver;
     }
-    WebDriver getDriver(String browserName) throws MalformedURLException {
-        if(webDriver == null){
+    public WebDriver getDriver(Browser browser,String url) throws MalformedURLException {
+        String remote_url=readConfigFile.seleniumGridHub();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        if(driver == null){
 
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            if(browserName.equalsIgnoreCase(readConfigFile.chrome())) {
-                WebDriverManager.chromedriver().setup();
-                capabilities.setCapability("browserName", browserName);
-            }else {
-                WebDriverManager.firefoxdriver().setup();
-                capabilities.setCapability("browserName",browserName);
+            URL webDriverGripServer=null;
+            try{
+                webDriverGripServer=new URL(remote_url);
+            }catch (Exception e){
+                e.printStackTrace();
             }
 
-            webDriver = new RemoteWebDriver(new URL(readConfigFile.seleniumGridHub()),
-                    capabilities);
-            webDriver.manage().window().maximize();
-            return webDriver;
+            if(webDriverGripServer==null){
+                throw new IllegalArgumentException("[ERR] the driver cannot null");
+            }
 
+            switch (browser){
+                case chrome:
+                     capabilities.setBrowserName(browser.toString());
+                    break;
+                case firefox:
+                    capabilities.setBrowserName(browser.toString());
+                    break;
+                case MicrosoftEdge:
+                    capabilities.setBrowserName(browser.toString());
+                    break;
+                default: throw new IllegalArgumentException("[ERR] the browser cannot null");
+            }
 
+            try {
+                driver = new RemoteWebDriver(webDriverGripServer, capabilities);
+                driver.get(url);
+                driver.manage().timeouts().implicitlyWait(2L, TimeUnit.SECONDS);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         }
-        return webDriver;
+        return driver;
     }
-    void quitDriver(){
-        if (webDriver !=null){
-            webDriver.quit();
-            webDriver =null;
+    public void quitDriverSession(){
+        if (driver !=null){
+            driver.quit();
+            driver =null;
         }
     }
 
